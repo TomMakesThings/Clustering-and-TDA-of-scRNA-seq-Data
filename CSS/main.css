@@ -8,12 +8,10 @@ body {
 }
 
 #profilepic {
-	border-radius: 30%;
-}
-
-.header img {
   max-width: 55px;
+  max-height: 55px;
   float: left;
+	border-radius: 30%;
   margin: 0 10px 0 0;
 }
 
