@@ -11,6 +11,12 @@ body {
 	border-radius: 30%;
 }
 
+.header img {
+  max-width: 55px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
