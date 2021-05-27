@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#profilepic {
+  max-width: 60px;
+  max-height: 60px;
+  float: left;
+	border-radius: 30%;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.header a {
+  float: left;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+.header .header-right a:hover {
+  background-color: #ddd;
+}
+
+.header-left:hover {
+  background-color: #ddd;
+}
+
+.header-left {
+  float:left;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  .header-right, .headerleft {
+    float: left;
+    display: block;
+  }
+
+}
