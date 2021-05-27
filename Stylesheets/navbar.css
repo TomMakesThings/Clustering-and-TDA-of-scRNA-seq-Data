@@ -1,0 +1,76 @@
+.header {
+  font-family: pineapple;
+}
+
+#profilepic {
+  max-width: 50px;
+  max-height: 50px;
+  float: left;
+	border-radius: 50%;
+}
+
+#githublogo {
+  max-width: 50px;
+  max-height: 50px;
+  float: right;
+}
+
+#username {
+  font-size: 30px;
+}
+
+.header {
+  overflow: hidden;
+  background-image: linear-gradient(to right,#49CE14, #286F0B);
+}
+
+.header a {
+  float: left;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+@keyframes rotation {
+  50% {
+    transform: rotate(0.5deg);
+  }
+
+  100% {
+    transform: rotate(0.5deg);
+  }
+}
+
+.header-left {
+  float:left;
+}
+
+.header-right, #header-github {
+  float: right;
+}
+
+.header-left:hover, #githublogo:hover, .navtext:hover {
+  transition: 0.3s;
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
+  animation-duration: 1.5s;
+  animation-name: rotation;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+@media screen and (max-width: 650px) {
+  .header-right, .headerleft {
+    float: left;
+    text-align: center;
+  }
+
+  a.header-right, a.headerleft {
+    display:inline;
+  }
+}
