@@ -1,3 +1,7 @@
+:root {
+  --rotation_angle: 4deg;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,33 +12,54 @@ body {
 }
 
 #profilepic {
-  max-width: 60px;
-  max-height: 60px;
+  max-width: 50px;
+  max-height: 50px;
   float: left;
-	border-radius: 30%;
+	border-radius: 50%;
+  transition: transform 1.5s;
+}
+
+#username {
+  font-size: 30px;
 }
 
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #44BF13;
 }
 
 .header a {
   float: left;
-  color: black;
+  color: white;
   padding: 10px;
   text-decoration: none;
   font-size: 25px;
-  line-height: 60px;
+  line-height: 50px;
   white-space: nowrap;
 }
 
-.header .header-right a:hover {
-  background-color: #ddd;
+.navtext:hover {
+  text-shadow: 0px 0px 5px white;
+  text-decoration: underline;
+  animation-duration: 2.5s;
+  animation-name: rotation;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-.header-left:hover {
-  background-color: #ddd;
+@keyframes rotation {
+  50% {
+    transform: rotate(3deg);
+  }
+
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+#profilepic:hover {
+  transform: scale(1.15);
+  box-shadow: 0px 0px 5px white;
 }
 
 .header-left {
@@ -45,7 +70,7 @@ body {
   float: right;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   .header-right, .headerleft {
     float: left;
     display: block;
