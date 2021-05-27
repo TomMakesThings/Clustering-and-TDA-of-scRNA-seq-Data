@@ -22,7 +22,7 @@
 
 	<div style="padding-left:20px">
 	  <h1>Graph Finder</h1>
-	  <p>Final year project Clustering and Topological Data Analysis of Single-Cell RNA Sequencing Data</p>
+	  <p>Search for an experiment result</p>
 	</div>
 
 	<form id="graphform" role="search">
@@ -30,18 +30,7 @@
 		<button>Click</button>
 	</form>
 
-	<script>
-		const f = document.getElementById('graphform');
-		const q = document.getElementById('query');
-
-		function submitted(event) {
-	  	event.preventDefault();
-	  	const url = "https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages"
-	  	const win = window.open(url, '_blank');
-	  	win.focus();
-		}
-
-		f.addEventListener('submit', submitted);
+	<script src="Javascript/graph_search.js">
 	</script>
 
 	</body>
