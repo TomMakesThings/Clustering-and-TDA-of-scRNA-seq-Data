@@ -3,11 +3,6 @@
 }
 
 @font-face {
-  font-family: edo;
-  src: url('../Assets/Fonts/edo/edo.ttf');
-}
-
-@font-face {
   font-family: pineapple;
   src: url('../Assets/Fonts/pineapple/PineappleDemo.ttf');
 }
