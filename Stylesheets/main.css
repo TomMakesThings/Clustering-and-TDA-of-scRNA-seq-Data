@@ -2,13 +2,23 @@
   --rotation_angle: 4deg;
 }
 
+@font-face {
+  font-family: edo;
+  src: url('../Assets/Fonts/edo/edo.ttf');
+}
+
+@font-face {
+  font-family: pineapple;
+  src: url('../Assets/Fonts/pineapple/PineappleDemo.ttf');
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: pineapple;
 }
 
 #profilepic {
@@ -19,13 +29,19 @@ body {
   transition: transform 1.5s;
 }
 
+#githublogo {
+  max-width: 50px;
+  max-height: 50px;
+  float: right;
+}
+
 #username {
   font-size: 30px;
 }
 
 .header {
   overflow: hidden;
-  background-color: #44BF13;
+  background-image: linear-gradient(to right,#49CE14, #286F0B);
 }
 
 .header a {
@@ -38,9 +54,8 @@ body {
   white-space: nowrap;
 }
 
-.navtext:hover {
-  text-shadow: 0px 0px 5px white;
-  text-decoration: underline;
+.navtext:hover, #profilepic:hover #header-github:hover {
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
   animation-duration: 2.5s;
   animation-name: rotation;
   animation-iteration-count: infinite;
@@ -49,31 +64,38 @@ body {
 
 @keyframes rotation {
   50% {
-    transform: rotate(3deg);
+    transform: rotate(1deg);
   }
 
   100% {
-    transform: rotate(-3deg);
+    transform: rotate(-1deg);
   }
-}
-
-#profilepic:hover {
-  transform: scale(1.15);
-  box-shadow: 0px 0px 5px white;
 }
 
 .header-left {
   float:left;
 }
 
-.header-right {
+.header-right, #header-github {
   float: right;
 }
 
-@media screen and (max-width: 640px) {
+.header-left:hover img, #header-github:hover img {
+  transform: scale(1.1);
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
+}
+
+@media screen and (max-width: 650px) {
   .header-right, .headerleft {
     float: left;
-    display: block;
+    text-align: center;
   }
+
+  a.header-right, a.headerleft {
+    display:inline;
+  }
+
+
 
 }
