@@ -23,24 +23,42 @@
 
 	<div style="padding-left:20px">
 	  <h1>Graph Finder</h1>
-	  <p>Search for an experiment result</p>
+	  <p>Enter keywords to search for an experiment result:</p>
 	</div>
 
 	<form id="graphform" role="search" autocomplete="off">
 	  <input type="search" name="search" placeholder="Search..." id="query" onclick="showDropdown()" oninput="showDropdown()" onkeyup="searchFilter()" aria-label="Find a graph">
 		<div id="dropdown-content">
-			<a id="cluster-category"><b>Clustering</b></a>
-			<a class="cluster-link link-option" href="Graphs/Topological_Data_Analysis/Final_Graphs/benchmarking_scRNAseq_graph.html"
-			target="_blank" rel="noopener noreferrer" data-tags="sc_10x">cluster</a>
-			<a id="tda-category"><b>Topological Data Analysis</b></a>
+			<a class="dropdown-category" id="cluster-category">Clustering</a>
+			<!--Clustering graphs-->
+			<a class="cluster-link link-option" data-href="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_E_68.7%.html"
+			onclick="displayGraph(this)" data-tags="sc_10x chromium 10x luyi tian kmeans cluster">
+			<b>K-means on benchmark data:</b> PCA with 2 principal components, autoencoder encoding, 68.7% accuracy</a>
+			<a class="cluster-link link-option" data-href="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_SE_97.3%.html"
+			onclick="displayGraph(this)" data-tags="sc_10x chromium 10x luyi tian kmeans cluster">
+			<b>K-means on benchmark data:</b> PCA with 2 principal components, standardization, autoencoder encoding, 97.3% accuracy</a>
+			<a class="cluster-link link-option" data-href="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_SU_72.7%.html"
+			onclick="displayGraph(this)" data-tags="sc_10x chromium 10x luyi tian kmeans cluster">
+			<b>K-means on benchmark data:</b> PCA with 2 principal components, standardization, 72.7% accuracy</a>
+			<a class="cluster-link link-option" data-href="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_SE_97.3%.html"
+			onclick="displayGraph(this)" data-tags="sc_10x chromium 10x luyi tian kmeans cluster">
+			<b>K-means on benchmark data:</b> PCA with 2 principal components, standardization, autoencoder encoding, 97.3% accuracy</a>
+			<!--TDA graphs-->
+			<a class="dropdown-category" id="tda-category">Topological Data Analysis</a>
 			<a class="tda-link link-option" href="Graphs/Topological_Data_Analysis/Final_Graphs/benchmarking_scRNAseq_graph.html"
-			target="_blank" rel="noopener noreferrer" data-tags="sc_10x">Benchmark</a>
+			target="_blank" rel="noopener noreferrer" data-tags="sc_10x chromium 10x luyi tian simplicial complex kepler mapper tda topological data analysis">
+			Benchmark</a>
 			<a class="tda-link link-option" href="Graphs/Topological_Data_Analysis/Final_Graphs/simulated_scRNAseq_graph.html"
-			target="_blank" rel="noopener noreferrer" data-tags="splat">Simulated</a>
-    	<a class="tda-link link-option" href="Graphs/Topological_Data_Analysis/Final_Graphs/evaluation_scRNAseq_graph.html"
-			target="_blank" rel="noopener noreferrer" data-tags="zeisel">Mouse Cortex</a>
+			target="_blank" rel="noopener noreferrer" data-tags="splatter tom simplicial complex kepler mapper tda topological data analysis">Simulated</a>
+			<a class="tda-link link-option" href="Graphs/Topological_Data_Analysis/Final_Graphs/evaluation_scRNAseq_graph.html"
+			target="_blank" rel="noopener noreferrer" data-tags="zeisel simplicial complex kepler mapper tda topological data analysis">Mouse Cortex</a>
 		</div>
 	</form>
+
+	<br>
+	<br>
+
+	<iframe src="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_E_68.7%.html" id="graph-iframe", title="cluster graph" scrolling="no"></iframe>
 
 	<script src="Javascript/graph_search.js"></script>
 

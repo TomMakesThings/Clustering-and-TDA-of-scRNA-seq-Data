@@ -4,7 +4,7 @@ input:-webkit-autofill:focus {
   all: unset;
   height: 100%;
   width: 10%;
-  min-width: 300px;
+  min-width: 435px;
   padding: 2px;
   border: 10px solid;
   border-image-slice: 1;
@@ -22,13 +22,6 @@ input:-webkit-autofill:focus,
   filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.2));
 }
 
-button {
-  all: unset;
-  cursor: pointer;
-  width: 44px;
-  height: 44px;
-}
-
 ::placeholder {
   color: grey;
   opacity: 0.7;
@@ -44,9 +37,11 @@ button {
   display: none;
   position: absolute;
   background-color: #f6f6f6;
-  width: 88.5%;
+  width: 91.5%;
   border: 1px solid #ddd;
   z-index: 1;
+  max-height: 500px;
+  overflow: auto;
 }
 
 #dropdown-content a {
@@ -58,4 +53,19 @@ button {
 
 #dropdown-content a:hover {
   background-color: #ddd;
+}
+
+.dropdown-category {
+  font-weight: bold;
+  font-size: 18px;
+  background: -webkit-linear-gradient(var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+iframe {
+  max-width: 900px;
+  width: 100%;
+  height: 700px;
+  border: none;
 }

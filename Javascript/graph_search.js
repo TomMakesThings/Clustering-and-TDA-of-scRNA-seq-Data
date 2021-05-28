@@ -49,6 +49,11 @@ function searchFilter() {
   }
 }
 
+function displayGraph(option) {
+  document.getElementById("graph-iframe").src = option.dataset.href;
+  
+}
+
 graphform.addEventListener('submit', submitted);
 graphform.addEventListener("mouseover", showDropdown);
 graphform.addEventListener("mouseout", hideDropdown);
