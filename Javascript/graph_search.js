@@ -1,5 +1,5 @@
-const f = document.getElementById('graphform');
-const q = document.getElementById('query');
+const graphform = document.getElementById('graphform');
+const query = document.getElementById('query');
 
 function submitted(event) {
   event.preventDefault();
@@ -8,4 +8,4 @@ function submitted(event) {
   win.focus();
 }
 
-f.addEventListener('submit', submitted);
+graphform.addEventListener('submit', submitted);
