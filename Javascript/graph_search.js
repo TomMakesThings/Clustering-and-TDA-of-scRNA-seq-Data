@@ -50,8 +50,7 @@ function searchFilter() {
 }
 
 function displayGraph(option) {
-  document.getElementById("graph-iframe").src = option.dataset.href;
-  
+  document.getElementById("graph-html").data = option.dataset.href;
 }
 
 graphform.addEventListener('submit', submitted);
