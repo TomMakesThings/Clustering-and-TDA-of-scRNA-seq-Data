@@ -16,7 +16,8 @@ input:-webkit-autofill:focus {
 
 input:hover,
 input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
+input:-webkit-autofill:focus,
+#dropdown-content {
   -webkit-filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
   filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.2));
 }
@@ -35,6 +36,26 @@ button {
 
 #graphform {
   position: relative;
-  display: flex;
+  display: inline-block;
   padding: 0px 20px;
+}
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  width: 88.5%;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+#dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#dropdown-content a:hover {
+  background-color: #ddd;
 }

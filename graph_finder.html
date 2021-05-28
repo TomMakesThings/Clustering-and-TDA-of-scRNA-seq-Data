@@ -26,13 +26,16 @@
 	  <p>Search for an experiment result</p>
 	</div>
 
-	<form id="graphform" role="search">
-	  <input type="search" name="search" placeholder="Search..." id="query" aria-label="Find a graph">
-		<button>Click</button>
+	<form id="graphform" role="search" autocomplete="off">
+	  <input type="search" name="search" placeholder="Search..." id="query" onclick="showDropdown()" keyup="filterFunction()" aria-label="Find a graph">
+		<div id="dropdown-content">
+			<a href="Graphs/Topological_Data_Analysis/Final_Graphs/benchmarking_scRNAseq_graph.html">Benchmark (sc_10x)</a>
+			<a href="Graphs/Topological_Data_Analysis/Final_Graphs/simulated_scRNAseq_graph.html">Simulated</a>
+    	<a href="Graphs/Topological_Data_Analysis/Final_Graphs/evaluation_scRNAseq_graph.html">Mouse Cortex</a>
+		</div>
 	</form>
 
-	<script src="Javascript/graph_search.js">
-	</script>
+	<script src="Javascript/graph_search.js"></script>
 
 	</body>
 	</html>
