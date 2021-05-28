@@ -50,7 +50,7 @@ function searchFilter() {
 }
 
 function displayGraph(option) {
-  document.getElementById("graph-html").data = option.dataset.href;
+  document.getElementById("graph-html").data = option.href;
 }
 
 graphform.addEventListener('submit', submitted);
