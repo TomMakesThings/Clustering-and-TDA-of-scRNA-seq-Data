@@ -3,6 +3,8 @@
   --purple: #d53a9d;
   --lightgreen: #49CE14;
   --darkgreen: #286F0B;
+  --lightblue: #33CCFF;
+  --blue: #0078A2;
 
   --media_width: 650px;
 }
@@ -34,6 +36,12 @@ body {
 
 h1, h2, h3 {
   font-family: lato-bold;
+}
+
+h1 {
+  background: -webkit-linear-gradient(var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Custom scrollbar */
