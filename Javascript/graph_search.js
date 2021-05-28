@@ -50,7 +50,21 @@ function searchFilter() {
 }
 
 function displayGraph(option) {
-  document.getElementById("graph-html").data = option.dataset.href;
+  var graph = document.getElementById("graph-html")
+  graph.data = option.dataset.href;
+  graph.style.display = "block";
+  if (option.className.includes("cluster-link")) {
+    document.getElementById("graph-wrapper").style.padding = "0px";
+    // if (window.innerWidth > 840) {
+    //   Object.assign(graph.style, {"width": "800px", "height": "500%", "-webkit-transform": "scale(1)", "transform": "scale(1)"});
+    // }
+    // else if (window.innerWidth < 840) {
+    //   Object.assign(graph.style, {"width": "800px", "height": "500%", "-webkit-transform": "scale(0.8)", "transform": "scale(0.8)"});
+    // }
+  }
+  else {
+    document.getElementById("graph-wrapper").style.padding = "20px";
+  }
 }
 
 graphform.addEventListener('submit', submitted);

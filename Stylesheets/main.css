@@ -1,12 +1,10 @@
 :root {
-  --pink: #743ad5;
-  --purple: #d53a9d;
+  --pink: #d53a9d;
+  --purple: #743ad5;
   --lightgreen: #49CE14;
   --darkgreen: #286F0B;
   --lightblue: #33CCFF;
   --blue: #0078A2;
-
-  --media_width: 650px;
 }
 
 /** Custom fonts **/
@@ -39,7 +37,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  background: -webkit-linear-gradient(var(--pink), var(--purple));
+  background: -webkit-linear-gradient(var(--purple), var(--pink));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -56,5 +54,5 @@ h1 {
 ::-webkit-scrollbar-thumb {
   background: red;
   box-shadow: inset 0 0 5px grey;
-  background-image: linear-gradient(to top, var(--pink), var(--purple));
+  background-image: linear-gradient(to top, var(--purple), var(--pink));
 }

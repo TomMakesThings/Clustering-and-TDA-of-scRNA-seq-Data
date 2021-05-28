@@ -9,7 +9,7 @@ input:-webkit-autofill:focus {
   border: 10px solid;
   border-image-slice: 1;
   border-width: 3px;
-  border-image-source: linear-gradient(to left, var(--pink), var(--purple));
+  border-image-source: linear-gradient(to left, var(--purple), var(--pink));
   transition: background-color 5000s ease-in-out 0s;
   background-color: white;
 }
@@ -58,14 +58,39 @@ input:-webkit-autofill:focus,
 .dropdown-category {
   font-weight: bold;
   font-size: 18px;
-  background: -webkit-linear-gradient(var(--pink), var(--purple));
+  background: -webkit-linear-gradient(var(--purple), var(--pink));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-#graph-html {
-  max-width: 900px;
+#graph-wrapper {
   width: 100%;
-  height: 700px;
-  border: none;
+  height: 800px;
+  overflow: hidden;
+  padding: 20px;
 }
+
+#graph-html {
+  width: 100% !important;
+  height: 100% !important;
+  border: none;
+  display: none;
+}
+
+/* @media screen and (max-width: 840px) {
+  .graph-cluster {
+    width: 800px !important;
+    height: 500% !important;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .graph-cluster {
+    width: 800px !important;
+    height: 500% !important;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+  }
+} */
