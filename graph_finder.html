@@ -38,7 +38,7 @@
 	  	<input type="search" name="search" placeholder="Search..." id="query" onclick="showDropdown()" oninput="showDropdown()" onkeyup="searchFilter()" onsearch="searchFilter()" aria-label="Find a graph">
 			<div id="dropdown-content">
 				<a class="dropdown-category" id="cluster-category">Clustering</a>
-				<!--Clustering graphs-->
+				<!--Benchmark clustering graphs-->
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_E_68.7%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian kmeans cluster">
 				<b>K-Means on Benchmark Data:</b> 150 cells, PCA with 2 principal components, autoencoder encoding, 68.7% accuracy</a>
@@ -72,8 +72,12 @@
 
 				<a class="cluster-link link-option" data-href="Graphs/Hierarchical_Clustering/Benchmarking_Data/sc_10x_hierarchical_2_PCA_SE_99.3%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian kmeans cluster">
-				<b>Agglomerative Hierarchical Clustering on Benchmark Data:</b> 150 cells, PCA with 7 principal components, standardization, autoencoder encoding, 99.3% accuracy</a>
+				<b>Agglomerative Hierarchical Clustering on Benchmark Data:</b> 150 cells, PCA with 2 principal components, standardization, autoencoder encoding, 99.3% accuracy</a>
+				<a class="cluster-link link-option" data-href="Graphs/Hierarchical_Clustering/Benchmarking_Data/sc_10x_hierarchical_3_PCA_SU_100%25.html"
+				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian cluster">
+				<b>Agglomerative Hierarchical Clustering on Benchmark Data:</b> 150 cells, PCA with 3 principal components, standardization, no encoding, 100% accuracy</a>
 
+				<!--Simulated clustering graphs-->
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Simulated_Data/splat_k-means_2_PCA_E_49.8%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="splat fake generated tom kmeans cluster">
 				<b>K-Means on Simulated Data:</b> 500 cells, PCA with 2 principal components, autoencoder encoding, 49.8% accuracy</a>
@@ -89,6 +93,11 @@
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Simulated_Data/splat_k-means_6_PCA_E_100%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="splat fake generated tom kmeans cluster">
 				<b>K-Means on Simulated Data:</b> 500 cells, PCA with 6 principal components, autoencoder encoding, 100% accuracy</a>
+				<a class="cluster-link link-option" data-href="Graphs/Hierarchical_Clustering/Simulated_Data/splat_hierarchical_6_PCA_E_99.8%25.html"
+				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="splat fake generated tom cluster">
+				<b>Agglomerative Hierarchical Clustering on Simulated Data:</b> 500 cells, PCA with 6 principal components, autoencoder encoding, 99.8% accuracy</a>
+
+				<!--Mouse cortex clustering graphs-->
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Real_Evaluation_Data/cortex_k-means_2_PCA_SU_36.6%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="zeisel hippocampus mrna kmeans cluster">
 				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 2 principal components, standardization, no encoding, 36.6% accuracy</a>
@@ -118,7 +127,11 @@
 				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 300 perplexity, 37% accuracy, 0.137 ARI, 0.399 silhouette coefficient</a>
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Real_Evaluation_Data/cortex_k-means_t-SNE_perplexity=600.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="zeisel hippocampus mrna kmeans cluster tsne stochastic neighbor embedding">
-				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 300 perplexity, 21.6% accuracy, 0.005 ARI, 0.528 silhouette coefficient</a>
+				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 600 perplexity, 21.6% accuracy, 0.005 ARI, 0.528 silhouette coefficient</a>
+				<a class="cluster-link link-option" data-href="Graphs/Hierarchical_Clustering/Real_Evaluation_Data/cortex_hierarchical_9_PCA_SU_44%25.html"
+				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="zeisel hippocampus mrna kmeans cluster">
+				<b>Agglomerative Hierarchical Clustering on Mouse Cortex Data:</b> 500 cells, PCA with 9 principal components, standardization, no encoding, 100% accuracy</a>
+
 				<!--TDA graphs-->
 				<a class="dropdown-category" id="tda-category">Topological Data Analysis</a>
 				<a class="tda-link link-option" data-href="Graphs/Topological_Data_Analysis/Final_Graphs/benchmarking_scRNAseq_graph.html"
