@@ -30,7 +30,6 @@ input:-webkit-autofill:focus,
 #graphform {
   position: relative;
   display: inline-block;
-  padding: 0px 20px;
   width: 100%;
 }
 
@@ -69,7 +68,6 @@ input:-webkit-autofill:focus,
   width: 100%;
   height: 800px;
   overflow: hidden;
-  padding: 20px;
 }
 
 #graph-html {
@@ -78,20 +76,6 @@ input:-webkit-autofill:focus,
   border: none;
 }
 
-/* @media screen and (max-width: 840px) {
-  .graph-cluster {
-    width: 800px !important;
-    height: 500% !important;
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-  }
+#graph-finder {
+  min-height: 700px;
 }
-
-@media screen and (max-width: 660px) {
-  .graph-cluster {
-    width: 800px !important;
-    height: 500% !important;
-    -webkit-transform: scale(0.6);
-    transform: scale(0.6);
-  }
-} */

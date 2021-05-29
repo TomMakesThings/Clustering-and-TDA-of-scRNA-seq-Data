@@ -1,7 +1,3 @@
-.header {
-  font-family: Lato-Bold;
-}
-
 #profilepic {
   max-width: 50px;
   max-height: 50px;
@@ -20,6 +16,7 @@
 }
 
 .header {
+  font-family: Lato-Bold;
   overflow: hidden;
   background-image: linear-gradient(to right, var(--lightgreen),  var(--darkgreen));
   -webkit-filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
