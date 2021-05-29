@@ -56,6 +56,10 @@ input:-webkit-autofill:focus,
   background-color: #ddd;
 }
 
+.link-option:hover {
+  cursor: pointer;
+}
+
 .dropdown-category {
   font-weight: bold;
   font-size: 18px;
