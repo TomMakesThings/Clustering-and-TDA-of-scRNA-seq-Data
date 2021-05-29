@@ -3,14 +3,6 @@ const query = document.getElementById('query');
 const graph = document.getElementById("graph-html");
 const graph_wrapper = document.getElementById("graph-wrapper");
 
-function submitted(event) {
-  event.preventDefault();
-  const url = "https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages"
-  const win = window.open(url, '_blank');
-  win.focus();
-  hideDropdown()
-}
-
 function showDropdown(event){
   document.getElementById("dropdown-content").style.display = "block";
 }
@@ -64,6 +56,8 @@ function displayGraph(option) {
   graph.data = option.dataset.href;
   /** Show if not already visible **/
   graph_wrapper.style.display = "";
+  graph_title = document.getElementById("graph-selected")
+  graph_title.innerHTML = option.innerHTML;
   if (option.className.includes("cluster-link")) {
     graph_wrapper.style.padding = "0px";
     graph_wrapper.classList.add("cluster-graph");
@@ -90,7 +84,6 @@ function graphScale() {
   }
 }
 
-graphform.addEventListener('submit', submitted);
 graphform.addEventListener("mouseover", showDropdown);
 graphform.addEventListener("mouseout", hideDropdown);
 window.addEventListener('resize', graphScale);
