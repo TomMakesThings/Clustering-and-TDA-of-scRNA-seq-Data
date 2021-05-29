@@ -3,8 +3,8 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
   all: unset;
   height: 100%;
-  width: 10%;
-  min-width: 435px;
+  width: 98%;
+  max-width: 750px;
   padding: 2px;
   border: 10px solid;
   border-image-slice: 1;
@@ -31,17 +31,19 @@ input:-webkit-autofill:focus,
   position: relative;
   display: inline-block;
   padding: 0px 20px;
+  width: 100%;
 }
 
 #dropdown-content {
   display: none;
   position: absolute;
   background-color: #f6f6f6;
-  width: 91.5%;
+  max-width: 760px;
+  width: 93%;
   border: 1px solid #ddd;
-  z-index: 1;
   max-height: 500px;
   overflow: auto;
+  z-index: 1;
 }
 
 #dropdown-content a {
