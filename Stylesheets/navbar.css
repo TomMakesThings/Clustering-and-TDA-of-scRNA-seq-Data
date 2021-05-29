@@ -26,11 +26,18 @@
 .header a {
   float: left;
   color: white;
-  font-size: 22px;
   padding: 10px;
   text-decoration: none;
   line-height: 50px;
   white-space: nowrap;
+}
+
+.header-center a {
+  font-size: 22px;
+}
+
+.header-right a {
+  font-size: 18px;
 }
 
 @keyframes rotation {
