@@ -1,5 +1,5 @@
 .header {
-  font-family: pineapple;
+  font-family: Lato-Bold;
 }
 
 #profilepic {
@@ -16,7 +16,7 @@
 }
 
 #username {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .header {
@@ -29,9 +29,9 @@
 .header a {
   float: left;
   color: white;
+  font-size: 22px;
   padding: 10px;
   text-decoration: none;
-  font-size: 25px;
   line-height: 50px;
   white-space: nowrap;
 }
@@ -47,7 +47,8 @@
 }
 
 .header-left {
-  float:left;
+  float: left;
+  font-family: pineapple;
 }
 
 .header-right, #header-github {
@@ -66,13 +67,15 @@
   animation-timing-function: ease-out;
 }
 
-@media screen and (max-width: 650px) {
-  .header-right, .headerleft {
-    float: left;
+@media screen and (max-width: 720px) {
+  .header-left, .header-center, .header-right {
+    width:100%;
+    display: flex;
+    justify-content: center;
     text-align: center;
   }
 
-  a.header-right, a.headerleft {
-    display:inline;
+  .header-center a {
+    font-size: 30px;
   }
 }

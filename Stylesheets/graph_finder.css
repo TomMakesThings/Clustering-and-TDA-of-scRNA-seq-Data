@@ -9,7 +9,7 @@ input:-webkit-autofill:focus {
   border: 10px solid;
   border-image-slice: 1;
   border-width: 3px;
-  border-image-source: linear-gradient(to left, var(--purple), var(--pink));
+  border-image-source: linear-gradient(to left, var(--purple), var(--lighterpurple));
   transition: background-color 5000s ease-in-out 0s;
   background-color: white;
 }
@@ -58,7 +58,7 @@ input:-webkit-autofill:focus,
 .dropdown-category {
   font-weight: bold;
   font-size: 18px;
-  background: -webkit-linear-gradient(var(--purple), var(--pink));
+  background: -webkit-linear-gradient(var(--purple), var(--lighterpurple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -74,7 +74,6 @@ input:-webkit-autofill:focus,
   width: 100% !important;
   height: 100% !important;
   border: none;
-  display: none;
 }
 
 /* @media screen and (max-width: 840px) {

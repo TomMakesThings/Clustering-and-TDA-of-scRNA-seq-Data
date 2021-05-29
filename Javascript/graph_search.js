@@ -1,5 +1,7 @@
 const graphform = document.getElementById('graphform');
 const query = document.getElementById('query');
+const graph = document.getElementById("graph-html");
+const graph_wrapper = document.getElementById("graph-wrapper");
 
 function submitted(event) {
   event.preventDefault();
@@ -50,23 +52,40 @@ function searchFilter() {
 }
 
 function displayGraph(option) {
-  var graph = document.getElementById("graph-html")
+  /** Change the graph to display **/
   graph.data = option.dataset.href;
-  graph.style.display = "block";
+  /** Show if not already visible **/
+  graph_wrapper.style.display = "";
   if (option.className.includes("cluster-link")) {
-    document.getElementById("graph-wrapper").style.padding = "0px";
-    // if (window.innerWidth > 840) {
-    //   Object.assign(graph.style, {"width": "800px", "height": "500%", "-webkit-transform": "scale(1)", "transform": "scale(1)"});
-    // }
-    // else if (window.innerWidth < 840) {
-    //   Object.assign(graph.style, {"width": "800px", "height": "500%", "-webkit-transform": "scale(0.8)", "transform": "scale(0.8)"});
-    // }
+    graph_wrapper.style.padding = "0px";
+    graph_wrapper.classList.add("cluster-graph");
+    graphScale()
   }
   else {
-    document.getElementById("graph-wrapper").style.padding = "20px";
+    graph_wrapper.style.padding = "20px";
+    graph_wrapper.classList.remove("cluster-graph");
+    graph.setAttribute("style", "width: 100% !important; height: 100% !important; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;");
+  }
+}
+
+function graphScale() {
+  if (graph_wrapper.className.includes("cluster-graph")) {
+    if (window.innerWidth > 840) {
+      graph.setAttribute("style", "width: 100% !important; height: 100% !important; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;");
+    }
+    else if (window.innerWidth > 660) {
+      graph.setAttribute("style", "width: 800px !important; height: 500% !important; -webkit-transform: scale(0.8); transform: scale(0.8); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;");
+    }
+    else {
+      graph.setAttribute("style", "width: 800px !important; height: 500% !important; -webkit-transform: scale(0.6); transform: scale(0.6); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;");
+    }
   }
 }
 
 graphform.addEventListener('submit', submitted);
 graphform.addEventListener("mouseover", showDropdown);
 graphform.addEventListener("mouseout", hideDropdown);
+window.addEventListener('resize', graphScale);
+
+/** Hide graph on page load **/
+graph_wrapper.style.display = "none";
