@@ -31,10 +31,18 @@ function searchFilter() {
     for (j = 0; j < option.length; j++) {
       text_value = option[j].textContent || option[j].innerText;
       text_tags = option[j].dataset.tags;
-      /* Check if the input text matches the option's name or metadata tags */
-      if (text_value.toUpperCase().indexOf(input) > -1 || text_tags.toUpperCase().indexOf(input) > -1) {
-        option[j].style.display = "";
+      input_words = input.split(" ");
+      found_all = true;
+      for (k = 0; k < input_words.length; k++){
+        /* Check if words in the input text match the words in the option's name or metadata tags */
+        if (!(text_value.toUpperCase().indexOf(input_words[k]) > -1 || text_tags.toUpperCase().indexOf(input_words[k]) > -1)) {
+          found_all = false;
+        }
+      }
+      /** If all words match, display the option **/
+      if (found_all == true) {
         category_empty = false;
+        option[j].style.display = "";
       }
       /* Otherwise hide the option */
       else {
