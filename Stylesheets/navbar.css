@@ -76,6 +76,7 @@
   }
 
   .header-center a {
-    font-size: 30px;
+    font-size: 26px;
+    font-size: min(5vw, 30px);
   }
 }
