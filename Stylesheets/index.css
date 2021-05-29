@@ -1,0 +1,17 @@
+#scRNA-seq-steps {
+  max-width: 400px;
+  width: 100%;
+  margin-left: 10px;
+  float: right;
+}
+
+#background-text {
+  text-align: left
+}
+
+@media screen and (max-width: 720px) {
+  #scRNA-seq-steps {
+    float: none;
+    display: block;
+  }
+}

@@ -37,9 +37,17 @@ h1, h2, h3 {
 }
 
 h1 {
+  font-size: 25px;
   background: -webkit-linear-gradient(var(--purple), var(--lighterpurple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 20px;
+  /* background: -webkit-linear-gradient(var(--purple), var(--lighterpurple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 /* Custom scrollbar */
