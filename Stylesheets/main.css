@@ -48,15 +48,20 @@ h1 {
 
 h2 {
   font-size: 20px;
-  /* background: -webkit-linear-gradient(var(--purple), var(--lighterpurple));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
 }
 
 .content {
   padding-left:25px;
   padding-right:25px;
   margin-top: 100px;
+}
+
+/** Reposition anchor tags above linked content **/
+a.anchor {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
 }
 
 /* Custom scrollbar */
@@ -75,6 +80,6 @@ h2 {
 
 @media screen and (max-width: 720px) {
   .content {
-    margin-top: 220px;
+    margin-top: 240px;
   }
 }

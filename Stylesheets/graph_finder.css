@@ -38,7 +38,7 @@ input:-webkit-autofill:focus,
   position: absolute;
   background-color: #f6f6f6;
   max-width: 760px;
-  width: 93%;
+  width: 100%;
   border: 1px solid #ddd;
   max-height: 500px;
   overflow: auto;

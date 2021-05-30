@@ -41,7 +41,7 @@
 }
 
 .header-right a {
-  font-size: 18px;
+  font-size: min(2vw, 18px);
 }
 
 @keyframes rotation {
@@ -86,5 +86,9 @@
   #header-left a, #header-center a {
     font-size: 26px;
     font-size: min(5vw, 30px);
+  }
+
+  .header-right a {
+    font-size: 3vw;
   }
 }
