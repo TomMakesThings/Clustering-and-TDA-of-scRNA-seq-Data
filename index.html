@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="Stylesheets\main.css">
 	<link rel="stylesheet" href="Stylesheets\navbar.css">
 	<link rel="stylesheet" href="Stylesheets\index.css">
+	<link rel="stylesheet" href="Stylesheets\datasets.css">
 	<link rel="stylesheet" href="Stylesheets\graph_finder.css">
 	<link rel="stylesheet" href="Stylesheets\footer.css">
 </head>
@@ -76,12 +77,27 @@
 		<p>The first dataset was created by Tian et al. and is officially named <a href="https://github.com/LuyiTian/sc_mixology" target="_blank">sc_10x</a>, though here is referred to as the "Benchmark dataset".
 			This contains gene counts of 902 cells from three human lung adenocarcinoma cell lines HCC827, H1975 and H2228.
 			These counts were produced using the 10X Chromium scRNA-seq protocol.</p>
+
+		<div class="dataset-graph">
+			<iframe src="Graphs/Target_Groups/sc_10x_cell_lines_3D.html" class="dataset-graph-html" scrolling="no"></iframe>
+		</div>
+
 		<h2>Simulated</h2>
 		<p>The second dataset was created during this project using the Splat simulator which is part of the R package <a href="https://bioconductor.org/packages/devel/bioc/vignettes/splatter/inst/doc/splatter.html" target="_blank">Splatter</a>.
 			To replicate the gene expression of real cells, the Splat simulator was seeded with the benchmark dataset.
 		</p>
+
+		<div class="dataset-graph">
+			<iframe src="Graphs/Target_Groups/splat_groups_3D.html" class="dataset-graph-html" scrolling="no"></iframe>
+		</div>
+
 		<h2>Mouse Cortex</h2>
 		<p></p>
+
+		<div class="dataset-graph">
+			<iframe src="Graphs/Target_Groups/cortex_groups_3D.html" class="dataset-graph-html" scrolling="no"></iframe>
+		</div>
+
 	</div>
 
 	<br>
@@ -98,8 +114,9 @@
 		<h1>Code</h1>
 		<p>This
 		</p>
-		<a href="Notebooks/Splat_Simulator.html" class="navtext">Notebooks</a>
-		<a href="Notebooks/Clustering_and_TDA.html" class="navtext">Notebooks</a>
+		<a href="Notebooks/Splat_Simulator.html" target="_blank" rel="noopener noreferrer">Notebooks</a>
+		<a href="Notebooks/Clustering_and_TDA.html" target="_blank" rel="noopener noreferrer">Notebooks</a>
+		<a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data" target="_blank" rel="noopener noreferrer">Repository</a>
 	</div>
 
 	<br>

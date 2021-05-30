@@ -1,0 +1,12 @@
+.dataset-graph {
+  width: 820px;
+  height: 550px;
+  overflow: hidden;
+}
+
+.dataset-graph-html {
+  width: 100% !important;
+  height: 100% !important;
+  border: none;
+  overflow: hidden;
+}
