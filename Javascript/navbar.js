@@ -28,8 +28,6 @@ function scrollFunction() {
   }
 }
 
-var top = this.scrollY, left = this.scrollX;
-
 /* Remove the hash from the URL when the page is reloaded to prevent page jumps */
 function anchorLinks() {
   if (location.hash != '') {

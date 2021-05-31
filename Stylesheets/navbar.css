@@ -86,3 +86,8 @@
     font-size: 3vw;
   }
 }
+
+@media screen and (min-width: 720px) and (max-width: 1110px) {
+  #header-center {
+    display: none;
+}
