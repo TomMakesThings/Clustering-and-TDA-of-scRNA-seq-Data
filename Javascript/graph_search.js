@@ -64,7 +64,7 @@ function displayGraph(option) {
     graphScale()
   }
   else {
-    graph_wrapper.style.padding = "20px";
+    graph_wrapper.style.padding = "20px 0px 20px 0px";
     graph_wrapper.classList.remove("cluster-graph");
     graph.setAttribute("style", "width: 100% !important; height: 100% !important; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;");
   }
