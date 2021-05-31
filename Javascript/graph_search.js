@@ -76,10 +76,10 @@ function displayGraph(option) {
 function graphScale() {
   var group_graphs = document.getElementsByClassName("dataset-graph-html");
   var style = "width: 800px !important; height: 500% !important; -webkit-transform: scale(0.6); transform: scale(0.6); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;";
-  if (window.innerWidth > 840) {
+  if (window.innerWidth > 880) {
     style = "width: 100% !important; height: 100% !important; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;";
   }
-  else if (window.innerWidth > 660) {
+  else if (window.innerWidth > 690) {
     style = "width: 800px !important; height: 500% !important; -webkit-transform: scale(0.8); transform: scale(0.8); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;";
   }
   // Update the cell line / group graphs

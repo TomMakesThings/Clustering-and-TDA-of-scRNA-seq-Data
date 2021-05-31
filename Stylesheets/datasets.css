@@ -14,14 +14,14 @@
   top: -35px;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 880px) {
   .dataset-graph {
     height: 430px;
-    width: 630px;
+    width: 635px;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 690px) {
   .dataset-graph {
     height: 330px;
     width: 470px;

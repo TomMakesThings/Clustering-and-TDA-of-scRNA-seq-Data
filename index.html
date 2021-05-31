@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="description" content="University final year project on single-cell RNA sequencing">
+  <meta name="keywords" content="scRNA-seq, clustering, topological data analysis">
+  <meta name="author" content="TomMakesThings">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<!-- Links to the CSS stylesheets -->
 	<link rel="stylesheet" href="Stylesheets\main.css">
 	<link rel="stylesheet" href="Stylesheets\navbar.css">
@@ -35,7 +39,9 @@
 	<div>
 		<a name="about" class="anchor"></a>
   	<h1>About</h1>
-		<p>This site gives a brief overview of my undergraduate dissertation. The aim being to experiment with clustering and topological data analysis to detect hidden gene expression in three single-cell RNA-seq datasets.
+		<p>This site gives a brief overview of my undergraduate dissertation, though may also be used as an introduction to some useful computational methods for the analysis of single-cell RNA sequencing data.
+			The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets.
+			For more information, read the paper.
 		</p>
 	</div>
 
@@ -83,12 +89,12 @@
 		<p>The cells consist of a mixture from three human lung adenocarcinoma cell lines HCC827, H1975 and H2228.
 			These assignments are provided within the dataset's metadata and can therefore be used as target labels.
 			However, it should be noted that for many real-world applications of scRNA-seq, these targets would be unknown.
-			Each cell has been coloured accordingly in the plot below of PCA with three principal components.
+			Each cell has been coloured accordingly in the plot below of PCA with two principal components.
 			The 150 cells randomly selected for initial experimentation can be seen by clicking on second legend on the graph.
 		</p>
 
 		<div class="dataset-graph">
-			<iframe src="Graphs/Target_Groups/sc_10x_cell_lines_3D.html" class="dataset-graph-html" scrolling="no"></iframe>
+			<iframe src="Graphs/Target_Groups/sc_10x_cell_lines_2D.html" class="dataset-graph-html" scrolling="no"></iframe>
 		</div>
 
 		<h2>Simulated</h2>
@@ -104,7 +110,7 @@
 			This time, 500 samples were initially selected.</p>
 
 		<div class="dataset-graph">
-			<iframe src="Graphs/Target_Groups/splat_groups_3D.html" class="dataset-graph-html" scrolling="no"></iframe>
+			<iframe src="Graphs/Target_Groups/splat_groups_2D.html" class="dataset-graph-html" scrolling="no"></iframe>
 		</div>
 
 		<h2>Mouse Cortex</h2>
@@ -120,7 +126,7 @@
 		</p>
 
 		<div class="dataset-graph">
-			<iframe src="Graphs/Target_Groups/cortex_groups_3D.html" class="dataset-graph-html" scrolling="no"></iframe>
+			<iframe src="Graphs/Target_Groups/cortex_groups_2D.html" class="dataset-graph-html" scrolling="no"></iframe>
 		</div>
 
 	</div>
@@ -130,8 +136,10 @@
 	<div>
 		<a name="clustering" class="anchor"></a>
 		<h1>Clustering</h1>
-		<p>Data is high-dimensional as each cell contains many features.
-			Clustering will not work well if directly applied.
+		<p>The goal of clustering is to group cells that show similar gene expression.
+
+			However a problem with scRNA-seq data is that it is high-dimensional as each cell contains many features.
+			This means that clustering will not work well if directly applied.
 			Therefore, a method to extract and / or combine the most representational features is required.
 		</p>
 
