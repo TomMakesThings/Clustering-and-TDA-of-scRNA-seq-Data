@@ -13,7 +13,7 @@ function scrollFunction() {
   all_content = document.getElementsByClassName('header');
   var position = "absolute";
   var top = "0px";
-  if (window.innerWidth < 720) {
+  if (window.innerWidth <= 721) {
     if (document.body.scrollTop > 140 || document.documentElement.scrollTop > 140) {
       position = "fixed";
       top = "-140px";

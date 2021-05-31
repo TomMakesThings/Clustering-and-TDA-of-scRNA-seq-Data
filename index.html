@@ -5,7 +5,7 @@
 	<!-- Links to the CSS stylesheets -->
 	<link rel="stylesheet" href="Stylesheets\main.css">
 	<link rel="stylesheet" href="Stylesheets\navbar.css">
-	<link rel="stylesheet" href="Stylesheets\index.css">
+	<link rel="stylesheet" href="Stylesheets\about.css">
 	<link rel="stylesheet" href="Stylesheets\datasets.css">
 	<link rel="stylesheet" href="Stylesheets\graph_finder.css">
 	<link rel="stylesheet" href="Stylesheets\footer.css">
@@ -74,14 +74,16 @@
 		<a name="datasets" class="anchor"></a>
 		<h1>Datasets</h1>
 		<h2>Benchmark</h2>
-		<p>The first dataset was created by Tian et al. and is officially named <a href="https://github.com/LuyiTian/sc_mixology" target="_blank">sc_10x</a>, though here is referred to as the "benchmark dataset".
-			It contains 16,468 gene counts for 902 cells produced using the 10X Chromium scRNA-seq protocol.
+		<p>The first dataset was created by Tian et al. and contains 16,468 gene counts for 902 cells produced using the 10X Chromium scRNA-seq protocol.
+			It is officially named <a href="https://github.com/LuyiTian/sc_mixology/tree/master/data/csv" target="_blank">sc_10x</a>, though here is referred to as the "benchmark dataset" as it was used as a gold standard during testing and development.
 		</p>
 
 		<p><img src="Assets/Images/Benchmark-Counts.png" class="gene-counts" style="max-width: 900px"></p>
 
-		<p>This dataset consists of a mix of cells from three human lung adenocarcinoma cell lines HCC827, H1975 and H2228.
-			These have been coloured accordingly in the plot below of PCA with three principal components.
+		<p>The cells consist of a mixture from three human lung adenocarcinoma cell lines HCC827, H1975 and H2228.
+			These assignments are provided within the dataset's metadata and can therefore be used as target labels.
+			However, it should be noted that for many real-world applications of scRNA-seq, these targets would be unknown.
+			Each cell has been coloured accordingly in the plot below of PCA with three principal components.
 			The 150 cells randomly selected for initial experimentation can be seen by clicking on second legend on the graph.
 		</p>
 
@@ -92,22 +94,30 @@
 		<h2>Simulated</h2>
 		<p>The second dataset was made during this project and is available to download from my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Data/Datasets">GitHub</a>.
 			It was created using the Splat simulator, which is part of the R package <a href="https://bioconductor.org/packages/devel/bioc/vignettes/splatter/inst/doc/splatter.html" target="_blank">Splatter</a>,
-			and consists 2000 cells again with 16,468 genes each.
+			and consists 2000 cells with 16,468 genes each.
 			To replicate real gene expression, the Splat simulator was seeded with the benchmark dataset sc_10x.
 		</p>
 
 		<p><img src="Assets/Images/Simulated-Counts.png" class="gene-counts" style="max-width: 950px"></p>
 
-		<p>Each sample belongs to one of four target groups as shown below.</p>
+		<p>Each sample belongs to one of four target groups as shown below.
+			This time, 500 samples were initially selected.</p>
 
 		<div class="dataset-graph">
 			<iframe src="Graphs/Target_Groups/splat_groups_3D.html" class="dataset-graph-html" scrolling="no"></iframe>
 		</div>
 
 		<h2>Mouse Cortex</h2>
-		<p>The final dataset</p>
+		<p>The final dataset is by Zeisel et al. and contains 3005 brain cells each with 1072 genes from mouse cortex and hippocampus.
+			It is available to download from <a href="http://linnarssonlab.org/cortex/">Linnarsson Lab</a>.
+		</p>
 
 		<p><img src="Assets/Images/Mouse-Cortex-Counts.png" class="gene-counts" style="max-width: 900px"></p>
+
+		<p>Each cell is assigned to one of nine groups and 47 subgroups determined using BackSPIN biclustering.
+			 As explained in the <a href="https://science.sciencemag.org/content/347/6226/1138.abstract">original paper</a>, these subgroups comprise all known major cell types in the cortex.
+
+		</p>
 
 		<div class="dataset-graph">
 			<iframe src="Graphs/Target_Groups/cortex_groups_3D.html" class="dataset-graph-html" scrolling="no"></iframe>
@@ -120,6 +130,15 @@
 	<div>
 		<a name="clustering" class="anchor"></a>
 		<h1>Clustering</h1>
+		<p>Data is high-dimensional as each cell contains many features.
+			Clustering will not work well if directly applied.
+			Therefore, a method to extract and / or combine the most representational features is required.
+		</p>
+
+		<h2>Autoencoder</h2>
+		<p>T</p>
+
+
 	</div>
 
 	<br>

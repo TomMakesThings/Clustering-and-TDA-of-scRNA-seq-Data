@@ -6,23 +6,24 @@
 }
 
 .dataset-graph-html {
-  width: 100% !important;
+  width: 110% !important;
   height: 100% !important;
   border: none;
-  overflow: hidden;
-  position: relative;
-  left: -10px;
-  top: -10px;
+  overflow: visible;
+  left: -25px;
+  top: -35px;
 }
 
 @media screen and (max-width: 840px) {
   .dataset-graph {
     height: 430px;
+    width: 630px;
   }
 }
 
 @media screen and (max-width: 660px) {
   .dataset-graph {
     height: 330px;
+    width: 470px;
   }
 }

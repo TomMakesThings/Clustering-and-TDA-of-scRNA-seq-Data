@@ -55,9 +55,10 @@ h2 {
 }
 
 .content {
-  padding-left:50px;
-  padding-right:50px;
+  padding-left:80px;
+  padding-right:80px;
   margin-top: 100px;
+  overflow: visible;
 }
 
 /** Reposition anchor tags above linked content **/
@@ -85,5 +86,19 @@ a.anchor {
 @media screen and (max-width: 720px) {
   .content {
     margin-top: 240px;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 840px) {
+  .content {
+    padding-left:60px;
+    padding-right:60px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .content {
+    padding-left:40px;
+    padding-right:40px;
   }
 }

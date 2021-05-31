@@ -26,22 +26,22 @@ function searchFilter() {
       input_words = input.split(" ");
       found_all = true;
       for (k = 0; k < input_words.length; k++) {
-        /* Check if words in the input text match the words in the option's name or metadata tags */
+        // Check if words in the input text match the words in the option's name or metadata tags
         if (!(text_value.toUpperCase().indexOf(input_words[k]) > -1 || text_tags.toUpperCase().indexOf(input_words[k]) > -1)) {
           found_all = false;
         }
       }
-      /** If all words match, display the option **/
+      // If all words match, display the option
       if (found_all == true) {
         category_empty = false;
         option[j].style.display = "";
       }
-      /* Otherwise hide the option */
+      // Otherwise hide the option
       else {
         option[j].style.display = "none";
       }
     }
-    /* Hide category headers if no options left*/
+    // Hide category headers if no options left
     if (category_empty) {
       category.style.display = "none";
     }
@@ -52,20 +52,22 @@ function searchFilter() {
 }
 
 function displayGraph(option) {
-  /** Change the graph to display **/
+  // Change the graph to display
   graph.src = option.dataset.href;
-  /** Show if not already visible **/
+  // Show if not already visible
   graph_wrapper.style.display = "";
   graph_title = document.getElementById("graph-selected")
   graph_title.innerHTML = option.innerHTML;
   if (option.className.includes("cluster-link")) {
-    graph_wrapper.style.padding = "0px";
+    // Add class attribute
     graph_wrapper.classList.add("cluster-graph");
+    // Resize the div
+    graph_wrapper.setAttribute("style", "padding: 0px; height: 580px;");
     graphScale()
   }
   else {
-    graph_wrapper.style.padding = "20px 0px 20px 0px";
     graph_wrapper.classList.remove("cluster-graph");
+    graph_wrapper.setAttribute("style", "padding: 20px 0px 20px 0px; height: 750px;");
     graph.setAttribute("style", "width: 100% !important; height: 100% !important; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;");
   }
 }
@@ -80,11 +82,11 @@ function graphScale() {
   else if (window.innerWidth > 660) {
     style = "width: 800px !important; height: 500% !important; -webkit-transform: scale(0.8); transform: scale(0.8); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;";
   }
-  /* Update the cell line / group graphs */
+  // Update the cell line / group graphs
   for (var i = 0; i < group_graphs.length; i++) {
       group_graphs[i].setAttribute("style", style);
   }
-  /* Update the graph finder graph */
+  // Update the graph finder graph
   if (graph_wrapper.className.includes("cluster-graph")) {
     graph.setAttribute("style", style);
   }
@@ -96,5 +98,5 @@ window.addEventListener('resize', graphScale);
 
 graphScale()
 
-/** Hide graph on page load **/
+// Hide graph on page load
 graph_wrapper.style.display = "none";
