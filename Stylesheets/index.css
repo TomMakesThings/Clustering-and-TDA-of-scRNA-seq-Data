@@ -1,8 +1,10 @@
 #scRNA-seq-steps {
-  max-width: 400px;
-  width: 100%;
-  margin-left: 10px;
+  height: 420px;
+  position: relative;
+  top: -40px;
+  margin-left: 15px;
   float: right;
+  transition: 0.8s;
 }
 
 #background-text {
@@ -13,9 +15,28 @@
   width: 100%;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 800px) {
   #scRNA-seq-steps {
     float: none;
     display: block;
+    top: 0px;
+  }
+}
+
+@media screen and (min-width: 1160px) and (max-width: 1350px) {
+  #scRNA-seq-steps {
+    margin: 0px;
+    top: -45px;
+    transform: scale(0.9);
+    margin: -20px -20px -20px 0px;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  #scRNA-seq-steps {
+    margin: 0px;
+    top: -40px;
+    transform: scale(0.85);
+    margin: -50px -50px -50px 0px;
   }
 }
