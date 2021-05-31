@@ -9,6 +9,10 @@
   text-align: left
 }
 
+.gene-counts {
+  width: 100%;
+}
+
 @media screen and (max-width: 720px) {
   #scRNA-seq-steps {
     float: none;

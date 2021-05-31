@@ -41,8 +41,8 @@
 
 	<br>
 
-	<a name="background" class="anchor"></a>
 	<div id="background-text">
+		<a name="background" class="anchor"></a>
 		<h1>Background</h1>
 				<p><img src="Assets/Images/scRNA-seq-Steps.png" alt="Single-cell RNA sequencing steps" id="scRNA-seq-steps"></img></p>
 		<h2>Genes and Proteins</h2>
@@ -70,22 +70,32 @@
 
 	<br>
 
-	<a name="datasets" class="anchor"></a>
 	<div>
+		<a name="datasets" class="anchor"></a>
 		<h1>Datasets</h1>
 		<h2>Benchmark</h2>
-		<p>The first dataset was created by Tian et al. and is officially named <a href="https://github.com/LuyiTian/sc_mixology" target="_blank">sc_10x</a>, though here is referred to as the "Benchmark dataset".
-			This contains gene counts of 902 cells from three human lung adenocarcinoma cell lines HCC827, H1975 and H2228.
-			These counts were produced using the 10X Chromium scRNA-seq protocol.</p>
+		<p>The first dataset was created by Tian et al. and is officially named <a href="https://github.com/LuyiTian/sc_mixology" target="_blank">sc_10x</a>, though here is referred to as the "benchmark dataset".
+			This contains 16,468 gene counts for 902 cells produced using the 10X Chromium scRNA-seq protocol.
+		</p>
+
+		<p><img src="Assets/Images/Benchmark-Counts.png" class="gene-counts" style="max-width: 900px"></p>
+
+		<p>The dataset consists of a mix of cells from three human lung adenocarcinoma cell lines HCC827, H1975 and H2228.
+			These have been coloured accordingly in the plot of PCA with three principal components below.
+			The 150 cells initially selected for testing can be seen by clicking on second legend on the graph.
+		</p>
 
 		<div class="dataset-graph">
 			<iframe src="Graphs/Target_Groups/sc_10x_cell_lines_3D.html" class="dataset-graph-html" scrolling="no"></iframe>
 		</div>
 
 		<h2>Simulated</h2>
-		<p>The second dataset was created during this project using the Splat simulator which is part of the R package <a href="https://bioconductor.org/packages/devel/bioc/vignettes/splatter/inst/doc/splatter.html" target="_blank">Splatter</a>.
-			To replicate the gene expression of real cells, the Splat simulator was seeded with the benchmark dataset.
+		<p>The second dataset was made during this project using the Splat simulator which is part of the R package <a href="https://bioconductor.org/packages/devel/bioc/vignettes/splatter/inst/doc/splatter.html" target="_blank">Splatter</a>.
+			This consists 2000 samples split into four target groups.
+			To replicate real gene expression, the Splat simulator was seeded with the benchmark dataset.
 		</p>
+
+		<p><img src="Assets/Images/Simulated-Counts.png" class="gene-counts" style="max-width: 950px"></p>
 
 		<div class="dataset-graph">
 			<iframe src="Graphs/Target_Groups/splat_groups_3D.html" class="dataset-graph-html" scrolling="no"></iframe>
@@ -93,6 +103,8 @@
 
 		<h2>Mouse Cortex</h2>
 		<p></p>
+
+		<p><img src="Assets/Images/Mouse-Cortex-Counts.png" class="gene-counts" style="max-width: 900px"></p>
 
 		<div class="dataset-graph">
 			<iframe src="Graphs/Target_Groups/cortex_groups_3D.html" class="dataset-graph-html" scrolling="no"></iframe>
@@ -102,8 +114,8 @@
 
 	<br>
 
-	<a name="clustering" class="anchor"></a>
 	<div>
+		<a name="clustering" class="anchor"></a>
 		<h1>Clustering</h1>
 	</div>
 
@@ -121,8 +133,8 @@
 
 	<br>
 
-	<a name="graphfinder" class="anchor"></a>
 	<div id="graph-finder">
+		<a name="graphfinder" class="anchor"></a>
 		<h1>Graph Finder</h1>
 		<p>Enter keywords to search for a clustering or topological data analysis experiment result:</p>
 
@@ -275,12 +287,14 @@
 		<a id="graph-selected"></a>
 
 		<div id="graph-wrapper">
-			<object data="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_E_68.7%25.html" id="graph-html"></object>
+			<iframe src="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_E_68.7%25.html" id="graph-html" scrolling="no"></iframe>
 		</div>
 
 	</div>
 
 </div>
+
+<br>
 
 <div class="footer">
 	<div class="footer-center">

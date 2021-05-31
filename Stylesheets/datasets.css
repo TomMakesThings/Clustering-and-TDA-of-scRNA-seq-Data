@@ -1,5 +1,6 @@
 .dataset-graph {
-  width: 820px;
+  width: 100%;
+  max-width: 820px;
   height: 550px;
   overflow: hidden;
 }
@@ -9,4 +10,19 @@
   height: 100% !important;
   border: none;
   overflow: hidden;
+  position: relative;
+  left: -10px;
+  top: -10px;
+}
+
+@media screen and (max-width: 840px) {
+  .dataset-graph {
+    height: 430px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .dataset-graph {
+    height: 330px;
+  }
 }

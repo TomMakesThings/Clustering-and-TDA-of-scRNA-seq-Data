@@ -8,6 +8,7 @@ function profileUnhover(element) {
 
 window.onscroll = function() {scrollFunction()};
 
+/* Adjust the header when scrolling down */
 function scrollFunction() {
   all_content = document.getElementsByClassName('header');
   var position = "absolute";
@@ -26,3 +27,14 @@ function scrollFunction() {
     all_content[i].style.top = top;
   }
 }
+
+var top = this.scrollY, left = this.scrollX;
+
+/* Remove the hash from the URL when the page is reloaded to prevent page jumps */
+function anchorLinks() {
+  if (location.hash != '') {
+      window.history.replaceState('', document.title, location.href.replace(/#.*$/, ''));
+  }
+}
+
+anchorLinks();

@@ -25,7 +25,7 @@ function searchFilter() {
       text_tags = option[j].dataset.tags;
       input_words = input.split(" ");
       found_all = true;
-      for (k = 0; k < input_words.length; k++){
+      for (k = 0; k < input_words.length; k++) {
         /* Check if words in the input text match the words in the option's name or metadata tags */
         if (!(text_value.toUpperCase().indexOf(input_words[k]) > -1 || text_tags.toUpperCase().indexOf(input_words[k]) > -1)) {
           found_all = false;
@@ -53,7 +53,7 @@ function searchFilter() {
 
 function displayGraph(option) {
   /** Change the graph to display **/
-  graph.data = option.dataset.href;
+  graph.src = option.dataset.href;
   /** Show if not already visible **/
   graph_wrapper.style.display = "";
   graph_title = document.getElementById("graph-selected")
@@ -70,23 +70,31 @@ function displayGraph(option) {
   }
 }
 
+/* Resize graphs to fit screen */
 function graphScale() {
+  var group_graphs = document.getElementsByClassName("dataset-graph-html");
+  var style = "width: 800px !important; height: 500% !important; -webkit-transform: scale(0.6); transform: scale(0.6); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;";
+  if (window.innerWidth > 840) {
+    style = "width: 100% !important; height: 100% !important; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;";
+  }
+  else if (window.innerWidth > 660) {
+    style = "width: 800px !important; height: 500% !important; -webkit-transform: scale(0.8); transform: scale(0.8); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;";
+  }
+  /* Update the cell line / group graphs */
+  for (var i = 0; i < group_graphs.length; i++) {
+      group_graphs[i].setAttribute("style", style);
+  }
+  /* Update the graph finder graph */
   if (graph_wrapper.className.includes("cluster-graph")) {
-    if (window.innerWidth > 840) {
-      graph.setAttribute("style", "width: 100% !important; height: 100% !important; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;");
-    }
-    else if (window.innerWidth > 660) {
-      graph.setAttribute("style", "width: 800px !important; height: 500% !important; -webkit-transform: scale(0.8); transform: scale(0.8); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;");
-    }
-    else {
-      graph.setAttribute("style", "width: 800px !important; height: 500% !important; -webkit-transform: scale(0.6); transform: scale(0.6); -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; -webkit-transform-origin: 0 0; transform-origin: 0 0;");
-    }
+    graph.setAttribute("style", style);
   }
 }
 
 graphform.addEventListener("mouseover", showDropdown);
 graphform.addEventListener("mouseout", hideDropdown);
 window.addEventListener('resize', graphScale);
+
+graphScale()
 
 /** Hide graph on page load **/
 graph_wrapper.style.display = "none";

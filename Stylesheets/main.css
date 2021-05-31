@@ -7,6 +7,7 @@
   --blue: #0078A2;
   --darkblue: #0000FF;
   --darkerblue: #00004C;
+  --wid: 720px;
 }
 
 /** Custom fonts **/
@@ -41,13 +42,16 @@ h1, h2, h3 {
 
 h1 {
   font-size: 25px;
-  background: -webkit-linear-gradient(var(--darkerblue), var(--darkblue));
+  background: -webkit-linear-gradient(var(--blue), var(--lightblue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 h2 {
   font-size: 20px;
+  background: -webkit-linear-gradient(var(--darkerblue), var(--darkblue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .content {
