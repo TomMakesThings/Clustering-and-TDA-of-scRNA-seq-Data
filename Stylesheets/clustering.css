@@ -20,9 +20,14 @@
   margin-left: 15px;
 }
 
-#preprocessing img {
+.preprocessing-horizontal img {
   width: 100%;
-  max-width: 550px;
+  max-width: 1200px;
+}
+
+.preprocessing-vertical img {
+  width: 100%;
+  max-width: 300px;
 }
 
 @media screen and (max-width: 1050px) {
@@ -30,5 +35,10 @@
     float: none;
     display: block;
     top: 0px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .preprocessing-horizontal img {
   }
 }
