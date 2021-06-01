@@ -28,20 +28,16 @@
   margin-right: -20px;
 }
 
-.preprocessing-horizontal img {
+.preprocessing img {
   width: 100%;
   max-width: 1200px;
   display: block;
-  margin-rigth: -15px;
 }
 
-.preprocessing-vertical img {
+.preprocessing-cropped img {
   width: 100%;
-  max-width: 210px;
+  max-width: 600px;
   display: none;
-  float: right;
-  margin-left: 15px;
-  margin-right: -35px;
 }
 
 .feature-extractors img {
@@ -68,13 +64,12 @@
     float: none;
     width: 100%;
   }
-}
 
-@media screen and (max-width: 1200px) {
-  .preprocessing-vertical img {
+  .preprocessing-cropped img {
     display: block;
   }
-  .preprocessing-horizontal img {
+
+  .preprocessing img {
     display: none;
   }
 }

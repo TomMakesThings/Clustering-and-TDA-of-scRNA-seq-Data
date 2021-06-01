@@ -25,7 +25,8 @@
 		<a href="https://tommakesthings.github.io/" id="username" class="navtext">TomMakesThings</a>
 	</div>
 	<div id="header-center">
-		<a href="index.html" class="navtext">Clustering and TDA of scRNA-Seq Data</a>
+		<a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data" class="navtext">Clustering and TDA of scRNA-Seq Data</a>
+		<a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data"><img src="Assets/Images/GitHub-Logo-White.png" alt="GitHub logo" id="github"></a>
 	</div>
 	<div class="header-right">
 		<a href="#about" class="navtext">About</a>
@@ -221,12 +222,17 @@
 		</div>
 
 		<h3>t-Distributed Stochastic Neighbor Embedding</h3>
-		<p>In addition, some other preprocessing techniques that may improve performance include </p>
+		<p>t-SNE is an algorithm well suited to the visualisation of high-dimensional data.
+		</p>
 
-		<p class="preprocessing-horizontal"><img src="Assets/Images/Preprocessing.png"></p>
-		<p class="preprocessing-vertical"><img src="Assets/Images/Preprocessing-Vertical.png"></p>
+		<p class="preprocessing"><img src="Assets/Images/Preprocessing.png"></p>
+		<p class="preprocessing-cropped"><img src="Assets/Images/Preprocessing-Cropped.png"></p>
 
-		<h2>Clustering Algorithms</h2>
+		<h2>Measuring Performance</h2>
+		<p>As clustering algorithms are unsupervised, they are not guided by a target output.
+			However, just because a cluster assignment appears to make sense does not mean it is correct.
+			Fortunately, each selected dataset contains group labels so to evaluate correctness, these can be matched with predicted clusters to calculate accuracy and adjusted Rand index (ARI).
+		</p>
 
 		<div class="cluster-row">
 			<div class="cluster-column">
@@ -236,8 +242,6 @@
 				<p><img src="Assets/Images/Clustering-Example-2.png"></p>
 			</div>
 		</div>
-
-		<h2>Clustering Algorithms</h2>
 
 		<h2>Results</h2>
 

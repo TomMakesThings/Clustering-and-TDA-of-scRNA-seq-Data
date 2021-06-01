@@ -5,6 +5,12 @@
 	border-radius: 50%;
 }
 
+#github {
+  max-width: 50px;
+  max-height: 50px;
+  margin-bottom: -15px;
+}
+
 #username {
   font-size: 25px;
 }
