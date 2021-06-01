@@ -1,14 +1,21 @@
 .cluster-column img {
   width: 50%;
-  max-width: 500px;
+  max-width: 400px;
   float: left;
   padding: 5px 15px 5px 15px;
 }
 
-.cluster-row::after {
+.cluster-row::after, .heatmap-row::after {
   content: "";
   clear: both;
   display: table;
+}
+
+.heatmap-column img {
+  width: 50%;
+  max-width: 500px;
+  float: left;
+  padding: 5px 15px 5px 15px;
 }
 
 #autoencoder img {
@@ -18,16 +25,33 @@
   position: relative;
   top: -45px;
   margin-left: 15px;
+  margin-right: -20px;
 }
 
 .preprocessing-horizontal img {
   width: 100%;
   max-width: 1200px;
+  display: block;
+  margin-rigth: -15px;
 }
 
 .preprocessing-vertical img {
   width: 100%;
-  max-width: 300px;
+  max-width: 210px;
+  display: none;
+  float: right;
+  margin-left: 15px;
+  margin-right: -35px;
+}
+
+.feature-extractors img {
+  width: 100%;
+  max-width: 850px;
+}
+
+.pca-scores img {
+  width: 100%;
+  max-width: 950px;
 }
 
 @media screen and (max-width: 1050px) {
@@ -35,10 +59,22 @@
     float: none;
     display: block;
     top: 0px;
+    margin-right: 0px;
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
+  .heatmap-column img {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .preprocessing-vertical img {
+    display: block;
+  }
   .preprocessing-horizontal img {
+    display: none;
   }
 }
