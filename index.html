@@ -44,7 +44,7 @@
   	<h1>About</h1>
 		<p>This site gives a brief overview of my undergraduate dissertation, though may also be used as an introduction to some useful computational methods for the analysis of single-cell RNA sequencing data.
 			The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets.
-			For more information, read the paper.
+			For more detail, refer to the paper.
 		</p>
 	</div>
 
@@ -109,8 +109,8 @@
 
 		<p><img src="Assets/Images/Simulated-Counts.png" class="gene-counts" style="max-width: 950px"></p>
 
-		<p>Each sample belongs to one of four target groups as shown below.
-			This time, 500 samples were initially selected.</p>
+		<p>Each sample belongs to one of four target groups as shown in the plot below.
+			This time, 500 samples were randomly selected for initial experimentation.</p>
 
 		<div class="dataset-graph">
 			<iframe src="Graphs/Target_Groups/splat_groups_2D.html" class="dataset-graph-html" scrolling="no"></iframe>
@@ -123,9 +123,11 @@
 
 		<p><img src="Assets/Images/Mouse-Cortex-Counts.png" class="gene-counts" style="max-width: 900px"></p>
 
-		<p>Each cell is assigned to one of nine groups and 47 subgroups determined using BackSPIN biclustering.
+		<p>Each cell is assigned to one of nine numerical groups and 47 subgroups determined using BackSPIN biclustering.
 			 As explained in the <a href="https://science.sciencemag.org/content/347/6226/1138.abstract">original paper</a>, these subgroups comprise all known major cell types in the cortex.
-
+			 The initial nine groups are labelled according to cell type as: astrocytes-ependymal, endothelial-mural, interneurons, microglia, oligodendrocytes, pyramidal CA1 or pyramidal SS.
+			 Though groups 1 and 2 are assigned class joint pyramidal CA1, and 7 and 8 astrocytes_ependymal and so there are seven target labels.
+			 Again 500 cells were randomly selected for initial experimentation.
 		</p>
 
 		<div class="dataset-graph">
@@ -140,18 +142,52 @@
 		<a name="clustering" class="anchor"></a>
 		<h1>Clustering</h1>
 		<p>Clustering is an unsupervised machine learning technique for grouping data points with similar traits.
-			Here the goal is to group cells that show similar gene expression.
-		</p>
-		<p>
-			However a problem with scRNA-seq data is that it is high-dimensional as each cell contains many features.
-			This means that clustering will not work well if directly applied.
-			Therefore, a method to extract and / or combine the most representational features is required.
+			For scRNA-seq data, the goal is to group cells that show similar gene expression.
+			However a problem with this type of data is that it is high-dimensional as each cell contains many features.
+			This means that clustering will not work well if directly applied as there will be too much noise to reliably seperate the data.
+			Therefore a method to extract and / or combine the most representational features is required.
 		</p>
 
-		<h2>Autoencoder</h2>
+		<h2>Dimensionality Reduction</h2>
+		<h3>Autoencoders</h3>
+
+		<p id="autoencoder"><img src="Assets/Images/Autoencoder.png"></p>
+
+		<p>An autoencoder is a type of artificial neural network with an encoder-decoder architecture that learns a compressed representation of the data.
+			During training, the gene counts are given as input and the network will attempt to recreate this and return it at the output layer.
+			After training, the output layer can be discarded and the encoding retrieved from the network's bottleneck layer.
+			This learnt encoding can be used directly, or in combination with additional pre-processing techniques for clustering.
+			It is good practise to test different network architectures and hyperparameters to improve the recreation accuracy of a dataset.
+			For this project, the autoencoder's encoding size was set to 16 and the parameters optimised for the benchmark dataset.
+			This includes:
+		</p>
+		<ul>
+			<li>Setting the PReLU activation function after the first linear layer in the encoder</li>
+  		<li>Using the AMSGrad variant of the Adam optimiser with learning rate 0.001</li>
+  		<li>Training through mini-batch gradient descent with a batch size of four</li>
+		</ul>
+
+		<h3>Principal Component Analysis</h3>
+
+		<h3>Alternatives</h3>
+
+		<h2>Additional Pre-Processing</h2>
 		<p>T</p>
 
-		<p class="autoencoder"><img src="Assets/Images/Autoencoder.png"></p>
+		<p id="preprocessing"><img src="Assets/Images/Pre-Processing.png"></p>
+
+		<h2>Clustering</h2>
+
+		<div class="cluster-row">
+			<div class="cluster-column">
+				<p><img src="Assets/Images/Clustering-Example.png"></p>
+			</div>
+			<div class="cluster-column">
+				<p><img src="Assets/Images/Clustering-Example-2.png"></p>
+			</div>
+		</div>
+
+		<h2>Results</h2>
 
 	</div>
 
