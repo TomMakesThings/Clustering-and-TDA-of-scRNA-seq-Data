@@ -27,7 +27,7 @@ input:-webkit-autofill:focus,
   opacity: 0.7;
 }
 
-#graphform {
+#graphsearch {
   position: relative;
   display: inline-block;
   width: 100%;

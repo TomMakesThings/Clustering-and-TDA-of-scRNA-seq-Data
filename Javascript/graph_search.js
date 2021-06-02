@@ -1,4 +1,4 @@
-const graphform = document.getElementById('graphform');
+const graphsearch = document.getElementById('graphsearch');
 const query = document.getElementById('query');
 const graph = document.getElementById("graph-html");
 const graph_wrapper = document.getElementById("graph-wrapper");
@@ -13,7 +13,7 @@ function hideDropdown(event) {
 
 function searchFilter() {
   input = query.value.toUpperCase();
-  form = document.getElementById("graphform");
+  form = document.getElementById("graphsearch");
   let options = ["cluster-link", "tda-link"];
   let categories = ["cluster-category", "tda-category"];
   for (i = 0; i < options.length; i++) {
@@ -92,8 +92,8 @@ function graphScale() {
   }
 }
 
-graphform.addEventListener("mouseover", showDropdown);
-graphform.addEventListener("mouseout", hideDropdown);
+graphsearch.addEventListener("mouseover", showDropdown);
+graphsearch.addEventListener("mouseout", hideDropdown);
 window.addEventListener('resize', graphScale);
 
 graphScale()

@@ -247,7 +247,7 @@
 
 		<p><img src="Assets/Images/Bipartite-Matching.png" id="bipartite"></p>
 
-		<p>Clustering algorithms output arbitrary numerical values to represent the predicted cluster for each cell.
+		<p>Arbitrary numerical values are outputted by clustering algorithms to represent the predicted cluster for each cell.
 			As each selected dataset contains group labels, it possible to evaluate correctness by finding the optimal mapping between these labels and predictions.
 			There are multiple methods to achieve this, but for this project I constructed a bipartite graph between the two sets and applied the Hungarian matching algorithm to find the maximal-weight matchings.
 			These were used to calculate performance metrics such as accuracy and adjusted Rand index (ARI).
@@ -258,11 +258,11 @@
 			<iframe src="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_E_68.7%25.html" class="dataset-graph-html" scrolling="no"></iframe>
 		</div>
 
-		<p>By comparing the target labels and the cluster predictions, 
+		<p>By comparing the target labels and predicted clusters,
 		</p>
 
 		<div class="dataset-graph">
-			<iframe src="Graphs/Alternative_Algorithms/Benchmarking_Data/sc_10x_minibatch_k-means_2_PCA_t-SNE_99%25.html" class="dataset-graph-html" scrolling="no"></iframe>
+			<iframe src="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_SE_t-SNE_99.3%25.html" class="dataset-graph-html" scrolling="no"></iframe>
 		</div>
 
 		<h2>Best Results</h2>
@@ -285,6 +285,18 @@
 
 		<p class="tda-graph"><img src="Assets/Images/TDA-Hypercubes.png"></p>
 
+		<div class="mapper-graph">
+			<iframe src="Graphs/Topological_Data_Analysis/GitHub_Pages/benchmarking_scRNAseq_graph.html" class="mapper-graph-html" scrolling="no"></iframe>
+		</div>
+
+		<div class="mapper-graph">
+			<iframe src="Graphs/Topological_Data_Analysis/GitHub_Pages/simulated_scRNAseq_graph.html" class="mapper-graph-html" scrolling="no"></iframe>
+		</div>
+
+		<div class="mapper-graph">
+			<iframe src="Graphs/Topological_Data_Analysis/GitHub_Pages/evaluation_scRNAseq_graph.html" class="mapper-graph-html" scrolling="no"></iframe>
+		</div>
+
 	</div>
 
 	<br>
@@ -306,8 +318,8 @@
 		<h1>Graph Finder</h1>
 		<p>Enter keywords to search for a clustering or topological data analysis experiment result:</p>
 
-		<form id="graphform" role="search" autocomplete="off">
-			<input type="search" name="search" placeholder="Search..." id="query" onclick="showDropdown()" oninput="showDropdown()" onkeyup="searchFilter()" onsearch="searchFilter()" aria-label="Find a graph">
+		<div id="graphsearch">
+			<input type="search" name="search" placeholder="Search..." id="query" autocomplete="off" onclick="showDropdown()" oninput="showDropdown()" onkeyup="searchFilter()" onsearch="searchFilter()" aria-label="Find a graph">
 			<div id="dropdown-content">
 				<a class="dropdown-category" id="cluster-category">Clustering</a>
 				<!--Benchmark clustering graphs-->
@@ -317,9 +329,12 @@
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_SE_97.3%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this) ; hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian kmeans cluster component analysis">
 				<b>K-Means on Benchmark Data:</b> 150 cells, PCA with 2 principal components, standardization, autoencoder encoding, 97.3% accuracy</a>
+				<a class="cluster-link link-option" data-href="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_SE_t-SNE_99.3%25.html"
+				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this) ; hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian kmeans cluster component analysis tsne stochastic neighbor embedding">
+				<b>K-Means on Benchmark Data:</b> 150 cells, PCA with 2 principal components, standardization, autoencoder encoding, t-SNE with perplexity 30, 99.3% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_SU_72.7%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian kmeans cluster component analysis">
-				<b>K-Means on Benchmark Data:</b> 150 cells, PCA with 2 principal components, standardization, 72.7% accuracy</a>
+				<b>K-Means on Benchmark Data:</b> 150 cells, PCA with 2 principal components, standardization, no encoding, 72.7% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_U_64%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian kmeans cluster component analysis">
 				<b>K-Means on Benchmark Data:</b> 150 cells, PCA with 2 principal components, no encoding, 64% accuracy</a>
@@ -351,19 +366,19 @@
 
 				<a class="cluster-link link-option" data-href="Graphs/Alternative_Algorithms/Benchmarking_Data/sc_10x_hierarchical_3_PCA_99.9%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian cluster component analysis">
-				<b>Agglomerative Hierarchical Clustering on Benchmark Data:</b> 902 cells, PCA with 3 principal components, standardization, no encoding, 99.9% accuracy, 0.997 ARI</a>
+				<b>Agglomerative Hierarchical Clustering on Benchmark Data:</b> 902 cells, PCA with 3 principal components, standardization, no encoding, 99.9% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/Alternative_Algorithms/Benchmarking_Data/sc_10x_hierarchical_3_ICA_99.9%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian cluster independent component analysis independant">
-				<b>Agglomerative Hierarchical Clustering on Benchmark Data:</b> 902 cells, ICA with 4 independent components, standardization, no encoding, 99.9% accuracy, 0.997 ARI</a>
+				<b>Agglomerative Hierarchical Clustering on Benchmark Data:</b> 902 cells, ICA with 4 independent components, standardization, no encoding, 99.9% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/Alternative_Algorithms/Benchmarking_Data/sc_10x_k-means_3_NMF_87%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian kmeans cluster non negative matrix factorization">
-				<b>K-Means on Benchmark Data:</b> 902 cells, NMF with 3 basis components, standardization, no encoding, 87% accuracy, 0.696 ARI</a>
+				<b>K-Means on Benchmark Data:</b> 902 cells, NMF with 3 basis components, standardization, no encoding, 87% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/Alternative_Algorithms/Benchmarking_Data/sc_10x_gaussian_4_NMF_99.8%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian cluster non negative matrix factorization">
-				<b>Gaussian Mixture on Benchmark Data:</b> 902 cells, NMF with 4 basis components, standardization, no encoding, 99.8% accuracy, 0.993 ARI</a>
+				<b>Gaussian Mixture on Benchmark Data:</b> 902 cells, NMF with 4 basis components, standardization, no encoding, 99.8% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/Alternative_Algorithms/Benchmarking_Data/sc_10x_minibatch_k-means_2_PCA_t-SNE_99%25.html"
-				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian kmeans cluster component analysis tsne">
-				<b>Minibatch K-Means on Benchmark Data:</b> 902 cells, PCA with 2 principal components, standardization, autoencoder encoding, t-SNE with 30 perplexity, 99% accuracy, 0.970 ARI</a>
+				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian kmeans cluster component analysis tsne stochastic neighbor embedding">
+				<b>Minibatch K-Means on Benchmark Data:</b> 902 cells, PCA with 2 principal components, standardization, autoencoder encoding, t-SNE with 30 perplexity, 99% accuracy</a>
 
 				<!--Simulated clustering graphs-->
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Simulated_Data/splat_k-means_2_PCA_E_49.8%25.html"
@@ -387,19 +402,19 @@
 				<b>Agglomerative Hierarchical Clustering on Simulated Data:</b> 500 cells, PCA with 6 principal components, autoencoder encoding, 99.8% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/Alternative_Algorithms/Simulated_Data/splat_birch_4_PCA_100%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="splat fake generated tom analysis balanced iterative reducing and clustering using hierarchies">
-				<b>BIRCH on Simulated Data:</b> 2000 cells, PCA with 4 principal components, standardization, no encoding, 100% accuracy, ARI 1.0</a>
+				<b>BIRCH on Simulated Data:</b> 2000 cells, PCA with 4 principal components, standardization, no encoding, 100% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/Alternative_Algorithms/Simulated_Data/splat_birch_4_ICA_100%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="splat fake generated tom analysis balanced iterative reducing and clustering using hierarchies">
-				<b>BIRCH on Simulated Data:</b> 2000 cells, ICA with 4 independent components, standardization, no encoding, 100% accuracy, ARI 1.0</a>
+				<b>BIRCH on Simulated Data:</b> 2000 cells, ICA with 4 independent components, standardization, no encoding, 100% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/Alternative_Algorithms/Simulated_Data/splat_hierarchical_11_NMF_85%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="splat fake generated tom analysis cluster non negative matrix factorization">
-				<b>Agglomerative Hierarchical on Simulated Data:</b> 2000 cells, NMF with 11 basis components, no encoding, 85% accuracy, ARI 0.857</a>
+				<b>Agglomerative Hierarchical on Simulated Data:</b> 2000 cells, NMF with 11 basis components, no encoding, 85% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/Alternative_Algorithms/Simulated_Data/splat_spectral_2_PCA_t-SNE_50%25.html"
-				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="splat fake generated tom analysis cluster tsne">
-				<b>Spectral Clustering on Simulated Data:</b> 2000 cells, PCA with 2 principal components, autoencoder encoding, 50% accuracy</a>
+				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="splat fake generated tom analysis cluster tsne stochastic neighbor embedding">
+				<b>Spectral Clustering on Simulated Data:</b> 2000 cells, PCA with 2 principal components, autoencoder encoding, t-SNE with perplexity 30, 50% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/Alternative_Algorithms/Simulated_Data/splat_spectral_2_PCA_t-SNE_100%25.html"
-				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="splat fake generated tom analysis cluster tsne">
-				<b>Spectral Clustering on Simulated Data:</b> 2000 cells, PCA with 2 principal components, autoencoder encoding, 100% accuracy</a>
+				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="splat fake generated tom analysis cluster tsne stochastic neighbor embedding">
+				<b>Spectral Clustering on Simulated Data:</b> 2000 cells, PCA with 2 principal components, autoencoder encoding, t-SNE with perplexity 30, 100% accuracy</a>
 
 				<!--Mouse cortex clustering graphs-->
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Real_Evaluation_Data/cortex_k-means_2_PCA_SU_36.6%25.html"
@@ -416,37 +431,51 @@
 				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 30 perplexity, 33.2% accuracy, </a>
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Real_Evaluation_Data/cortex_k-means_t-SNE_perplexity=5.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="zeisel hippocampus mrna kmeans cluster component analysis tsne stochastic neighbor embedding">
-				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 5 perplexity, 30% accuracy, 0.104 ARI, 0.451 silhouette coefficient</a>
+				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 5 perplexity, 30% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Real_Evaluation_Data/cortex_k-means_t-SNE_perplexity=10.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="zeisel hippocampus mrna kmeans cluster component analysis tsne stochastic neighbor embedding">
-				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 10 perplexity, 28.4% accuracy, 0.1 ARI, 0.435 silhouette coefficient</a>
+				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 10 perplexity, 28.4% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Real_Evaluation_Data/cortex_k-means_t-SNE_perplexity=20.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="zeisel hippocampus mrna kmeans cluster component analysis tsne stochastic neighbor embedding">
-				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 20 perplexity, 29.8% accuracy, 0.112 ARI, 0.436 silhouette coefficient</a>
+				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 20 perplexity, 29.8% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Real_Evaluation_Data/cortex_k-means_t-SNE_perplexity=100.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="zeisel hippocampus mrna kmeans cluster component analysis tsne stochastic neighbor embedding">
-				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 100 perplexity, 34% accuracy, 0.125 ARI, 0.374 silhouette coefficient</a>
+				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 100 perplexity, 34% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Real_Evaluation_Data/cortex_k-means_t-SNE_perplexity=300.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="zeisel hippocampus mrna kmeans cluster component analysis tsne stochastic neighbor embedding">
-				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 300 perplexity, 37% accuracy, 0.137 ARI, 0.399 silhouette coefficient</a>
+				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 300 perplexity, 37% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/K-Means/Real_Evaluation_Data/cortex_k-means_t-SNE_perplexity=600.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="zeisel hippocampus mrna kmeans cluster component analysis tsne stochastic neighbor embedding">
-				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 600 perplexity, 21.6% accuracy, 0.005 ARI, 0.528 silhouette coefficient</a>
+				<b>K-Means on Mouse Cortex Data:</b> 500 cells, PCA with 16 principal components, standardization, no encoding, t-SNE with 600 perplexity, 21.6% accuracy</a>
 				<a class="cluster-link link-option" data-href="Graphs/Hierarchical_Clustering/Real_Evaluation_Data/cortex_hierarchical_9_PCA_SU_44%25.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="zeisel hippocampus mrna kmeans cluster component analysis">
 				<b>Agglomerative Hierarchical Clustering on Mouse Cortex Data:</b> 500 cells, PCA with 9 principal components, standardization, no encoding, 44% accuracy</a>
 
 				<!--TDA graphs-->
 				<a class="dropdown-category" id="tda-category">Topological Data Analysis</a>
+				<a class="tda-link link-option" data-href="Graphs/Topological_Data_Analysis/Parameter_Optimisation/scRNAseq_graph_ϵ=0.05.html"
+				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian simplicial complex kepler mapper tda topological data analysis">
+				<b>Benchmark Data</b>: Mapper simplicial complex with epsilon 0.05 and 10 cubes</a>
+				<a class="tda-link link-option" data-href="Graphs/Topological_Data_Analysis/Parameter_Optimisation/scRNAseq_graph_ϵ=0.2.html"
+				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian simplicial complex kepler mapper tda topological data analysis">
+				<b>Benchmark Data</b>: Mapper simplicial complex with epsilon 0.2 and 10 cubes</a>
+				<a class="tda-link link-option" data-href="Graphs/Topological_Data_Analysis/Parameter_Optimisation/scRNAseq_graph_ϵ=0.4.html"
+				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian simplicial complex kepler mapper tda topological data analysis">
+				<b>Benchmark Data</b>: Mapper simplicial complex with epsilon 0.4 and 10 cubes</a>
+				<a class="tda-link link-option" data-href="Graphs/Topological_Data_Analysis/Parameter_Optimisation/scRNAseq_graph_ϵ=0.8.html"
+				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian simplicial complex kepler mapper tda topological data analysis">
+				<b>Benchmark Data</b>: Mapper simplicial complex with epsilon 0.8 and 10 cubes</a>
 				<a class="tda-link link-option" data-href="Graphs/Topological_Data_Analysis/Final_Graphs/benchmarking_scRNAseq_graph.html"
 				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="sc_10x chromium lung adenocarcinoma luyi tian simplicial complex kepler mapper tda topological data analysis">
-				Benchmark</a>
+				<b>Benchmark Data</b>: Mapper simplicial complex with epsilon 0.15 and 10 cubes</a>
 				<a class="tda-link link-option" data-href="Graphs/Topological_Data_Analysis/Final_Graphs/simulated_scRNAseq_graph.html"
-				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="splatter tom fake generated simplicial complex kepler mapper tda topological data analysis">Simulated</a>
+				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="splatter tom fake generated simplicial complex kepler mapper tda topological data analysis">
+				<b>Simulated Data</b>: Mapper simplicial complex with epsilon 0.15 and 10 cubes</a>
 				<a class="tda-link link-option" data-href="Graphs/Topological_Data_Analysis/Final_Graphs/evaluation_scRNAseq_graph.html"
-				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="zeisel hippocampus mrna simplicial complex kepler mapper tda topological data analysis">Mouse Cortex</a>
+				target="_blank" rel="noopener noreferrer" onclick="displayGraph(this); hideDropdown()" data-tags="zeisel hippocampus mrna simplicial complex kepler mapper tda topological data analysis">
+				<b>Mouse Cortex Data</b>: Mapper simplicial complex with epsilon 0.15 and 10 cubes</a>
 			</div>
-		</form>
+		</div>
 
 		<br>
 		<br>
