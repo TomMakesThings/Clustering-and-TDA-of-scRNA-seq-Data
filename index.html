@@ -26,7 +26,6 @@
 	</div>
 	<div id="header-center">
 		<a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data" class="navtext">Clustering and TDA of scRNA-Seq Data</a>
-		<a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data"><img src="Assets/Images/GitHub-Logo-White.png" alt="GitHub logo" id="github"></a>
 	</div>
 	<div class="header-right">
 		<a href="#about" class="navtext">About</a>
@@ -150,12 +149,12 @@
 			However, for this project I tested six standard clustering algorithms from <a href="https://scikit-learn.org/stable/modules/clustering.html">scikit-learn</a>:
 		</p>
 		<ul>
-			<li>K-means</li>
-			<li>Agglomerative hierarchical clustering</li>
-			<li>Balanced iterative reducing and clustering using hierarchies (BIRCH)</li>
-			<li>Mini batch k-means</li>
-			<li>Spectral clustering</li>
-			<li>Gaussian mixture</li>
+			<li><b>K-means</b>: A commonly used iterative centroid based algorithm that divides data points into k clusters</li>
+			<li><b>Agglomerative hierarchical clustering</b>: A form of hierarchical clustering that builds a hierarchy of clusters by recursively merging pairs</li>
+			<li><b>Balanced iterative reducing and clustering using hierarchies (BIRCH)</b>: Another form of hierarchical clustering designed for clustering large datasets</li>
+			<li><b>Mini batch k-means</b>: An alternative version of k-means that instead clusters small subsets of the data each iteration to reduce memory usage</li>
+			<li><b>Spectral clustering</b>: A type of clustering that constructs a connected graph of data points and assigns clusters by partitioning into subgraphs</li>
+			<li><b>Gaussian mixture</b>: Clustering using a mixture of multiple Gaussian distributions</li>
 		</ul>
 
 		<h2>Preprocessing</h2>
@@ -187,18 +186,17 @@
 			Some commonly used techniques that I investigated are:
 		</p>
 		<ul>
-			<li>Principal component analysis (PCA)</li>
-			<li>Independent component analysis (ICA)</li>
-			<li>Non-negative matrix factorization (NMF)</li>
+			<li><b>Principal component analysis (PCA)</b>: A statistical technique that find the top principal components that maximise variance by solving a eigenvector problem</li>
+			<li><b>Independent component analysis (ICA)</b>: A method designed for signal processing that transforms a set of vectors into a maximally independent set</li>
+			<li><b>Non-negative matrix factorization (NMF)</b>: A technique that extracts features from a set of non-negative vectors</li>
 		</ul>
 
 	  <p class="feature-extractors"><img src="Assets/Images/Feature-Extractors.png"></p>
 
-		<p>Before running these algorithms, the number of features to reduce the data down to must be specified.
-			For example, the graphs above show extraction of two components from the benchmark data.
+		<p>Before running these algorithms, the number of features to reduce the data to must be specified.
 			Specific genes are not directly selected, but instead new features are created from weighted combinations of genes.
-			Investigating which genes provide the largest contributions to the top components may also reveal additional information of interest.
-			For example with PCA, the graph below of the top three principal components discloses genes that show a large amount of variation between cells.
+			Investigating which genes provide the largest contributions to these top components may also reveal additional information of interest.
+			For example in the graph below, after applying PCA to the benchmark dataset, plotting the magnitude of the eigenvector loading scores for the top three principal components discloses which genes show the greatest variation between cells.
 		</p>
 		<p class="pca-scores"><img src="Assets/Images/Loading-Scores-Histogram.png"></p>
 
@@ -222,28 +220,52 @@
 		</div>
 
 		<h3>t-Distributed Stochastic Neighbor Embedding</h3>
-		<p>t-SNE is an algorithm well suited to the visualisation of high-dimensional data.
+		<p>t-SNE is an algorithm well suited to visualisation of high-dimensional data.
+			It is popular for scRNA-seq data as it isolates groups of cells while preserving local similarities.
+			This is achieved by minimising the Kullback-Leibler divergence over two probability distributions constructed from the high-dimensional and low dimensional space.
+			Unlike other dimensionality reduction techniques, with t-SNE global geometry is lost due to the random initialisation of the algorithm.
+			This means that the distance between and position of groups of cells do not have any significant meaning.
+			If using t-SNE, it is advisable to apply another dimensionality reduction method beforehand to remove noise.
 		</p>
 
 		<p class="preprocessing"><img src="Assets/Images/Preprocessing.png"></p>
 		<p class="preprocessing-cropped"><img src="Assets/Images/Preprocessing-Cropped.png"></p>
 
-		<h2>Measuring Performance</h2>
-		<p>As clustering algorithms are unsupervised, they are not guided by a target output.
-			However, just because a cluster assignment appears to make sense does not mean it is correct.
-			Fortunately, each selected dataset contains group labels so to evaluate correctness, these can be matched with predicted clusters to calculate accuracy and adjusted Rand index (ARI).
+		<h2>Measuring Correctness</h2>
+		<p>Clustering algorithms are unsupervised meaning that they are not guided by a target output.
+			However, clustering can often be misleading and just because a cluster assignment looks reasonable does not mean it is correct.
 		</p>
 
 		<div class="cluster-row">
 			<div class="cluster-column">
-				<p><img src="Assets/Images/Clustering-Example.png"></p>
+				<p><img src="Assets/Images/Clustering-Example.png" style="margin-left:-10px;"></p>
 			</div>
 			<div class="cluster-column">
 				<p><img src="Assets/Images/Clustering-Example-2.png"></p>
 			</div>
 		</div>
 
-		<h2>Results</h2>
+		<p><img src="Assets/Images/Bipartite-Matching.png" id="bipartite"></p>
+
+		<p>Clustering algorithms output arbitrary numerical values to represent the predicted cluster for each cell.
+			As each selected dataset contains group labels, it possible to evaluate correctness by finding the optimal mapping between these labels and predictions.
+			There are multiple methods to achieve this, but for this project I constructed a bipartite graph between the two sets and applied the Hungarian matching algorithm to find the maximal-weight matchings.
+			These were used to calculate performance metrics such as accuracy and adjusted Rand index (ARI).
+			The difference can also be plotted to visualise which cells the clustering algorithm was not able to correctly predict.
+		</p>
+
+		<div class="dataset-graph">
+			<iframe src="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_E_68.7%25.html" class="dataset-graph-html" scrolling="no"></iframe>
+		</div>
+
+		<p>By comparing the target labels and the cluster predictions, 
+		</p>
+
+		<div class="dataset-graph">
+			<iframe src="Graphs/Alternative_Algorithms/Benchmarking_Data/sc_10x_minibatch_k-means_2_PCA_t-SNE_99%25.html" class="dataset-graph-html" scrolling="no"></iframe>
+		</div>
+
+		<h2>Best Results</h2>
 
 	</div>
 
@@ -252,7 +274,12 @@
 	<div>
 		<a name="tda" class="anchor"></a>
 		<h1>Topological Data Analysis</h1>
-		<p>TDA
+		<p>Mapper is an TDA algorithm that constructs a simplicial complex.
+			This is a type of graph that represents a high-dimensional shape of data with many features.
+			There is no right way to construct a complex, but the aim is to reveal topological features.
+			For Kepler Mapper, the main hyperparameters to tune are epsilon and hypercubes.
+			Simplicial complexes for each dataset were created with the same hyperparameters so that topological features can be compared.
+
 		</p>
 		<p class="tda-graph"><img src="Assets/Images/TDA-Epsilon.png"></p>
 

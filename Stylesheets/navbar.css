@@ -5,12 +5,6 @@
 	border-radius: 50%;
 }
 
-#github {
-  max-width: 50px;
-  max-height: 50px;
-  margin-bottom: -15px;
-}
-
 #username {
   font-size: 25px;
 }
@@ -63,7 +57,7 @@
   float: right;
 }
 
-#header-left:hover, .navtext:hover {
+#header-left:hover img, .navtext:hover {
   transition: 0.3s;
   text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
   -webkit-filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
