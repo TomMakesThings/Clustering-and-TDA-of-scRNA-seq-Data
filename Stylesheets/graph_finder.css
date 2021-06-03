@@ -18,7 +18,7 @@ input:hover,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 #dropdown-content {
-  -webkit-filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.2));
   filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.2));
 }
 

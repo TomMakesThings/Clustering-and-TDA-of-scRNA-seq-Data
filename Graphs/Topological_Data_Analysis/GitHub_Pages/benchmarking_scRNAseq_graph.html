@@ -407,7 +407,7 @@ label {
 
         <div class='banner'>
           <noscript><b>Requires JavaScript (d3.js) for visualizations</b></noscript>
-          <h1> Simplicial Complex of Benchmarking Dataset </h1>
+          <h1></h1>
         </div>
 
       </div>
@@ -860,6 +860,7 @@ function init() {
       set_cursor('pointer');
     }
   });
+
 }
 
 function set_histogram(selection, data){
@@ -961,6 +962,7 @@ function start() {
   simulation.alpha(1).restart()
 
   reset_color_functions()
+
 }
 
 init();
@@ -1413,6 +1415,7 @@ document.getElementById('load-config').addEventListener('click', function(){
   }
   fr.readAsText(config_file)
 })
+
 function load_config(config){
   node = node.datum(function(d, i){
     let load_node_config = config[d['name']]
@@ -1427,6 +1430,7 @@ function load_config(config){
   })
   simulation.restart()
 }
+
 </script>
 </body>
 

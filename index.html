@@ -93,7 +93,7 @@
 			These assignments are provided within the dataset's metadata and can therefore be used as target labels.
 			However, it should be noted that for many real-world applications of scRNA-seq, these targets would be unknown.
 			Each cell has been coloured accordingly in the plot below of PCA with two principal components.
-			The 150 cells randomly selected for initial experimentation can be seen by clicking on second legend on the graph.
+			The 150 cells randomly selected for initial experimentation are represented by the coloured in dots.
 		</p>
 
 		<div class="dataset-graph">
@@ -258,14 +258,56 @@
 			<iframe src="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_E_68.7%25.html" class="dataset-graph-html" scrolling="no"></iframe>
 		</div>
 
+		<h2>Results and Findings</h2>
+
+		<h3>Best Results</h3>
+		<h4>Benchmark Dataset</h4>
+		<p>One of the reasons this dataset is ideal for benchmarking is that an extensive <a href="https://github.com/LuyiTian/sc_mixology/tree/master/data/benchmark_results/clustering">table of results</a> is avaliable from experimentation with different normalisation techiques, imputation methods and clustering algorithms commonly used for scRNA-seq including: RaceID, RaceID2, RCA, seurat, clusterExperiment, and SC3.
+			These are also documented in a <a href="https://www.researchgate.net/publication/328071371_scRNA-seq_mixology_towards_better_benchmarking_of_single_cell_RNA-seq_protocols_and_analysis_methods">paper by L. Tian et al</a>.
+			The best result they achieved was 0.742 ARI using SC3 clustering.
+		</p>
+
+		<p><img src="Assets/Images/Benchmark-ARI.png" id="benchmark-ari"></p>
+
+		<p>By comparision, I was able to achieve a much higher ARI of 0.997 and accuracy 99.9% in which 901 out of 902 cells were assigned to the correct cell line.
+			This was possible through a combination of standardization, PCA / ICA with three components and BIRCH / agglomerative hierarchical clustering.
+		</p>
+
+		<div class="dataset-graph">
+			<iframe src="Graphs/Alternative_Algorithms/Benchmarking_Data/sc_10x_hierarchical_3_PCA_99.9%25.html" class="dataset-graph-html" scrolling="no"></iframe>
+		</div>
+
+		<h4>Simulated Dataset</h4>
+		<p>For the Splat simulated dataset, I was able to correctly group all 2000 cells resulting in 100% accuracy.
+			This was accomplished through applying standardization and PCA / ICA with four components in combination with agglomerative hierarchical clustering, BIRCH or mini batch k-means.
+		</p>
+
+		<div class="dataset-graph">
+			<iframe src="Graphs/Alternative_Algorithms/Simulated_Data/splat_birch_4_ICA_100%25.html" class="dataset-graph-html" scrolling="no"></iframe>
+		</div>
+
+		<h4>Mouse Cortex Dataset</h4>
+		<p>The best accuracy I was able to achieve for this dataset was poor at 44.4%.
+			Compared to the previous two datasets, cells show an overlapping spectrum of gene expression in the lower dimensional space when using pre-processing techniques attempted in this project.
+			This is a problem as standard clustering methods require some degree of seperation to reliably assign clusters.
+		</p>
+		<p>Another issue is that the ground truth was derived using the BackSPIN biclustering algorithm.
+			While standard clustering algorithms such as k-means divide cells into clusters, biclustering is a different class of algorithms that cluster cells and genes simultaneously enabling cells to be grouped by gene co-expression.
+			As explained in the <a href="https://science.sciencemag.org/content/347/6226/1138.abstract">original paper by Zeisel et al.</a>, many of the genes in this dataset are not related to every sample making biclustering more suitable.
+		</p>
+
+		<div class="dataset-graph">
+			<iframe src="Graphs/Hierarchical_Clustering/Real_Evaluation_Data/cortex_hierarchical_9_PCA_SU_44%25.html" class="dataset-graph-html" scrolling="no"></iframe>
+		</div>
+
+		<h3>Observations</h3>
+		<h4>t-SNE</h4>
 		<p>By comparing the target labels and predicted clusters,
 		</p>
 
 		<div class="dataset-graph">
 			<iframe src="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_SE_t-SNE_99.3%25.html" class="dataset-graph-html" scrolling="no"></iframe>
 		</div>
-
-		<h2>Best Results</h2>
 
 	</div>
 
@@ -274,25 +316,32 @@
 	<div>
 		<a name="tda" class="anchor"></a>
 		<h1>Topological Data Analysis</h1>
+		<h2>Mapper</h2>
 		<p>Mapper is an TDA algorithm that constructs a simplicial complex.
 			This is a type of graph that represents a high-dimensional shape of data with many features.
-			There is no right way to construct a complex, but the aim is to reveal topological features.
+		</p>
+
+		<h2>Parameter Tuning</h2>
+		<p>There is no right way to construct a complex, but the aim is to reveal topological features.
 			For Kepler Mapper, the main hyperparameters to tune are epsilon and hypercubes.
 			Simplicial complexes for each dataset were created with the same hyperparameters so that topological features can be compared.
-
 		</p>
 		<p class="tda-graph"><img src="Assets/Images/TDA-Epsilon.png"></p>
 
 		<p class="tda-graph"><img src="Assets/Images/TDA-Hypercubes.png"></p>
 
+		<h2>Results</h2>
+		<h3>Simplicial Complex of Benchmark Dataset</h3>
 		<div class="mapper-graph">
 			<iframe src="Graphs/Topological_Data_Analysis/GitHub_Pages/benchmarking_scRNAseq_graph.html" class="mapper-graph-html" scrolling="no"></iframe>
 		</div>
 
+		<h3>Simplicial Complex of Simulated Dataset</h3>
 		<div class="mapper-graph">
 			<iframe src="Graphs/Topological_Data_Analysis/GitHub_Pages/simulated_scRNAseq_graph.html" class="mapper-graph-html" scrolling="no"></iframe>
 		</div>
 
+		<h3>Simplicial Complex of Mouse Cortex Dataset</h3>
 		<div class="mapper-graph">
 			<iframe src="Graphs/Topological_Data_Analysis/GitHub_Pages/evaluation_scRNAseq_graph.html" class="mapper-graph-html" scrolling="no"></iframe>
 		</div>
@@ -304,11 +353,19 @@
 	<div>
 		<a name="code" class="anchor"></a>
 		<h1>Code</h1>
-		<p>This
+		<p>All code was developed in Google Colab and is written in Python and R across two Jupyter notebooks, both of which are avaliable to download from my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data" target="_blank" rel="noopener noreferrer"> GitHub Repository</a>.
 		</p>
 		<a href="Notebooks/Splat_Simulator.html" target="_blank" rel="noopener noreferrer">Notebooks</a>
 		<a href="Notebooks/Clustering_and_TDA.html" target="_blank" rel="noopener noreferrer">Notebooks</a>
-		<a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data" target="_blank" rel="noopener noreferrer">Repository</a>
+
+		<div class="mapper-graph">
+			<iframe src="Notebooks/Clustering_and_TDA.html" class="mapper-graph-html"></iframe>
+		</div>
+
+		<div class="mapper-graph">
+			<iframe src="Notebooks/Splat_Simulator.html" class="mapper-graph-html"></iframe>
+		</div>
+
 	</div>
 
 	<br>

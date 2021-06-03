@@ -4,14 +4,13 @@
 }
 
 .mapper-graph {
-  width: 150%;
+  width: 143%;
   height: 1300px;
   overflow: hidden;
   -webkit-transform: scale(0.7);
   transform: scale(0.7);
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
-  margin-left: -40px;
   margin-bottom: -370px;
 }
 
