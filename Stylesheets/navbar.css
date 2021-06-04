@@ -11,7 +11,7 @@
 
 .header {
   font-family: Lato-Bold;
-  overflow: hidden;
+  overflow: visible;
   position: fixed;
   top: 0px;
   width: 100%;
@@ -69,6 +69,42 @@
   animation-timing-function: ease-out;
 }
 
+.nav-dropdown {
+  display: inline;
+  float: left;
+  overflow: visible;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 70px;
+  border-radius: 0px 0px 15px 15px;
+  background-color: var(--light-grey);
+}
+
+.nav-dropdown-content a {
+  font-size: 14px;
+  float: none;
+  color: black;
+  text-align: center;
+  display: block;
+  text-align: left;
+  padding: 15px;
+  line-height: 1;
+}
+
+.nav-dropdown-content a:hover {
+  background: -webkit-linear-gradient(var(--darkerblue), var(--darkblue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+}
+
 @media screen and (max-width: 720px) {
   #header-left, #header-center, .header-right {
     width: 100%;
@@ -84,6 +120,10 @@
 
   .header-right a {
     font-size: 3vw;
+  }
+
+  .nav-dropdown-content a {
+    font-size: min(2.6vw, 14px);
   }
 }
 

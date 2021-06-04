@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="Stylesheets\datasets.css">
 	<link rel="stylesheet" href="Stylesheets\clustering.css">
 	<link rel="stylesheet" href="Stylesheets\tda.css">
+	<link rel="stylesheet" href="Stylesheets\code.css">
 	<link rel="stylesheet" href="Stylesheets\graph_finder.css">
 	<link rel="stylesheet" href="Stylesheets\footer.css">
 </head>
@@ -29,11 +30,38 @@
 	</div>
 	<div class="header-right">
 		<a href="#about" class="navtext">About</a>
-		<a href="#background" class="navtext">Background</a>
-		<a href="#datasets" class="navtext">Data</a>
-		<a href="#clustering" class="navtext">Clustering</a>
+		<div class="nav-dropdown">
+			<a href="#background" class="navtext">Background</a>
+			<div class="nav-dropdown-content">
+				<a href="#genes">Genes and Proteins</a>
+				<a href="#scrnaseq">Single Cell RNA-Sequencing</a>
+			</div>
+		</div>
+		<div class="nav-dropdown">
+			<a href="#datasets" class="navtext">Data</a>
+			<div class="nav-dropdown-content">
+				<a href="#benchmark">Benchmark</a>
+				<a href="#simulated">Simulated</a>
+				<a href="#mousecortex">Mouse Cortex</a>
+			</div>
+		</div>
+		<div class="nav-dropdown">
+			<a href="#clustering" class="navtext">Clustering</a>
+			<div class="nav-dropdown-content">
+				<a href="#clusteringalgorithms">Clustering Algorithms</a>
+				<a href="#preprocessing">Preprocessing</a>
+				<a href="#measuringcorrectness">Measuring Correctness</a>
+				<a href="#clusterresults">Results and Findings</a>
+			</div>
+		</div>
 		<a href="#tda" class="navtext">TDA</a>
-		<a href="#code" class="navtext">Code</a>
+		<div class="nav-dropdown">
+			<a href="#code" class="navtext">Code</a>
+			<div class="nav-dropdown-content">
+				<a href="#clusternotebook">Clustering and TDA</a>
+				<a href="#splatnotebook">Splat Simulator</a>
+			</div>
+		</div>
 		<a href="#graphfinder" class="navtext">Graphs</a>
 	</div>
 </div>
@@ -53,6 +81,7 @@
 	<div id="background-text">
 		<a name="background" class="anchor"></a>
 		<h1>Background</h1>
+		<a name="genes" class="anchor"></a>
 		<h2>Genes and Proteins</h2>
 		<p>In biology, genes are small sections of DNA that encode proteins.
 			These are important biomolecules with a large range of functions such as: enzymes, antibodies, structural proteins, storage or cell signalling.
@@ -62,6 +91,8 @@
 			During transcription, DNA is unzipped and sections copied using the enzyme RNA polymerase to produce a complementary molecule called messenger RNA (mRNA).
 			The mRNA then travels to a ribosome where a protein is constructed in a process known as translation.
 			This means that cellular gene expression can be inferred through reading the sequence of bases RNA.</p>
+
+		<a name="scrnaseq" class="anchor"></a>
 		<h2>Single-Cell RNA-Sequencing</h2>
 		<p><img src="Assets/Images/scRNA-seq-Steps.png" alt="Single-cell RNA sequencing steps" id="scRNA-seq-steps"></img></p>
 		<p>Single-cell RNA sequencing (scRNA-seq) is a method in which genetic expression is measured across a population of heterogeneous cells of the same type.
@@ -82,6 +113,7 @@
 	<div>
 		<a name="datasets" class="anchor"></a>
 		<h1>Datasets</h1>
+		<a name="benchmark" class="anchor"></a>
 		<h2>Benchmark</h2>
 		<p>The first dataset was created by Tian et al. and contains 16,468 gene counts for 902 cells produced using the 10X Chromium scRNA-seq protocol.
 			It is officially named <a href="https://github.com/LuyiTian/sc_mixology/tree/master/data/csv" target="_blank">sc_10x</a>, though here is referred to as the "benchmark dataset" as it was used as a gold standard during testing and development.
@@ -100,6 +132,7 @@
 			<iframe src="Graphs/Target_Groups/sc_10x_cell_lines_2D.html" class="dataset-graph-html" scrolling="no"></iframe>
 		</div>
 
+		<a name="simulated" class="anchor"></a>
 		<h2>Simulated</h2>
 		<p>The second dataset was made during this project and is available to download from my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Data/Datasets">GitHub</a>.
 			It was created using the Splat simulator, which is part of the R package <a href="https://bioconductor.org/packages/devel/bioc/vignettes/splatter/inst/doc/splatter.html" target="_blank">Splatter</a>,
@@ -116,6 +149,7 @@
 			<iframe src="Graphs/Target_Groups/splat_groups_2D.html" class="dataset-graph-html" scrolling="no"></iframe>
 		</div>
 
+		<a name="mousecortex" class="anchor"></a>
 		<h2>Mouse Cortex</h2>
 		<p>The final dataset is by Zeisel et al. and contains 3005 brain cells each with 1072 genes from mouse cortex and hippocampus.
 			It is available to download from <a href="http://linnarssonlab.org/cortex/">Linnarsson Lab</a>.
@@ -142,6 +176,7 @@
 		<a name="clustering" class="anchor"></a>
 		<h1>Clustering</h1>
 
+		<a name="clusteringalgorithms" class="anchor"></a>
 		<h2>Clustering Algorithms</h2>
 		<p>Clustering is an unsupervised machine learning technique for grouping data points with similar traits.
 			For genetic data, the goal is to group cells that show similar gene expression.
@@ -157,6 +192,7 @@
 			<li><b>Gaussian mixture</b>: Clustering using a mixture of multiple Gaussian distributions</li>
 		</ul>
 
+		<a name="preprocessing" class="anchor"></a>
 		<h2>Preprocessing</h2>
 		<p>A problem with scRNA-seq data is that it is high-dimensional as each cell contains many features.
 			Many of the genes only exhibit noise and so clustering will not work well if directly applied to the gene counts.
@@ -231,6 +267,7 @@
 		<p class="preprocessing"><img src="Assets/Images/Preprocessing.png"></p>
 		<p class="preprocessing-cropped"><img src="Assets/Images/Preprocessing-Cropped.png"></p>
 
+		<a name="measuringcorrectness" class="anchor"></a>
 		<h2>Measuring Correctness</h2>
 		<p>Clustering algorithms are unsupervised meaning that they are not guided by a target output.
 			However, clustering can often be misleading and just because a cluster assignment looks reasonable does not mean it is correct.
@@ -258,6 +295,7 @@
 			<iframe src="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_E_68.7%25.html" class="dataset-graph-html" scrolling="no"></iframe>
 		</div>
 
+		<a name="clusterresults" class="anchor"></a>
 		<h2>Results and Findings</h2>
 
 		<h3>Best Results</h3>
@@ -302,7 +340,7 @@
 
 		<h3>Observations</h3>
 		<h4>t-SNE</h4>
-		<p>By comparing the target labels and predicted clusters,
+		<p>t-SNE
 		</p>
 
 		<div class="dataset-graph">
@@ -355,15 +393,19 @@
 		<h1>Code</h1>
 		<p>All code was developed in Google Colab and is written in Python and R across two Jupyter notebooks, both of which are avaliable to download from my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data" target="_blank" rel="noopener noreferrer"> GitHub Repository</a>.
 		</p>
-		<a href="Assets/IFrame_HTML/Splat_Simulator.html" target="_blank" rel="noopener noreferrer">Notebooks</a>
+		<a href="Notebooks/Splat_Simulator.html" target="_blank" rel="noopener noreferrer">Notebooks</a>
 		<a href="Notebooks/Clustering_and_TDA.html" target="_blank" rel="noopener noreferrer">Notebooks</a>
 
-		<div class="mapper-graph">
-			<iframe src="Assets/IFrame_HTML/Clustering_and_TDA.html" class="mapper-graph-html"></iframe>
+		<a name="clusternotebook" class="anchor"></a>
+		<h2>Clustering and TDA</h2>
+		<div class="notebook">
+			<iframe src="Assets/IFrame_HTML/Clustering_and_TDA.html" class="notebook-html"></iframe>
 		</div>
 
-		<div class="mapper-graph">
-			<iframe src="Assets/IFrame_HTML/Splat_Simulator.html" class="mapper-graph-html"></iframe>
+		<a name="splatnotebook" class="anchor"></a>
+		<h2>Splat Simulator</h2>
+		<div class="notebook">
+			<iframe src="Assets/IFrame_HTML/Splat_Simulator.html" class="notebook-html"></iframe>
 		</div>
 
 	</div>

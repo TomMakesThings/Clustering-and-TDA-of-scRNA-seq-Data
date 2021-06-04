@@ -7,7 +7,8 @@
   --blue: #0078A2;
   --darkblue: #0000FF;
   --darkerblue: #00004C;
-  --wid: 720px;
+  --light-grey: #f6f6f6;
+  --grey: #ddd;
 }
 
 /** Custom fonts **/
