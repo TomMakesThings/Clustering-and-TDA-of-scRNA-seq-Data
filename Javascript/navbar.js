@@ -1,19 +1,20 @@
 function profileHover(element) {
-  element.setAttribute('src', 'Assets/Images/Profile-Wink.gif');
+  document.getElementById("profilepic").setAttribute('src', 'Assets/Images/Profile-Wink.gif');
 }
 
 function profileUnhover(element) {
-  element.setAttribute('src', 'Assets/Images/Profile.jpg');
+  document.getElementById("profilepic").setAttribute('src', 'Assets/Images/Profile.jpg');
 }
 
 window.onscroll = function() {scrollFunction()};
+window.addEventListener('resize', scrollFunction);
 
 /* Adjust the header when scrolling down */
 function scrollFunction() {
   all_content = document.getElementsByClassName('header');
   var position = "absolute";
   var top = "0px";
-  if (window.innerWidth <= 721) {
+  if (window.innerWidth <= 750) {
     if (document.body.scrollTop > 140 || document.documentElement.scrollTop > 140) {
       position = "fixed";
       top = "-140px";

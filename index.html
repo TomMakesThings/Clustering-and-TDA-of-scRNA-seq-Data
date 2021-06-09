@@ -21,8 +21,8 @@
 <body>
 
 <div class="header">
-	<div id="header-left">
-		<a href="https://github.com/TomMakesThings"><img src="Assets/Images/Profile.jpg" alt="GitHub profile picture" id="profilepic" onmouseover="profileHover(this);" onmouseout="profileUnhover(this);"></a>
+	<div id="header-left" onmouseover="profileHover(this);" onmouseout="profileUnhover(this);">
+		<a href="https://github.com/TomMakesThings"><img src="Assets/Images/Profile.jpg" alt="GitHub profile picture" id="profilepic"></a>
 		<a href="https://tommakesthings.github.io/" id="username" class="navtext">TomMakesThings</a>
 	</div>
 	<div id="header-center">
@@ -141,7 +141,7 @@
 
 		<a name="simulated" class="anchor"></a>
 		<h2>Simulated</h2>
-		<p>The second dataset consists 2000 cells with 16,468 genes each.
+		<p>The second dataset consists of 2000 cells with 16,468 genes each.
 			It was made during this project using the Splat simulator, which is part of the R package <a href="https://bioconductor.org/packages/devel/bioc/vignettes/splatter/inst/doc/splatter.html" target="_blank">Splatter</a>.
 			The code and CSV files of the data are available to download from my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main">GitHub</a>.
 			To replicate real gene expression, the Splat simulator was seeded with the benchmark dataset sc_10x.
@@ -437,16 +437,18 @@
 	<div>
 		<a name="code" class="anchor"></a>
 		<h1>Code</h1>
-		<p>Code was developed in Google Colab and is written in Python 3.6.9 and R 4.0.3 across two Jupyter notebooks.
-			These are both available to download from my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Jupyter_Notebooks" target="_blank" rel="noopener noreferrer"> GitHub</a>.
+		<p>Code was written in Python 3.6.9 and R 4.0.3 across two Jupyter notebooks with Google Colab as the development environment.
+			Both notebooks are available to download from <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Jupyter_Notebooks" target="_blank" rel="noopener noreferrer">GitHub</a>.
 		</p>
 
 		<a name="splatnotebook" class="anchor"></a>
 		<h2>Splat Simulator</h2>
-		<p>This notebook was used to create the simulated dataset.
-			New scRNA-seq gene counts and group labels are generated using the Splat simulator, which is part of the R package Splatter.
-			The artificial dataset is seeded by mimicking gene expression from a dataset of human lung adenocarcinoma cells sc_10x.
-			It is then saved as CSV files with Python.
+		<p>This notebook was used to create the <a href="#simulated">simulated dataset</a>.
+			The artificial gene counts and group labels are generated using the Splat simulator, which is part of the R package <a href="https://bioconductor.org/packages/devel/bioc/vignettes/splatter/inst/doc/splatter.html" target="_blank">Splatter</a>, and so the code contains a mix between Python and inline R.
+			To mimick true biological gene expression, the benchmark dataset has been set to use as a seed, though it would be easy to swap this out to imitate another dataset.
+			After seeding the simulator, datapoints are generated with each belonging to one of four groups.
+			This new data and labels are then saved as CSV files using Python.
+			These can be downloaded and reopened to use in the second notebook.
 		</p>
 		<div class="notebook">
 			<iframe src="Assets/IFrame_HTML/Splat_Simulator.html" class="notebook-html"></iframe>
@@ -454,11 +456,17 @@
 
 		<a name="clusternotebook" class="anchor"></a>
 		<h2>Clustering and TDA</h2>
-		<p>In this notebook, three scRNA-seq datasets and their target labels are opened as dataframes.
-			A dataset is selected and an autoencoder with customisable hyperparameters created using PyTorch Lightning to use as a feature extractor for the gene counts.
-			Clustering is then performed to divide cells into groups which show similar gene expression. Several sklearn clustering algorithms can be chosen including: k-means, agglomerative hierarchical, BIRCH, mini-batch k-means, spectral and Gaussian mixture.
+		<p>In this notebook, experimentation is performed on the three given datasets.
+			However, it has been designed so that it could be run easily with a new dataset.
+		</p>
+		<p>
+			First the three datasets and their target labels are opened as dataframes.
+			These datasets are downloaded from URL so that the notebook can be run with no set up required.
+			Next, a dataset is selected and an autoencoder with customisable hyperparameters created using PyTorch Lightning to use as a feature extractor for the gene counts.
+			Then clustering is performed to divide cells into groups which show similar gene expression.
+			Several clustering algorithms can be chosen including: k-means, agglomerative hierarchical, BIRCH, mini-batch k-means, spectral and Gaussian mixture.
 			The encoding produced by the autoencoder can optionally be used, along with other dimensionality reduction methods such as PCA, ICA or NMF and techniques such as standardization and t-SNE.
-			At the end of the notebook, Kepler Mapper is run on the gene counts to produce a simplicial complex which reveals the topological shape of the high-dimensional data.
+			At the end of the notebook, Kepler Mapper is run on the gene counts to produce a simplicial complex to reveal the topological shape of the high-dimensional data.
 		</p>
 		<div class="notebook">
 			<iframe src="Assets/IFrame_HTML/Clustering_and_TDA.html" class="notebook-html"></iframe>
