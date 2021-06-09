@@ -1,4 +1,4 @@
-# 🧬 Clustering and Topological Data Analysis of scRNA-seq Data 🧬
+# Clustering and Topological Data Analysis of scRNA-seq Data
 ## About
 
 ## GitHub Pages
