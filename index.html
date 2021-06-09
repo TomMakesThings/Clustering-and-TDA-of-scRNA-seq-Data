@@ -143,8 +143,8 @@
 		<h2>Simulated</h2>
 		<p>The second dataset consists of 2000 cells with 16,468 genes each.
 			It was made during this project using the Splat simulator, which is part of the R package <a href="https://bioconductor.org/packages/devel/bioc/vignettes/splatter/inst/doc/splatter.html" target="_blank">Splatter</a>.
-			The code and CSV files of the data are available to download from my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main">GitHub</a>.
-			To replicate real gene expression, the Splat simulator was seeded with the benchmark dataset sc_10x.
+			The code and CSV files of the data are available to download from my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main" target="_blank">GitHub</a>.
+			To replicate real gene expression, the Splat simulator was seeded with the benchmark dataset <a href="https://github.com/LuyiTian/sc_mixology/tree/master/data/csv" target="_blank">sc_10x</a>.
 		</p>
 
 		<p><img src="Assets/Images/Simulated-Counts.png" class="gene-counts" style="max-width: 830px;"></p>
@@ -159,13 +159,13 @@
 		<a name="mousecortex" class="anchor"></a>
 		<h2>Mouse Cortex</h2>
 		<p>The final dataset is by Zeisel et al. and contains 3005 brain cells each with 1072 genes from mouse cortex and hippocampus.
-			It is available to download from <a href="http://linnarssonlab.org/cortex/">Linnarsson Lab</a>.
+			It is available to download from <a href="http://linnarssonlab.org/cortex/" target="_blank">Linnarsson Lab</a>.
 		</p>
 
 		<p><img src="Assets/Images/Mouse-Cortex-Counts.png" class="gene-counts" style="max-width: 870px"></p>
 
 		<p>Each cell is assigned to one of nine numerical groups and 47 subgroups determined using BackSPIN biclustering.
-			 As explained in the <a href="https://science.sciencemag.org/content/347/6226/1138.abstract">original paper</a>, these subgroups comprise all known major cell types in the cortex.
+			 As explained in the <a href="https://science.sciencemag.org/content/347/6226/1138.abstract" target="_blank">original paper</a>, these subgroups comprise all known major cell types in the cortex.
 			 The initial nine groups are labelled according to cell type as: astrocytes-ependymal, endothelial-mural, interneurons, microglia, oligodendrocytes, pyramidal CA1 or pyramidal SS.
 			 Though groups 1 and 2 are assigned class joint pyramidal CA1, and 7 and 8 astrocytes-ependymal and so there are seven target labels.
 			 Again 500 cells were randomly selected for initial experimentation.
@@ -186,7 +186,7 @@
 		<a name="clusteringalgorithms" class="anchor"></a>
 		<h2>Clustering Algorithms</h2>
 		<p>There are many clustering algorithms and tools to choose from, including those designed for scRNA-seq data such as SC3, SIMLR or BackSPIN.
-			However, for this project I tested six standard clustering algorithms from <a href="https://scikit-learn.org/stable/modules/clustering.html">scikit-learn</a>:
+			However, for this project I tested six standard clustering algorithms from <a href="https://scikit-learn.org/stable/modules/clustering.html" target="_blank">scikit-learn</a>:
 		</p>
 		<ul>
 			<li><b>K-means</b>: A commonly used iterative centroid based algorithm that divides data points into k clusters</li>
@@ -305,8 +305,8 @@
 
 		<h3>Best Results</h3>
 		<h4>Benchmark Dataset</h4>
-		<p>One reason this dataset is ideal for benchmarking is that an extensive <a href="https://github.com/LuyiTian/sc_mixology/tree/master/data/benchmark_results/clustering">table of results</a> is avaliable from experimentation with different normalisation techiques, imputation methods and clustering algorithms commonly used for scRNA-seq including: RaceID, RaceID2, RCA, seurat, clusterExperiment, and SC3.
-			These are also documented in a <a href="https://www.researchgate.net/publication/328071371_scRNA-seq_mixology_towards_better_benchmarking_of_single_cell_RNA-seq_protocols_and_analysis_methods">paper by L. Tian et al</a>.
+		<p>One reason this dataset is ideal for benchmarking is that an extensive <a href="https://github.com/LuyiTian/sc_mixology/tree/master/data/benchmark_results/clustering" target="_blank">table of results</a> is avaliable from experimentation with different normalisation techiques, imputation methods and clustering algorithms commonly used for scRNA-seq including: RaceID, RaceID2, RCA, seurat, clusterExperiment, and SC3.
+			These are also documented in a <a href="https://www.researchgate.net/publication/328071371_scRNA-seq_mixology_towards_better_benchmarking_of_single_cell_RNA-seq_protocols_and_analysis_methods" target="_blank">paper by L. Tian et al</a>.
 			The best result they achieved was 0.742 ARI using SC3 clustering.
 		</p>
 
@@ -336,7 +336,7 @@
 		</p>
 		<p>Another issue is that the ground truth was derived using the BackSPIN biclustering algorithm.
 			While standard clustering algorithms such as k-means divide cells into clusters, biclustering is a different class of algorithms that cluster cells and genes simultaneously enabling cells to be grouped by gene co-expression.
-			As explained in the <a href="https://science.sciencemag.org/content/347/6226/1138.abstract">original paper by Zeisel et al.</a>, many of the genes in this dataset are not related to every sample making biclustering more suitable.
+			As explained in the <a href="https://science.sciencemag.org/content/347/6226/1138.abstract" target="_blank">original paper by Zeisel et al.</a>, many of the genes in this dataset are not related to every sample making biclustering more suitable.
 		</p>
 
 		<div class="dataset-graph">
@@ -381,7 +381,7 @@
 			Compare to graphs produced through standard dimensionality reduction techniques, this gives a higher-dimensional overview of a dataset to provide insight into relationships in gene expression between cells.
 		</p>
 		<p>Mapper is a TDA algorithm that constructs a simplicial complex through dimensionality reduction, clustering, and graph networks.
-			<a href="https://kepler-mapper.scikit-tda.org/en/latest/">Kepler Mapper</a> is a Python implementation of Mapper that was used for this project.
+			<a href="https://kepler-mapper.scikit-tda.org/en/latest/" target="_blank">Kepler Mapper</a> is a Python implementation of Mapper that was used for this project.
 		</p>
 
 		<a name="parametertuning" class="anchor"></a>
@@ -644,7 +644,7 @@
 		<br>
 		<br>
 
-		<a id="graph-selected"></a>
+		<p id="graph-selected"></p>
 
 		<div id="graph-wrapper">
 			<iframe src="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_E_68.7%25.html" id="graph-html" scrolling="no"></iframe>

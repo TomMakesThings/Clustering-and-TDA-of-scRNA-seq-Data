@@ -73,6 +73,16 @@ ul {
   list-style-type: square;
 }
 
+a {
+  color: var(--lighterpurple);
+  text-decoration: underline dashed;
+}
+
+a:hover {
+  color: var(--purple);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
 /** Reposition anchor tags above linked content **/
 a.anchor {
   display: block;
