@@ -33,33 +33,40 @@
 		<div class="nav-dropdown">
 			<a href="#background" class="navtext">Background</a>
 			<div class="nav-dropdown-content">
-				<a href="#genes">Genes and Proteins</a>
-				<a href="#scrnaseq">Single Cell RNA-Sequencing</a>
+				<p><a href="#genes">Genes and Proteins</a></p>
+				<p><a href="#scrnaseq">Single Cell RNA-Sequencing</a></p>
 			</div>
 		</div>
 		<div class="nav-dropdown">
 			<a href="#datasets" class="navtext">Data</a>
 			<div class="nav-dropdown-content">
-				<a href="#benchmark">Benchmark</a>
-				<a href="#simulated">Simulated</a>
-				<a href="#mousecortex">Mouse Cortex</a>
+				<p><a href="#benchmark">Benchmark</a></p>
+				<p><a href="#simulated">Simulated</a></p>
+				<p><a href="#mousecortex">Mouse Cortex</a></p>
 			</div>
 		</div>
 		<div class="nav-dropdown">
 			<a href="#clustering" class="navtext">Clustering</a>
 			<div class="nav-dropdown-content">
-				<a href="#clusteringalgorithms">Clustering Algorithms</a>
-				<a href="#preprocessing">Preprocessing</a>
-				<a href="#measuringcorrectness">Measuring Correctness</a>
-				<a href="#clusterresults">Results and Findings</a>
+				<p><a href="#clusteringalgorithms">Clustering Algorithms</a></p>
+				<p><a href="#preprocessing">Preprocessing</a></p>
+				<p><a href="#measuringcorrectness">Measuring Correctness</a></p>
+				<p><a href="#clusterresults">Results and Findings</a></p>
 			</div>
 		</div>
-		<a href="#tda" class="navtext">TDA</a>
+		<div class="nav-dropdown">
+			<a href="#tda" class="navtext">TDA</a>
+			<div class="nav-dropdown-content">
+				<p><a href="#mapper">Mapper</a></p>
+				<p><a href="#parametertuning">Parameter Tuning</a></p>
+				<p><a href="#tdaresults">Results</a></p>
+			</div>
+		</div>
 		<div class="nav-dropdown">
 			<a href="#code" class="navtext">Code</a>
 			<div class="nav-dropdown-content">
-				<a href="#clusternotebook">Clustering and TDA</a>
-				<a href="#splatnotebook">Splat Simulator</a>
+				<p><a href="#splatnotebook">Splat Simulator</a></p>
+				<p><a href="#clusternotebook">Clustering and TDA</a></p>
 			</div>
 		</div>
 		<a href="#graphfinder" class="navtext">Graphs</a>
@@ -134,9 +141,9 @@
 
 		<a name="simulated" class="anchor"></a>
 		<h2>Simulated</h2>
-		<p>The second dataset was made during this project and is available to download from my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Data/Datasets">GitHub</a>.
-			It was created using the Splat simulator, which is part of the R package <a href="https://bioconductor.org/packages/devel/bioc/vignettes/splatter/inst/doc/splatter.html" target="_blank">Splatter</a>,
-			and consists 2000 cells with 16,468 genes each.
+		<p>The second dataset consists 2000 cells with 16,468 genes each.
+			It was made during this project using the Splat simulator, which is part of the R package <a href="https://bioconductor.org/packages/devel/bioc/vignettes/splatter/inst/doc/splatter.html" target="_blank">Splatter</a>.
+			The code and CSV files of the data are available to download from my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main">GitHub</a>.
 			To replicate real gene expression, the Splat simulator was seeded with the benchmark dataset sc_10x.
 		</p>
 
@@ -178,9 +185,7 @@
 
 		<a name="clusteringalgorithms" class="anchor"></a>
 		<h2>Clustering Algorithms</h2>
-		<p>Clustering is an unsupervised machine learning technique for grouping data points with similar traits.
-			For genetic data, the goal is to group cells that show similar gene expression.
-			There are many clustering algorithms and tools to choose from, including those designed for scRNA-seq data such as SC3, SIMLR or BackSPIN.
+		<p>There are many clustering algorithms and tools to choose from, including those designed for scRNA-seq data such as SC3, SIMLR or BackSPIN.
 			However, for this project I tested six standard clustering algorithms from <a href="https://scikit-learn.org/stable/modules/clustering.html">scikit-learn</a>:
 		</p>
 		<ul>
@@ -300,7 +305,7 @@
 
 		<h3>Best Results</h3>
 		<h4>Benchmark Dataset</h4>
-		<p>One of the reasons this dataset is ideal for benchmarking is that an extensive <a href="https://github.com/LuyiTian/sc_mixology/tree/master/data/benchmark_results/clustering">table of results</a> is avaliable from experimentation with different normalisation techiques, imputation methods and clustering algorithms commonly used for scRNA-seq including: RaceID, RaceID2, RCA, seurat, clusterExperiment, and SC3.
+		<p>One reason this dataset is ideal for benchmarking is that an extensive <a href="https://github.com/LuyiTian/sc_mixology/tree/master/data/benchmark_results/clustering">table of results</a> is avaliable from experimentation with different normalisation techiques, imputation methods and clustering algorithms commonly used for scRNA-seq including: RaceID, RaceID2, RCA, seurat, clusterExperiment, and SC3.
 			These are also documented in a <a href="https://www.researchgate.net/publication/328071371_scRNA-seq_mixology_towards_better_benchmarking_of_single_cell_RNA-seq_protocols_and_analysis_methods">paper by L. Tian et al</a>.
 			The best result they achieved was 0.742 ARI using SC3 clustering.
 		</p>
@@ -339,13 +344,29 @@
 		</div>
 
 		<h3>Observations</h3>
+		<h4>Autoencoders</h4>
+		<ul>
+			<li>The best clustering results for the benchmark dataset were attained without encoding, while top results were achieved both with and without encoding the simulated data.
+			Effectiveness was therefore dependent on the data, though it is always worth testing multiple approaches.</li>
+			<li>I kept the encoding size at 16 for this project, though ideally different encoding sizes should be tested.</li>
+			<li>t-SNE was more effective when combined with the autoencoder's encoding.</li>
+		</ul>
+
+		</p>
+
 		<h4>t-SNE</h4>
-		<p>t-SNE
+		<p>This is a good option to try if cells are not separable by other methods, however, should be used with caution as it has can produce misleading results.
+			For example in the graph below, all cells in the predicted clusters are close together so without looking at the expected cell lines it is not obvious that one cell is incorrect.
 		</p>
 
 		<div class="dataset-graph">
 			<iframe src="Graphs/K-Means/Benchmarking_Data/sc_10x_k-means_2_PCA_SE_t-SNE_99.3%25.html" class="dataset-graph-html" scrolling="no"></iframe>
 		</div>
+
+		<p>If using t-SNE, different values for the hyperparameter perplexity should be tested as changing this causes results to vary significantly.
+		</p>
+
+		<p><img src="Assets/Images/Perplexity.png" id="perplexity"></p>
 
 	</div>
 
@@ -354,32 +375,57 @@
 	<div>
 		<a name="tda" class="anchor"></a>
 		<h1>Topological Data Analysis</h1>
+		<a name="mapper" class="anchor"></a>
 		<h2>Mapper</h2>
-		<p>Mapper is an TDA algorithm that constructs a simplicial complex.
-			This is a type of graph that represents a high-dimensional shape of data with many features.
+		<p>A simplicial complex is a type of graph that represents data with many features through a high-dimensional shape.
+			Compare to graphs produced through standard dimensionality reduction techniques, this gives a higher-dimensional overview of a dataset to provide insight into relationships in gene expression between cells.
+		</p>
+		<p>Mapper is a TDA algorithm that constructs a simplicial complex through dimensionality reduction, clustering, and graph networks.
+			<a href="https://kepler-mapper.scikit-tda.org/en/latest/">Kepler Mapper</a> is a Python implementation of Mapper that was used for this project.
 		</p>
 
+		<a name="parametertuning" class="anchor"></a>
 		<h2>Parameter Tuning</h2>
-		<p>There is no right way to construct a complex, but the aim is to reveal topological features.
-			For Kepler Mapper, the main hyperparameters to tune are epsilon and hypercubes.
-			Simplicial complexes for each dataset were created with the same hyperparameters so that topological features can be compared.
+		<p>There is no right way to construct a simplicial complex, but the aim is to reveal topological features.
+			For Kepler Mapper, the main hyperparameters to tune are epsilon and hypercubes:
 		</p>
+		<ul>
+			<li><b>Epsilon</b>: When epsilon is small, many of the nodes are separated, while increasing it too much results in most nodes being connected losing the topological features.</li>
+			<li><b>Hypercubes</b>: Using only a few hypercubes creates a simple graph, while increasing this reveals more complexity.</li>
+		</ul>
+
 		<p class="tda-graph"><img src="Assets/Images/TDA-Epsilon.png"></p>
 
 		<p class="tda-graph"><img src="Assets/Images/TDA-Hypercubes.png"></p>
 
+		<a name="tdaresults" class="anchor"></a>
 		<h2>Results</h2>
+		<p>Each dataset was first projected onto a lower-dimensional space using 2 principal components, then a simplicial complex constructed using 10 hypercubes with 0.15 overlap and k-means clustering.
+			For all three datasets, the same hyperparameters were used so that topological features can be compared.</p>
 		<h3>Simplicial Complex of Benchmark Dataset</h3>
+		<p>In the interactive graph below, the cell lines are identifiable as the three most connected regions.
+			As most nodes are connected, this suggests that most cells have some correlation in gene expression.
+			There are also several nodes that are not joined to the main complex representing small subgroups of cells with more unusual gene expression.
+			However, it is worth pointing out that if the parameter epsilon was increased then some of these nodes would join the main complex, while if it was decreased then more of these distinct nodes would form.
+		</p>
 		<div class="mapper-graph" style="height: 1600px; margin-bottom: -950px;">
 			<iframe src="Assets/IFrame_HTML/benchmarking_scRNAseq_graph.html" class="mapper-graph-html" scrolling="no"></iframe>
 		</div>
 
 		<h3>Simplicial Complex of Simulated Dataset</h3>
+		<p>Compared to the benchmarking data, the groups of the simulated data are much more clearly defined and separated from one another.
+			This suggests that gene expression between the groups do not overlap as much as true biological data.
+			Furthermore, the groups themselves form straight lines indicating that there is a lot less variation within each of them.
+		</p>
 		<div class="mapper-graph" style="height: 1450px; margin-bottom: -860px;">
 			<iframe src="Assets/IFrame_HTML/simulated_scRNAseq_graph.html" class="mapper-graph-html" scrolling="no"></iframe>
 		</div>
 
 		<h3>Simplicial Complex of Mouse Cortex Dataset</h3>
+		<p>The simplicial complex of this dataset is far more complicated than the others reflecting the greater variation of gene expression within the mouse cortex and hippocampus.
+			As seen during clustering, the groups are not well defined, though this graph implies most cells can be split into two distinct regions.
+			There are also far more individual nodes compared to the other datasets, though this is likely because this dataset contains the most cells.
+		</p>
 		<div class="mapper-graph" style="height: 2250px; margin-bottom: -1360px;">
 			<iframe src="Assets/IFrame_HTML/evaluation_scRNAseq_graph.html" class="mapper-graph-html" scrolling="no"></iframe>
 		</div>
@@ -391,21 +437,31 @@
 	<div>
 		<a name="code" class="anchor"></a>
 		<h1>Code</h1>
-		<p>All code was developed in Google Colab and is written in Python and R across two Jupyter notebooks, both of which are avaliable to download from my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data" target="_blank" rel="noopener noreferrer"> GitHub Repository</a>.
+		<p>Code was developed in Google Colab and is written in Python 3.6.9 and R 4.0.3 across two Jupyter notebooks.
+			These are both available to download from my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Jupyter_Notebooks" target="_blank" rel="noopener noreferrer"> GitHub</a>.
 		</p>
-		<a href="Notebooks/Splat_Simulator.html" target="_blank" rel="noopener noreferrer">Notebooks</a>
-		<a href="Notebooks/Clustering_and_TDA.html" target="_blank" rel="noopener noreferrer">Notebooks</a>
-
-		<a name="clusternotebook" class="anchor"></a>
-		<h2>Clustering and TDA</h2>
-		<div class="notebook">
-			<iframe src="Assets/IFrame_HTML/Clustering_and_TDA.html" class="notebook-html"></iframe>
-		</div>
 
 		<a name="splatnotebook" class="anchor"></a>
 		<h2>Splat Simulator</h2>
+		<p>This notebook was used to create the simulated dataset.
+			New scRNA-seq gene counts and group labels are generated using the Splat simulator, which is part of the R package Splatter.
+			The artificial dataset is seeded by mimicking gene expression from a dataset of human lung adenocarcinoma cells sc_10x.
+			It is then saved as CSV files with Python.
+		</p>
 		<div class="notebook">
 			<iframe src="Assets/IFrame_HTML/Splat_Simulator.html" class="notebook-html"></iframe>
+		</div>
+
+		<a name="clusternotebook" class="anchor"></a>
+		<h2>Clustering and TDA</h2>
+		<p>In this notebook, three scRNA-seq datasets and their target labels are opened as dataframes.
+			A dataset is selected and an autoencoder with customisable hyperparameters created using PyTorch Lightning to use as a feature extractor for the gene counts.
+			Clustering is then performed to divide cells into groups which show similar gene expression. Several sklearn clustering algorithms can be chosen including: k-means, agglomerative hierarchical, BIRCH, mini-batch k-means, spectral and Gaussian mixture.
+			The encoding produced by the autoencoder can optionally be used, along with other dimensionality reduction methods such as PCA, ICA or NMF and techniques such as standardization and t-SNE.
+			At the end of the notebook, Kepler Mapper is run on the gene counts to produce a simplicial complex which reveals the topological shape of the high-dimensional data.
+		</p>
+		<div class="notebook">
+			<iframe src="Assets/IFrame_HTML/Clustering_and_TDA.html" class="notebook-html"></iframe>
 		</div>
 
 	</div>

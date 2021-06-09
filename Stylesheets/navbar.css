@@ -79,22 +79,32 @@
   display: none;
   position: absolute;
   margin-top: 70px;
+  max-width: 120px;
   border-radius: 0px 0px 15px 15px;
   background-color: var(--light-grey);
+  word-wrap: break-word;
 }
 
 .nav-dropdown-content a {
+  white-space: normal;
   font-size: 14px;
   float: none;
   color: black;
   text-align: center;
-  display: block;
+  display: inline-block;
   text-align: left;
-  padding: 15px;
-  line-height: 1;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: -10px;
+  margin-bottom: -20px;
+  line-height: 1.4;
 }
 
-.nav-dropdown-content a:hover {
+.nav-dropdown-content p {
+  float: left;
+}
+
+.nav-dropdown-content p:hover {
   background: -webkit-linear-gradient(var(--darkerblue), var(--darkblue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
