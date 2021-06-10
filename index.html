@@ -437,17 +437,20 @@
 	<div>
 		<a name="code" class="anchor"></a>
 		<h1>Code</h1>
-		<p>Code was written in Python 3.6.9 and R 4.0.3 across two Jupyter notebooks with Google Colab as the development environment.
-			Both notebooks are available to download from <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Jupyter_Notebooks" target="_blank" rel="noopener noreferrer">GitHub</a>.
+		<p>Code was written in Python 3.6.9 and R 4.0.3 across two Jupyter notebooks, both of which are available to download from <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Jupyter_Notebooks" target="_blank" rel="noopener noreferrer">GitHub</a>.
+			These were developed in <a href="https://colab.research.google.com/notebooks/intro.ipynb?utm_source=scs-index#recent=true" target="_blank">Google Colab</a>, though alternatively can be run through <a href="https://jupyter.org/install.html" target="_blank">Jupyter Notebook</a>.
 		</p>
 
 		<a name="splatnotebook" class="anchor"></a>
 		<h2>Splat Simulator</h2>
-		<p>This notebook was used to create the <a href="#simulated">simulated dataset</a>.
-			The artificial gene counts and group labels are generated using the Splat simulator, which is part of the R package <a href="https://bioconductor.org/packages/devel/bioc/vignettes/splatter/inst/doc/splatter.html" target="_blank">Splatter</a>, and so the code contains a mix between Python and inline R.
-			To mimick true biological gene expression, the benchmark dataset has been set to use as a seed, though it would be easy to swap this out to imitate another dataset.
+		<p>The purpose of notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Splat_Simulator.ipynb" target="_blank">Splat_Simulator.ipynb</a> is to produce new, artificial scRNA-seq data.
+			For this project, it was used to create the <a href="#simulated">simulated dataset</a>, though can easily be altered to make new data for other purposes.
+		</p>
+		<p>
+			Gene counts and group labels are generated using the Splat simulator, which is part of the R package <a href="https://bioconductor.org/packages/devel/bioc/vignettes/splatter/inst/doc/splatter.html" target="_blank">Splatter</a>, and so the code contains a mix between Python and inline R.
+			To mimick true biological gene expression, the benchmark dataset has been set to use as a seed, though this could be swapped out to imitate another dataset.
 			After seeding the simulator, datapoints are generated with each belonging to one of four groups.
-			This new data and labels are then saved as CSV files using Python.
+			The new data and labels are then saved as CSV files using Python.
 			These can be downloaded and reopened to use in the second notebook.
 		</p>
 		<div class="notebook">
@@ -456,7 +459,7 @@
 
 		<a name="clusternotebook" class="anchor"></a>
 		<h2>Clustering and TDA</h2>
-		<p>In this notebook, experimentation is performed on the three given datasets.
+		<p>In the notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb" target="_blank">Clustering_and_TDA.ipynb</a>, experimentation is performed on the three given datasets.
 			However, it has been designed so that it could be easily run with new data.
 		</p>
 		<p>
