@@ -4,12 +4,12 @@
   <summary><b>Contents</b></summary>
   <ol>
     <li><a href="#about">About</a></li>
+    <li><a href="#code">Running the Code</a></li>
     <li><a href="#repositorycontents">Repository Contents</a></li>
     <ul>
       <li><a href="#mainbranch">Main Branch</a></li>
       <li><a href="#pagesbranch">GitHub Pages Branch</a></li>
     </ul>
-    <li><a href="#code">Running the Code</a></li>
   </ol>
 </details>
 
@@ -17,6 +17,20 @@
 <h2 align="center">🧬 About 🧬</h2>
 <p>This respository consists of two branches hosting the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
 
+<a id="code">
+<h2 align="center">🧬 Running the Code 🧬</h2>
+The notebooks were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser:
+<ol>
+  <li>Visit <a href=https://colab.research.google.com>https://colab.research.google.com</a></li>
+  <li>Sign in to your Google account</li>
+  <li>Download the Jupyter notebook(s) from this repository</li>
+  <ul>
+    <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb</a></li>
+    <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Splat_Simulator.ipynb">Splat_Simulator.ipynb</a></li>
+  </ul>
+  <li>On Colab, go to File > Upload notebook</li>
+</ol>
+  
 <a id="repositorycontents"></a>
 <h2 align="center">🧬 Repository Contents 🧬</h2>
 <a id="mainbranch">
@@ -61,17 +75,3 @@ This folder contains HTML versions of the executed notebooks:
 
 <h5>Website</h5>
 Other folders provide the HTML, CSS, JavaScript and assets required to host the GitHub pages site.
-  
-<a id="code">
-<h2 align="center">🧬 Running the Code 🧬</h2>
-The notebooks were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser:
-<ol>
-  <li>Visit <a href=https://colab.research.google.com>https://colab.research.google.com</a></li>
-  <li>Sign in to your Google account</li>
-  <li>Download the Jupyter notebook(s) from this repository</li>
-  <ul>
-    <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb</a></li>
-    <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Splat_Simulator.ipynb">Splat_Simulator.ipynb</a></li>
-  </ul>
-  <li>On Colab, go to File > Upload notebook</li>
-</ol>
