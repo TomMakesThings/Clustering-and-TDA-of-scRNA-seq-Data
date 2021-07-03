@@ -73,5 +73,5 @@ The notebooks were designed to run in Google Colab which is a free Jupyter noteb
     <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb</a></li>
     <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Splat_Simulator.ipynb">Splat_Simulator.ipynb</a></li>
   </ul>
-  <li>On Colab, press `var example = true`
-<ol>
+  <li>On Colab, go to File > Upload notebook</li>
+</ol>
