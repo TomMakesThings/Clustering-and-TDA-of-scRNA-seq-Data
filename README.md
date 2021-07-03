@@ -11,7 +11,7 @@
 
 <a id="about">
 <h2 align="center">🧬 About 🧬</h2>
-<p>This respository consists of two branches hosting the datasets, code, interactive graphs and website for my undergraduate final year project. The aim being to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For a brief overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
+<p>This respository consists of two branches hosting the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
 
 <a id="mainbranch">
 <h2 align="center">🧬 Main Branch 🧬</h2>
