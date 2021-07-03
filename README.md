@@ -17,10 +17,10 @@
 <h2 align="center">🧬 About 🧬</h2>
 <p>This respository consists of two branches hosting the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
 
-<a id="repositorycontents">
+<a id="repositorycontents"></a>
 <h2 align="center">🧬 Repository Contents 🧬</h2>
 <a id="mainbranch">
-<h3 align="center"Main Branch</h3>
+<h3 align="center">Main Branch</h3>
 
 <h4>Data</h4>
 <h5>Datasets</h5>
@@ -41,7 +41,7 @@ In the notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of
 First the datasets and their target labels are opened as dataframes. These datasets are downloaded from URL so that the notebook can be run with no set up required. Next, a dataset is selected and an autoencoder with customisable hyperparameters created using PyTorch Lightning to use as a feature extractor for the gene counts. Then clustering is performed to divide cells into groups which show similar gene expression. Several clustering algorithms can be chosen including: k-means, agglomerative hierarchical, BIRCH, mini-batch k-means, spectral and Gaussian mixture. The encoding produced by the autoencoder can optionally be used, along with other dimensionality reduction methods such as PCA, ICA or NMF and techniques such as standardization and t-SNE. At the end of the notebook, Kepler Mapper is run on the gene counts to produce a simplicial complex to reveal the topological shape of the high-dimensional data.
 
 <a id="pagesbranch">
-<h3 align="center"GitHub Pages Branch</h3>
+<h3 align="center">GitHub Pages Branch</h3>
 <h5>Graphs</h5>
 In <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs">this folder</a>, interactive HTML graphs from experiments with clustering and topological data analysis are located.
 <ul>
