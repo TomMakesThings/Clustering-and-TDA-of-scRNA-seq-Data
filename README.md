@@ -33,7 +33,7 @@ All code was written across two Jupyter notebooks. For an explaination of each, 
   
 <a id="repositorycontents"></a>
 <h2 align="center">🧬 Repository Contents 🧬</h2>
-<p>The repository consists of two branches: <a href="#mainbranch">Main Branch</a></li> and <a href="#pagesbranch">GitHub Pages Branch</a>. The contents of each branch is explained here.</p>
+<p>The repository consists of two branches: <a href="#mainbranch">main</a></li> and <a href="#pagesbranch">gh-pages</a>. The contents of each branch is explained here.</p>
 <a id="mainbranch">
 <h3 align="center">Main Branch</h3>
 
