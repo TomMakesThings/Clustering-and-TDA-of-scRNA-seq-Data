@@ -19,7 +19,7 @@
 
 <a id="code">
 <h2 align="center">🧬 Running the Code 🧬</h2>
-The notebooks were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser:
+All code was written across two Jupyter notebooks. For an explaination of each, see the <a href="code">Jupyter Notebooks</a> section below. These were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser.
 <ol>
   <li>Visit <a href=https://colab.research.google.com>https://colab.research.google.com</a></li>
   <li>Sign in to your Google account</li>
@@ -43,6 +43,7 @@ The notebooks were designed to run in Google Colab which is a free Jupyter noteb
 <h5>Benchmark_Autoencoder, Simulated_Autoencoder and Evaluation_Autoencoder</h5>
 These folders contain zip files that are opened automatically in notebook Clustering_and_TDA.ipynb and do not need to be manually downloaded. These files allow the state of trained autoencoders to be reloaded for the three datasets to avoid training new models every time the notebook is run. Within each zip is a model checkpoint file containing the model weights, as well as text files listing the cells / samples selected for the testing, training and validation data to ensure training and testing data does not overlap when the notebook is run again.
 
+<a id="code">
 <h4>Jupyter_Notebooks</h4>
 <h5>Splat_Simulator</h5>
 The purpose of notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Splat_Simulator.ipynb">Splat_Simulator.ipynb</a> is to produce new, artificial scRNA-seq data. For this project, it was used to create the simulated dataset, though can easily be altered to make new data for other purposes.
