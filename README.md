@@ -33,7 +33,7 @@ All code was written across two Jupyter notebooks. For an explaination of each, 
   
 <a id="repositorycontents"></a>
 <h2 align="center">🧬 Repository Contents 🧬</h2>
-<p>The contents of each file in the repository is explained here</p>
+<p>The contents of each file in the repository is explained here.</p>
 <a id="mainbranch">
 <h3 align="center">Main Branch</h3>
 
