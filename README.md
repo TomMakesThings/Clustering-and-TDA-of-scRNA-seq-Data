@@ -15,7 +15,7 @@
 
 <a id="about">
 <h2 align="center">🧬 About 🧬</h2>
-<p>This respository consists of two branches hosting the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
+<p>This respository hosts the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
 
 <a id="code">
 <h2 align="center">🧬 Running the Code 🧬</h2>
@@ -33,7 +33,7 @@ All code was written across two Jupyter notebooks. For an explaination of each, 
   
 <a id="repositorycontents"></a>
 <h2 align="center">🧬 Repository Contents 🧬</h2>
-<p>The contents of each file in the repository is explained here.</p>
+<p>The repository consists of two branches: <a href="#mainbranch">Main Branch</a></li> and <a href="#pagesbranch">GitHub Pages Branch</a>. The contents of each branch is explained here.</p>
 <a id="mainbranch">
 <h3 align="center">Main Branch</h3>
 
