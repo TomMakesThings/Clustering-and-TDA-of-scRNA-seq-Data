@@ -69,7 +69,7 @@ In <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Da
 </ul>
 
 <h5>Notebooks</h5>
-This folder contains HTML versions of the executed notebooks:
+<a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Notebooks">This folder</a> contains HTML versions of the executed notebooks:
 <ul>
   <li><a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/Notebooks/Splat_Simulator.html">Splat_Simulator</a></li>
   <li><a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/Notebooks/Clustering_and_TDA.html">Clustering_and_TDA</a></li>
