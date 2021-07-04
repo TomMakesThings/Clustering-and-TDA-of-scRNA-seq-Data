@@ -41,7 +41,7 @@
 <a id="clustering"></a>
 <details open="open">
   <summary><b>Clustering</b></summary>
-  <p>Different combinations of the pre-processing, dimensionality reduction methods and clustering algorithm were tested with the best combination varying per dataset</p>
+  <p>Different combinations of the pre-processing, dimensionality reduction methods and clustering algorithm were tested with the best combination varying per dataset.</p>
   <p><b>Benchmark</b></p>
   <ul>
     <li>Dataset originally named sc_10x by <a href="https://github.com/LuyiTian/sc_mixology">Tian et al.</a></li>
@@ -78,7 +78,7 @@
 <a id="tda"></a>
 <details open="open">
   <summary><b>Topological Data Analysis with Kepler Mapper</b></summary>
-  <p>Simplicial complexes for each dataset were created with the same hyperparameters so that topological features can be compared</p>
+  <p>Simplicial complexes for each dataset were created with the same hyperparameters so that topological features can be compared.</p>
   <p><b>Benchmark</b></p>
   <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
     <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Benchmark-Mapper.gif" width="100%">
