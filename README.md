@@ -31,6 +31,9 @@ All code was written across two Jupyter notebooks. For an explaination of each n
   <li>On Colab, go to File ➞ Upload notebook</li>
    <a href="https://colab.research.google.com/notebooks/intro.ipynb#recent=true">
     <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Colab-Upload.gif" width="100%"></a>
+  <li>Navigate to Clustering-and-TDA-of-scRNA-seq-Data-main > Jupyter_Notebooks</li>
+  <li>Select the notebook to upload</li>
+  <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-File-Location.png" width="100%"></p>
 </ol>
   
 <a id="repositorycontents"></a>
