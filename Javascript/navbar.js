@@ -12,10 +12,11 @@ window.addEventListener('resize', scrollFunction);
 /* Adjust the header when scrolling down */
 function scrollFunction() {
   all_content = document.getElementsByClassName('header');
+  visible_header = document.getElementById('visible-header');
   var position = "absolute";
   var top = "0px";
   if (window.innerWidth <= 750) {
-    if (document.body.scrollTop > 140 || document.documentElement.scrollTop > 140) {
+    if (document.body.scrollTop > visible_header.offsetTop || document.documentElement.scrollTop > visible_header.offsetTop) {
       position = "fixed";
       top = "-140px";
     }
