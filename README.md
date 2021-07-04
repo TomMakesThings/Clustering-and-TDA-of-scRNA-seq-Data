@@ -34,6 +34,8 @@ All code was written across two Jupyter notebooks. For an explaination of each n
   <li>Navigate to Clustering-and-TDA-of-scRNA-seq-Data-main > Jupyter_Notebooks</li>
   <li>Select the notebook to upload</li>
   <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-File-Location.png" width="100%"></p>
+  <li>Press Runtime ➞ Run all
+  <a><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-Run.gif" width="100%"></a>
 </ol>
   
 <a id="repositorycontents"></a>
