@@ -22,7 +22,7 @@
 
 <a id="code"></a>
 <h2 align="center">🧬 Running the Code 🧬</h2>
-<p>All code was written across two Jupyter notebooks. For an explaination of each notebook, see the section below. These were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser.</p>
+<p>The code was written in Python and R across two Jupyter notebooks. For an explaination of each notebook, see the section below. These were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser.</p>
   
 <details>
   <summary><b>Click to show instructions</b></summary>
