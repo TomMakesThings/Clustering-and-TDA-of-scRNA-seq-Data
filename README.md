@@ -33,7 +33,7 @@
 <details open="open">
   <summary><b>Clustering</b></summary>
   <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
-    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Clustering-Results.png" width="700">
+    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Clustering-Results.png" width="650">
   </a>
 </details>
 
