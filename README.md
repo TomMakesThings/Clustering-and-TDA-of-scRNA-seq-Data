@@ -44,6 +44,7 @@
   <a><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-GPU.gif" width="100%"></a>
   <li>Run the code through pressing Runtime ➞ Run all.
   <a><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-Run.gif" width="100%"></a>
+  <li>If you would like to make any changes, for example running with your own dataset, follow the instructions in the notebook.
 </ol>
 </details>
   
