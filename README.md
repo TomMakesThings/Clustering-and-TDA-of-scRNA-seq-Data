@@ -47,18 +47,24 @@
 <a id="repositorycontents"></a>
 <h2 align="center">🧬 Repository Contents 🧬</h2>
 <p>The repository consists of two branches: <a href="#mainbranch">main</a></li> and <a href="#pagesbranch">gh-pages</a>. The contents of each branch is explained here.</p>
-<a id="mainbranch">
+<a id="mainbranch"></a>
 <h3 align="center">Main Branch</h3>
 
-<h4>Data</h4>
+<details>
+<summary><b>Data</b></summary>
+  
 <h5>Datasets</h5>
 <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Data/Datasets">This folder</a> contains CSV, text and R object files containing the gene count data, labels and metadata for three scRNA-seq datasets. These are downloaded and opened automatically in notebook Clustering_and_TDA.ipynb.
 
 <h5>Benchmark_Autoencoder, Simulated_Autoencoder and Evaluation_Autoencoder</h5>
 These folders contain zip files that are opened automatically in notebook Clustering_and_TDA.ipynb and do not need to be manually downloaded. These files allow the state of trained autoencoders to be reloaded for the three datasets to avoid training new models every time the notebook is run. Within each zip is a model checkpoint file containing the model weights, as well as text files listing the cells / samples selected for the testing, training and validation data to ensure training and testing data does not overlap when the notebook is run again.
+  
+</details>
 
-<a id="code">
-<h4>Jupyter_Notebooks</h4>
+<a id="code"></a>
+<details>
+<summary><b>Jupyter_Notebooks</b></summary>
+  
 <h5>Splat_Simulator</h5>
 The purpose of notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Splat_Simulator.ipynb">Splat_Simulator.ipynb</a> is to produce new, artificial scRNA-seq data. For this project, it was used to create the simulated dataset, though can easily be altered to make new data for other purposes.
 
@@ -68,10 +74,14 @@ Gene counts and group labels are generated using the Splat simulator, which is p
 In the notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb</a>, experimentation is performed on the three given datasets. However, it has been designed so that it could be easily run with new data.
 
 First the datasets and their target labels are opened as dataframes. These datasets are downloaded from URL so that the notebook can be run with no set up required. Next, a dataset is selected and an autoencoder with customisable hyperparameters created using PyTorch Lightning to use as a feature extractor for the gene counts. Then clustering is performed to divide cells into groups which show similar gene expression. Several clustering algorithms can be chosen including: k-means, agglomerative hierarchical, BIRCH, mini-batch k-means, spectral and Gaussian mixture. The encoding produced by the autoencoder can optionally be used, along with other dimensionality reduction methods such as PCA, ICA or NMF and techniques such as standardization and t-SNE. At the end of the notebook, Kepler Mapper is run on the gene counts to produce a simplicial complex to reveal the topological shape of the high-dimensional data.
+  
+</details>
 
-<a id="pagesbranch">
+<a id="pagesbranch"></a>
 <h3 align="center">GitHub Pages Branch</h3>
-<h5>Graphs</h5>
+
+<details>
+<summary><b>Graphs</b></summary>
 In <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs">this folder</a>, interactive HTML graphs from experiments with clustering and topological data analysis are located.
 <ul>
   <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs/Target_Groups">Target_Groups</a> - graphs of expected cells lines / groups</li>
@@ -80,13 +90,18 @@ In <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Da
   <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs/Alternative_Algorithms">Alternative_Algorithms</a> - experiments with other clustering algorithms</li>
   <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs/Topological_Data_Analysis">Topological_Data_Analysis</a> - simplicial complexes produced through Kepler Mapper</li>
 </ul>
+</details>
 
-<h5>Notebooks</h5>
+<details>
+<summary><b>Notebooks</b></summary>
 <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Notebooks">This folder</a> contains HTML versions of the executed notebooks:
 <ul>
   <li><a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/Notebooks/Splat_Simulator.html">Splat_Simulator</a></li>
   <li><a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/Notebooks/Clustering_and_TDA.html">Clustering_and_TDA</a></li>
 </ul>
+</details>
 
-<h5>Website</h5>
+<details>
+<summary><b>Website</b></summary>
 Other folders provide the HTML, CSS, JavaScript and assets required to host the GitHub pages site.
+</details
