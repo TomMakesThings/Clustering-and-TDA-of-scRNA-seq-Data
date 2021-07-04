@@ -17,7 +17,16 @@
     <li><a href="#repositorycontents">Repository Contents</a></li>
     <ul>
       <li><a href="#mainbranch">Main Branch</a></li>
+      <ul>
+        <li><a href="#jupyternotebooks">Jupyter Notebooks</a></li>
+        <li><a href="#data">Data</a></li>
+      </ul>
       <li><a href="#pagesbranch">GitHub Pages Branch</a></li>
+      <ul>
+        <li><a href="#graphs">Graphs</a></li>
+        <li><a href="#notebooks">Notebooks</a></li>
+        <li><a href="#website">Website</a></li>
+      </ul>
     </ul>
   </ol>
 </details>
@@ -79,26 +88,8 @@
 <a id="mainbranch"></a>
 <h3>Main Branch</h3>
 
-<details>
-<summary><b>Data</b></summary>
-  
-<h5>Datasets</h5>
-<p><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Data/Datasets">This folder</a> contains CSV, text and R object files containing the gene count data, labels and metadata for three scRNA-seq datasets. These are downloaded and opened automatically in notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb.</a></p>
-<a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">
-  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-Datasets.gif" width="100%">
-</a>
-<p>To find out more about the datasets see the <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
-<a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
-  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Dataset-Demo.gif" width="100%">
-</a>
-
-<h5>Benchmark_Autoencoder, Simulated_Autoencoder and Evaluation_Autoencoder</h5>
-These folders contain zip files that are opened automatically in notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb.</a> and do not need to be manually downloaded. These files allow the state of trained autoencoders to be reloaded for the three datasets to avoid training new models every time the notebook is run. Within each zip is a model checkpoint file containing the model weights, as well as text files listing the cells / samples selected for the testing, training and validation data to ensure training and testing data does not overlap when the notebook is run again.
-  
-</details>
-
-<a id="code"></a>
-<details>
+<a id="jupyternotebooks"></a>
+<details open="open">
 <summary><b>Jupyter Notebooks</b></summary>
   
 <h5>Splat_Simulator</h5>
@@ -121,10 +112,30 @@ First the datasets and their target labels are opened as dataframes. These datas
   
 </details>
 
+<a id="data"></a>
+<details open="open">
+<summary><b>Data</b></summary>
+  
+<h5>Datasets</h5>
+<p><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Data/Datasets">This folder</a> contains CSV, text and R object files containing the gene count data, labels and metadata for three scRNA-seq datasets. These are downloaded and opened automatically in notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb.</a></p>
+<a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">
+  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-Datasets.gif" width="100%">
+</a>
+<p>To find out more about the datasets see the <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
+<a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
+  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Dataset-Demo.gif" width="100%">
+</a>
+
+<h5>Benchmark_Autoencoder, Simulated_Autoencoder and Evaluation_Autoencoder</h5>
+These folders contain zip files that are opened automatically in notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb.</a> and do not need to be manually downloaded. These files allow the state of trained autoencoders to be reloaded for the three datasets to avoid training new models every time the notebook is run. Within each zip is a model checkpoint file containing the model weights, as well as text files listing the cells / samples selected for the testing, training and validation data to ensure training and testing data does not overlap when the notebook is run again.
+  
+</details>
+
 <a id="pagesbranch"></a>
 <h3>GitHub Pages Branch</h3>
 
-<details>
+<a id="graphs"></a>
+<details open="open">
 <summary><b>Graphs</b></summary>
 <p>In <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs">this folder</a>, interactive HTML graphs from experiments with clustering and topological data analysis are located.</p>
 <ul>
@@ -139,7 +150,8 @@ First the datasets and their target labels are opened as dataframes. These datas
   <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Graph-Finder-Demo.gif" width="100%"></a>
 </details>
 
-<details>
+<a id="notebooks"></a>
+<details open="open">
 <summary><b>Notebooks</b></summary>
 <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Notebooks">This folder</a> contains HTML versions of the executed notebooks:
 <ul>
@@ -148,7 +160,8 @@ First the datasets and their target labels are opened as dataframes. These datas
 </ul>
 </details>
 
-<details>
+<a id="website"></a>
+<details open="open">
 <summary><b>Website</b></summary>
 Other folders provide the HTML, CSS, JavaScript and assets required to host the GitHub pages site.
 </details
