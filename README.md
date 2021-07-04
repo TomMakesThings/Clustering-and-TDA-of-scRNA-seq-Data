@@ -86,7 +86,7 @@ First the datasets and their target labels are opened as dataframes. These datas
 
 <details>
 <summary><b>Graphs</b></summary>
-In <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs">this folder</a>, interactive HTML graphs from experiments with clustering and topological data analysis are located.
+<p>In <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs">this folder</a>, interactive HTML graphs from experiments with clustering and topological data analysis are located.</p>
 <ul>
   <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs/Target_Groups">Target_Groups</a> - graphs of expected cells lines / groups</li>
   <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs/K-Means">K-Means</a> - experiments with k-means clustering</li>
@@ -94,6 +94,9 @@ In <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Da
   <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs/Alternative_Algorithms">Alternative_Algorithms</a> - experiments with other clustering algorithms</li>
   <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs/Topological_Data_Analysis">Topological_Data_Analysis</a> - simplicial complexes produced through Kepler Mapper</li>
 </ul>
+  <p>To see the graphs, browse through the graphs refer to the Graph Finder on the <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
+  <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
+  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Graph-Finder-Demo.gif" width="100%"></a>
 </details>
 
 <details>
