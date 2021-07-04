@@ -1,5 +1,6 @@
 <div align="center">
   <h1>Clustering and Topological Data Analysis of Single-Cell RNA Sequencing Data</h1>
+  <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Images/Profile.jpg" width="100"></p>
   <p><b>Project by TomMakesThings</b></p>
   <sub><b>2020 - 2021</b></sub>
 </div>
