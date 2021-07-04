@@ -28,12 +28,9 @@ All code was written across two Jupyter notebooks. For an explaination of each n
   <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/ZIP-Extract.png" width="600"></p>
   <li>Visit <a href=https://colab.research.google.com>https://colab.research.google.com</a></li>
   <li>Sign in to your Google account</li>
-  <li>Download the Jupyter notebook(s) from this repository</li>
-  <ul>
-    <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb</a></li>
-    <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Splat_Simulator.ipynb">Splat_Simulator.ipynb</a></li>
-  </ul>
-  <li>On Colab, go to File > Upload notebook</li>
+  <li>On Colab, go to File ➞ Upload notebook</li>
+   <a href="https://colab.research.google.com/notebooks/intro.ipynb#recent=true">
+    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Colab-Upload.gif" width="100%"></a>
 </ol>
   
 <a id="repositorycontents"></a>
