@@ -20,14 +20,21 @@
 <h2 align="center">🧬 About 🧬</h2>
 <p>This respository hosts the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>, or if you'd like to experiment with the code yourself, refer to the <a href="#code">Running the Code</a>.</p>
 
-<h4>Best Results of Clustering</h4>
-<a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
-  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Clustering-Results.png" width="700">
-</a>
-<h4>Results of Topological Data Analysis with Mapper</h4>
-<a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
-  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/TDA-Results.png" width="700">
-</a>
+<h2 align="center">🧬 Results 🧬</h2>
+
+<details open="open">
+  <summary><b>Clustering</b></summary>
+  <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
+    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Clustering-Results.png" width="700">
+  </a>
+</details>
+
+<details open="open">
+  <summary><b>Topological Data Analysis with Kepler Mapper</b></summary>
+  <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
+    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/TDA-Results.png" width="700">
+  </a>
+</details>
 
 <a id="code"></a>
 <h2 align="center">🧬 Running the Code 🧬</h2>
@@ -61,7 +68,7 @@
 <h2 align="center">🧬 Repository Contents 🧬</h2>
 <p>The repository consists of two branches: <a href="#mainbranch">main</a></li> and <a href="#pagesbranch">gh-pages</a>. The contents of each branch is explained here.</p>
 <a id="mainbranch"></a>
-<h3 align="center">Main Branch</h3>
+<h3>Main Branch</h3>
 
 <details>
 <summary><b>Data</b></summary>
@@ -98,7 +105,7 @@ First the datasets and their target labels are opened as dataframes. These datas
 </details>
 
 <a id="pagesbranch"></a>
-<h3 align="center">GitHub Pages Branch</h3>
+<h3>GitHub Pages Branch</h3>
 
 <details>
 <summary><b>Graphs</b></summary>
