@@ -19,7 +19,7 @@
 
 <a id="code">
 <h2 align="center">🧬 Running the Code 🧬</h2>
-All code was written across two Jupyter notebooks. For an explaination of each, see the <a href="code">Jupyter Notebooks</a> section below. These were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser.
+All code was written across two Jupyter notebooks. For an explaination of each, see the <a href="#code">Jupyter Notebooks</a> section below. These were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser.
 <ol>
   <li>Visit <a href=https://colab.research.google.com>https://colab.research.google.com</a></li>
   <li>Sign in to your Google account</li>
