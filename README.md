@@ -13,30 +13,36 @@
   </ol>
 </details>
 
-<a id="about">
+<a id="about"></a>
 <h2 align="center">🧬 About 🧬</h2>
 <p>This respository hosts the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
 
-<a id="code">
+<a id="code"></a>
 <h2 align="center">🧬 Running the Code 🧬</h2>
-All code was written across two Jupyter notebooks. For an explaination of each notebook, see the section below. These were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser.
-<ol>
-  <li>Download the repository by clicking Code ➞ Download ZIP</li>
+<p>All code was written across two Jupyter notebooks. For an explaination of each notebook, see the section below. These were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser.</p>
+  
+<details>
+  <summary><b>Click to show instructions</b></summary>
+  <ol>
+  <li>Download the repository by clicking Code ➞ Download ZIP.</li>
   <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/archive/refs/heads/main.zip">
     <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Download-Instruction.png" width="100%"></a>
-  <li>Extract the contents of the zip</li>
-  <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/ZIP-Extract.png" width="600"></p>
-  <li>Visit <a href=https://colab.research.google.com>https://colab.research.google.com</a></li>
-  <li>Sign in to your Google account</li>
-  <li>On Colab, go to File ➞ Upload notebook</li>
+  <li>Extract the contents of the zip.</li>
+  <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/ZIP-Extract.png" width="700"></p>
+  <li>Visit <a href=https://colab.research.google.com>https://colab.research.google.com</a>.</li>
+  <li>Sign in to your Google account.</li>
+  <li>On Colab, go to File ➞ Upload notebook.</li>
    <a href="https://colab.research.google.com/notebooks/intro.ipynb#recent=true">
     <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Colab-Upload.gif" width="100%"></a>
-  <li>Navigate to Clustering-and-TDA-of-scRNA-seq-Data-main > Jupyter_Notebooks</li>
-  <li>Select the notebook to upload</li>
+  <li>Navigate to Clustering-and-TDA-of-scRNA-seq-Data-main > Jupyter_Notebooks.</li>
+  <li>Select the notebook to upload.</li>
   <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-File-Location.png" width="100%"></p>
-  <li>Press Runtime ➞ Run all
+  <li>Optionally switch from CPU to GPU by selecting Change runtime type ➞ Hardware accelerator ➞ GPU ➞ Save. This is recommended if you selected Clustering_and_TDA.ipynb and wish to train a new autoencoder as it can considerably reduce training time.</li>
+  <a><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-GPU.gif" width="100%"></a>
+  <li>Run the code through pressing Runtime ➞ Run all.
   <a><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-Run.gif" width="100%"></a>
 </ol>
+</details>
   
 <a id="repositorycontents"></a>
 <h2 align="center">🧬 Repository Contents 🧬</h2>
