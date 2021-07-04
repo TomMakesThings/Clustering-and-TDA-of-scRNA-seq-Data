@@ -1,6 +1,7 @@
 <div align="center">
-  <h1>Clustering and Topological Data Analysis of scRNA-seq Data</h1>
+  <h1>Clustering and Topological Data Analysis of Single-Cell RNA Sequencing Data</h1>
   <p><b>Undergraduate project by TomMakesThings</b></p>
+  <sub><b>2020 - 2021</b></sub>
 </div>
 
 <details open="open">
