@@ -17,6 +17,9 @@
 <h2 align="center">🧬 About 🧬</h2>
 <p>This respository hosts the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
 
+<a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
+  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Graph-Finder-Demo.gif" width="100%"></a>
+
 <a id="code"></a>
 <h2 align="center">🧬 Running the Code 🧬</h2>
 <p>All code was written across two Jupyter notebooks. For an explaination of each notebook, see the section below. These were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser.</p>
