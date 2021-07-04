@@ -20,8 +20,13 @@
 <h2 align="center">🧬 About 🧬</h2>
 <p>This respository hosts the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>, or if you'd like to experiment with the code yourself, refer to the <a href="#code">Running the Code</a>.</p>
 
+<h4>Best Results of Clustering</h4>
 <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
-  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Graph-Finder-Demo.gif" width="100%">
+  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Clustering-Results.png" width="700">
+</a>
+<h4>Results of Topological Data Analysis with Mapper</h4>
+<a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
+  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/TDA-Results.png" width="700">
 </a>
 
 <a id="code"></a>
@@ -62,14 +67,17 @@
 <summary><b>Data</b></summary>
   
 <h5>Datasets</h5>
-<p><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Data/Datasets">This folder</a> contains CSV, text and R object files containing the gene count data, labels and metadata for three scRNA-seq datasets. These are downloaded and opened automatically in notebook Clustering_and_TDA.ipynb.</p>
-
+<p><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Data/Datasets">This folder</a> contains CSV, text and R object files containing the gene count data, labels and metadata for three scRNA-seq datasets. These are downloaded and opened automatically in notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb.</a></p>
+<a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">
+  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-Datasets.gif" width="100%">
+</a>
+<p>To find out more about the datasets see the <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
 <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
   <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Dataset-Demo.gif" width="100%">
 </a>
 
 <h5>Benchmark_Autoencoder, Simulated_Autoencoder and Evaluation_Autoencoder</h5>
-These folders contain zip files that are opened automatically in notebook Clustering_and_TDA.ipynb and do not need to be manually downloaded. These files allow the state of trained autoencoders to be reloaded for the three datasets to avoid training new models every time the notebook is run. Within each zip is a model checkpoint file containing the model weights, as well as text files listing the cells / samples selected for the testing, training and validation data to ensure training and testing data does not overlap when the notebook is run again.
+These folders contain zip files that are opened automatically in notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb.</a> and do not need to be manually downloaded. These files allow the state of trained autoencoders to be reloaded for the three datasets to avoid training new models every time the notebook is run. Within each zip is a model checkpoint file containing the model weights, as well as text files listing the cells / samples selected for the testing, training and validation data to ensure training and testing data does not overlap when the notebook is run again.
   
 </details>
 
