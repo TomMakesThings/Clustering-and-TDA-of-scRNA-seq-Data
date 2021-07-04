@@ -24,7 +24,6 @@
       <li><a href="#pagesbranch">GitHub Pages Branch</a></li>
       <ul>
         <li><a href="#graphs">Graphs</a></li>
-        <li><a href="#notebooks">Notebooks</a></li>
         <li><a href="#website">Website</a></li>
       </ul>
     </ul>
@@ -93,18 +92,31 @@
 <summary><b>Jupyter Notebooks</b></summary>
   
 <h5>Splat_Simulator</h5>
-The purpose of notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Splat_Simulator.ipynb">Splat_Simulator.ipynb</a> is to produce new, artificial scRNA-seq data. For this project, it was used to create the simulated dataset, though can easily be altered to make new data for other purposes.
+<p>The purpose of notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Splat_Simulator.ipynb">Splat_Simulator.ipynb</a> is to produce new, artificial scRNA-seq data. For this project, it was used to create the simulated dataset, though can easily be altered to make new data for other purposes. To see a fully executed version of the code, <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/Notebooks/Splat_Simulator.html">click here</a>.</p>
 
-Gene counts and group labels are generated using the Splat simulator, which is part of the R package Splatter, and so the code contains a mix between Python and inline R. To mimick true biological gene expression, the benchmark dataset has been set to use as a seed, though this could be swapped out to imitate another dataset. After seeding the simulator, datapoints are generated with each belonging to one of four groups. The new data and labels are then saved as CSV files using Python. These can be downloaded and reopened to use in <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb</a>.
+<ul>
+  <li>Gene counts and group labels are generated using the Splat simulator, which is part of the R package Splatter, and so the code contains a mix between Python and inline R.</li>
+  <li>To mimick true biological gene expression, the benchmark dataset has been set to use as a seed, though this could be swapped out to imitate another dataset.</li>
+  <li>After seeding the simulator, datapoints are generated with each belonging to one of four groups.</li>
+  <li>The new data and labels are then saved as CSV files using Python. These can be downloaded and reopened to use in <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb</a>.</li>
   
 <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Splat_Simulator.ipynb">
   <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Splat-Simulator-Demo.gif" width="100%">
 </a>
 
 <h5>Clustering_and_TDA</h5>
-In the notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb</a>, experimentation is performed on the three given datasets. However, it has been designed so that it could be easily run with new data.
+<p>In the notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">Clustering_and_TDA.ipynb</a>, experimentation is performed on the three given datasets.
+  To see a fully executed version of the code with interactive graphs, <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/Notebooks/Clustering_and_TDA.html">click here</a>.</p>
 
-First the datasets and their target labels are opened as dataframes. These datasets are downloaded from URL so that the notebook can be run with no set up required. Next, a dataset is selected and an autoencoder with customisable hyperparameters created using PyTorch Lightning to use as a feature extractor for the gene counts. Then clustering is performed to divide cells into groups which show similar gene expression. Several clustering algorithms can be chosen including: k-means, agglomerative hierarchical, BIRCH, mini-batch k-means, spectral and Gaussian mixture. The encoding produced by the autoencoder can optionally be used, along with other dimensionality reduction methods such as PCA, ICA or NMF and techniques such as standardization and t-SNE. At the end of the notebook, Kepler Mapper is run on the gene counts to produce a simplicial complex to reveal the topological shape of the high-dimensional data.
+<ul>
+  <li>First the datasets and their target labels are opened as dataframes. The given datasets are downloaded from URL so that the notebook can be run with no set up required,
+  although the code has been designed so that it can also be run with your own dataset.</li>
+  <li>Next, a dataset is selected and an autoencoder with customisable hyperparameters created using PyTorch Lightning to use as a feature extractor for the gene counts</li>
+  <li>Then clustering is performed to divide cells into groups which show similar gene expression. Several clustering algorithms can be chosen including: k-means, agglomerative 
+    hierarchical, BIRCH, mini-batch k-means, spectral and Gaussian mixture. The encoding produced by the autoencoder can optionally be used, along with other dimensionality    
+    reduction methods such as PCA, ICA or NMF and techniques such as standardization and t-SNE.</li>
+  </li>
+  <li>At the end of the notebook, Kepler Mapper is run on the gene counts to produce a simplicial complex to reveal the topological shape of the high-dimensional data.</li>
   
 <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Clustering_and_TDA.ipynb">
   <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Clustering-Demo.gif" width="100%">
@@ -148,16 +160,6 @@ These folders contain zip files that are opened automatically in notebook <a hre
   <p>To view a particular graph, refer to the Graph Finder on the <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
   <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
   <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Graph-Finder-Demo.gif" width="100%"></a>
-</details>
-
-<a id="notebooks"></a>
-<details open="open">
-<summary><b>Notebooks</b></summary>
-<a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Notebooks">This folder</a> contains HTML versions of the executed notebooks:
-<ul>
-  <li><a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/Notebooks/Splat_Simulator.html">Splat_Simulator</a></li>
-  <li><a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/Notebooks/Clustering_and_TDA.html">Clustering_and_TDA</a></li>
-</ul>
 </details>
 
 <a id="website"></a>
