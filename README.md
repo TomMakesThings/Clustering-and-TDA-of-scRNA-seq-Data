@@ -7,6 +7,11 @@
   <summary><b>Contents</b></summary>
   <ol>
     <li><a href="#about">About</a></li>
+    <li><a href="#results">Results</a></li>
+    <ul>
+      <li><a href="#clustering">Clustering</a></li>
+      <li><a href="#tda">Topological Data Analysis</a></li>
+    </ul>
     <li><a href="#code">Running the Code</a></li>
     <li><a href="#repositorycontents">Repository Contents</a></li>
     <ul>
@@ -20,8 +25,10 @@
 <h2 align="center">🧬 About 🧬</h2>
 <p>This respository hosts the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>, or if you'd like to experiment with the code yourself, refer to the <a href="#code">Running the Code</a>.</p>
 
+<a id="results"></a>
 <h2 align="center">🧬 Results 🧬</h2>
 
+<a id="clustering"></a>
 <details open="open">
   <summary><b>Clustering</b></summary>
   <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
@@ -29,6 +36,7 @@
   </a>
 </details>
 
+<a id="tda"></a>
 <details open="open">
   <summary><b>Topological Data Analysis with Kepler Mapper</b></summary>
   <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
