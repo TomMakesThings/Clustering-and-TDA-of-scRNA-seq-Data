@@ -19,7 +19,7 @@
 
 <a id="code">
 <h2 align="center">🧬 Running the Code 🧬</h2>
-All code was written across two Jupyter notebooks. For an explaination of each, see the <a href="code">Jupyter Notebooks</a> section below. These were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser.
+All code was written across two Jupyter notebooks. For an explaination of each, see the <a href="#code">Jupyter Notebooks</a> section below. These were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser.
 <ol>
   <li>Visit <a href=https://colab.research.google.com>https://colab.research.google.com</a></li>
   <li>Sign in to your Google account</li>
@@ -67,6 +67,8 @@ In <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Da
   <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs/Alternative_Algorithms">Alternative_Algorithms</a> - experiments with other clustering algorithms</li>
   <li><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Graphs/Topological_Data_Analysis">Topological_Data_Analysis</a> - simplicial complexes produced through Kepler Mapper</li>
 </ul>
+  
+<p align="center"><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Graph-Finder-Demo.gif" style="width: 100%; max-width: 1000px;"></p>
 
 <h5>Notebooks</h5>
 <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/gh-pages/Notebooks">This folder</a> contains HTML versions of the executed notebooks:
