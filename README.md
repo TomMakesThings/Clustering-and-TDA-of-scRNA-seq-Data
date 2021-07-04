@@ -18,10 +18,11 @@
 
 <a id="about"></a>
 <h2 align="center">🧬 About 🧬</h2>
-<p>This respository hosts the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>, or for instructions running code, refer to the <a href="#code">Running the Code</a>.</p>
+<p>This respository hosts the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>, or if you'd like to experiment with the code yourself, refer to the <a href="#code">Running the Code</a>.</p>
 
 <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
-  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Graph-Finder-Demo.gif" width="100%"></a>
+  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Graph-Finder-Demo.gif" width="100%">
+</a>
 
 <a id="code"></a>
 <h2 align="center">🧬 Running the Code 🧬</h2>
@@ -61,7 +62,11 @@
 <summary><b>Data</b></summary>
   
 <h5>Datasets</h5>
-<a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Data/Datasets">This folder</a> contains CSV, text and R object files containing the gene count data, labels and metadata for three scRNA-seq datasets. These are downloaded and opened automatically in notebook Clustering_and_TDA.ipynb.
+<p><a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/tree/main/Data/Datasets">This folder</a> contains CSV, text and R object files containing the gene count data, labels and metadata for three scRNA-seq datasets. These are downloaded and opened automatically in notebook Clustering_and_TDA.ipynb.</p>
+
+<a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
+  <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Dataset-Demo.gif" width="100%">
+</a>
 
 <h5>Benchmark_Autoencoder, Simulated_Autoencoder and Evaluation_Autoencoder</h5>
 These folders contain zip files that are opened automatically in notebook Clustering_and_TDA.ipynb and do not need to be manually downloaded. These files allow the state of trained autoencoders to be reloaded for the three datasets to avoid training new models every time the notebook is run. Within each zip is a model checkpoint file containing the model weights, as well as text files listing the cells / samples selected for the testing, training and validation data to ensure training and testing data does not overlap when the notebook is run again.
@@ -70,7 +75,7 @@ These folders contain zip files that are opened automatically in notebook Cluste
 
 <a id="code"></a>
 <details>
-<summary><b>Jupyter_Notebooks</b></summary>
+<summary><b>Jupyter Notebooks</b></summary>
   
 <h5>Splat_Simulator</h5>
 The purpose of notebook <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/main/Jupyter_Notebooks/Splat_Simulator.ipynb">Splat_Simulator.ipynb</a> is to produce new, artificial scRNA-seq data. For this project, it was used to create the simulated dataset, though can easily be altered to make new data for other purposes.
