@@ -1,4 +1,7 @@
-<h1 align="center">Clustering and Topological Data Analysis of scRNA-seq Data</h1>
+<div align="center">
+  <h1>Clustering and Topological Data Analysis of scRNA-seq Data</h1>
+  <p><b>Undergraduate project by TomMakesThings</b></p>
+</div>
 
 <details open="open">
   <summary><b>Contents</b></summary>
@@ -15,7 +18,7 @@
 
 <a id="about"></a>
 <h2 align="center">🧬 About 🧬</h2>
-<p>This respository hosts the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>.</p>
+<p>This respository hosts the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>, or for instructions running code, refer to the <a href="#code">Running the Code</a>.</p>
 
 <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
   <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Graph-Finder-Demo.gif" width="100%"></a>
