@@ -40,16 +40,55 @@
 <a id="clustering"></a>
 <details open="open">
   <summary><b>Clustering</b></summary>
+  <p>Different combinations of the pre-processing, dimensionality reduction methods and clustering algorithm were tested with the best combination varying per dataset</p>
+  <p><b>Benchmark</b></p>
+  <ul>
+    <li>Dataset originally named sc_10x by <a href="https://github.com/LuyiTian/sc_mixology">Tian et al.</a></li>
+    <li>Contains human lung adenocarcinoma cancer cells with three cell lines</li>
+    <li>Best accuracy was 99.9% in which 901 out of 902 cells were assigned to the correct cell line</li>
+    <li>Use standardization and PCA or ICA with three components with agglomerative hierarchical clustering or BIRCH</li>
+  </ul>
   <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
-    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Clustering-Results.png" width="650">
+    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Benchmark-Cluster.gif" width="600">
+  </a>
+  <p><b>Splat Simulated</b></p>
+  <ul>
+    <li>Dataset of artificial data simulated with Splat during this project</li>
+    <li>Gene expression imitates sc_10x</li>
+    <li>Ground truth contains four target groups</li>
+    <li>Was able to achieve 100% accuracy in which 2000 cells were correctly grouped</li>
+    <li>Use standardization and PCA or ICA with four components along with agglomerative hierarchical clustering, BIRCH or mini batch k-means</li>
+  </ul>
+  <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
+    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Simulated-Cluster.gif" width="600">
+  </a>
+  <p><b>Mouse Cortex</b></p>
+  <ul>
+    <li>Dataset originally named mouse cortex mRNA by <a href="http://linnarssonlab.org/cortex/">Zeisel et al.</a></li>
+    <li>Contains brain cells from mouse cortex and hippocampus with nine groups and 47 subgroups determined previously using BackSPIN biclustering</li>
+    <li>Unfortunatly I was only able to get 44% accuracy</li>
+    <li>Standard clustering methods are not as reliable with this data as cells show an overlapping spectrum of gene expression</li>
+  </ul>
+  <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
+    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Mouse-Cluster.gif" width="600">
   </a>
 </details>
 
 <a id="tda"></a>
 <details open="open">
   <summary><b>Topological Data Analysis with Kepler Mapper</b></summary>
+  <p>Simplicial complexes for each dataset were created with the same hyperparameters so that topological features can be compared</p>
+  <p><b>Benchmark</b></p>
   <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
-    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/TDA-Results.png" width="700">
+    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Benchmark-Mapper.gif" width="100%">
+  </a>
+  <p><b>Splat Simulated</b></p>
+  <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
+    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Simulated-Mapper.gif" width="100%">
+  </a>
+  <p><b>Mouse Cortex</b></p>
+  <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
+    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Mouse-Mapper.gif" width="100%">
   </a>
 </details>
 
