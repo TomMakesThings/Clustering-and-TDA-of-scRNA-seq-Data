@@ -21,6 +21,9 @@
 <h2 align="center">🧬 Running the Code 🧬</h2>
 All code was written across two Jupyter notebooks. For an explaination of each, see the <a href="code">Jupyter Notebooks</a> section below. These were designed to run in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser.
 <ol>
+  <li></li>
+  <a align="center" width="80%" href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/archive/refs/heads/main.zip">
+    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Download-Instruction.png"></a>
   <li>Visit <a href=https://colab.research.google.com>https://colab.research.google.com</a></li>
   <li>Sign in to your Google account</li>
   <li>Download the Jupyter notebook(s) from this repository</li>
