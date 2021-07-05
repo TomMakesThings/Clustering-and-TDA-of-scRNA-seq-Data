@@ -67,7 +67,7 @@
   <ul>
     <li>Dataset originally named mouse cortex mRNA by <a href="http://linnarssonlab.org/cortex/">Zeisel et al.</a></li>
     <li>Contains brain cells from mouse cortex and hippocampus with nine groups and 47 subgroups determined previously using BackSPIN biclustering</li>
-    <li>Unfortunatly I was only able to get 44% accuracy</li>
+    <li>Unfortunately I was only able to get 44% accuracy</li>
     <li>Standard clustering methods are not as reliable with this data as cells show an overlapping spectrum of gene expression</li>
   </ul>
   <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
