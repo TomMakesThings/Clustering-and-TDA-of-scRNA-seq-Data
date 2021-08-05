@@ -33,7 +33,7 @@
 
 <a id="about"></a>
 <h2 align="center">🧬 About 🧬</h2>
-<p>This respository hosts the datasets, code, interactive graphs and website for my undergraduate final year project. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>, or if you'd like to experiment with the code yourself, refer to the <a href="#code">Running the Code</a>.</p>
+<p>This respository hosts the datasets, code, interactive graphs and website for my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/raw/gh-pages/Paper/Clustering-and-TDA-of-scRNA-seq-Data.pdf">undergraduate final year project</a>. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>, or if you'd like to experiment with the code yourself, refer to the <a href="#code">Running the Code</a>.</p>
 
 <a id="results"></a>
 <h2 align="center">🧬 Results 🧬</h2>
