@@ -1,12 +1,13 @@
 <div align="center">
-  <h1>Clustering and Topological Data Analysis of Single-Cell RNA Sequencing Data</h1>
-  <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Images/Profile.jpg" width="100"></p>
-  <p><b>Project by TomMakesThings</b></p>
-  <sub><b>2020 - 2021</b></sub>
+  <h1>𝗖𝗹𝘂𝘀𝘁𝗲𝗿𝗶𝗻𝗴 𝗮𝗻𝗱 𝗧𝗼𝗽𝗼𝗹𝗼𝗴𝗶𝗰𝗮𝗹 𝗗𝗮𝘁𝗮 𝗔𝗻𝗮𝗹𝘆𝘀𝗶𝘀 𝗼𝗳 𝗦𝗶𝗻𝗴𝗹𝗲-𝗖𝗲𝗹𝗹 𝗥𝗡𝗔 𝗦𝗲𝗾𝘂𝗲𝗻𝗰𝗶𝗻𝗴 𝗗𝗮𝘁𝗮</h1>
+  <p><img src="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/gh-pages/Assets/Readme_Assets/Logo.png" width="170"></p>
+  <p><b>Project by <a href="https://github.com/TomMakesThings">TomMakesThings</a> - 2020/2021</b></p>
 </div>
 
+<p><img src="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/gh-pages/Assets/Readme_Assets/Divider.png" width="100%"></p>
+
 <details open="open">
-  <summary><b>Contents</b></summary>
+  <summary><b>𝗖𝗼𝗻𝘁𝗲𝗻𝘁𝘀</b></summary>
   <ol>
     <li><a href="#about">About</a></li>
     <li><a href="#results">Results</a></li>
@@ -31,16 +32,20 @@
   </ol>
 </details>
 
+<p><img src="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/gh-pages/Assets/Readme_Assets/Divider.png" width="100%"></p>
+
 <a id="about"></a>
-<h2 align="center">🧬 About 🧬</h2>
+<h2 align="center">🧬 𝗔𝗯𝗼𝘂𝘁 🧬</h2>
 <p>This respository hosts the datasets, code, interactive graphs and website for my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/raw/gh-pages/Paper/Clustering-and-TDA-of-scRNA-seq-Data.pdf">undergraduate final year project</a>. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>, or if you'd like to experiment with the code yourself, refer to the <a href="#code">Running the Code</a>.</p>
 
+<p><img src="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/gh-pages/Assets/Readme_Assets/Divider.png" width="100%"></p>
+
 <a id="results"></a>
-<h2 align="center">🧬 Results 🧬</h2>
+<h2 align="center">🧬 𝗥𝗲𝘀𝘂𝗹𝘁𝘀 🧬</h2>
 
 <a id="clustering"></a>
 <details open="open">
-  <summary><b>Clustering</b></summary>
+  <summary><b>𝗖𝗹𝘂𝘀𝘁𝗲𝗿𝗶𝗻𝗴</b></summary>
   <p>Different combinations of the pre-processing, dimensionality reduction methods and clustering algorithm were tested with the best combination varying per dataset.</p>
   <p><b>Benchmark</b></p>
   <ul>
@@ -77,7 +82,7 @@
 
 <a id="tda"></a>
 <details open="open">
-  <summary><b>Topological Data Analysis with Kepler Mapper</b></summary>
+  <summary><b>𝗧𝗼𝗽𝗼𝗹𝗼𝗴𝗶𝗰𝗮𝗹 𝗗𝗮𝘁𝗮 𝗔𝗻𝗮𝗹𝘆𝘀𝗶𝘀 𝘄𝗶𝘁𝗵 𝗞𝗲𝗽𝗹𝗲𝗿 𝗠𝗮𝗽𝗽𝗲𝗿</b></summary>
   <p>Simplicial complexes for each dataset were created with the same hyperparameters so that topological features can be compared.</p>
   <p><b>Benchmark</b></p>
   <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">
@@ -93,39 +98,97 @@
   </a>
 </details>
 
+<p><img src="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/gh-pages/Assets/Readme_Assets/Divider.png" width="100%"></p>
+
 <a id="code"></a>
-<h2 align="center">🧬 Running the Code 🧬</h2>
+<h2 align="center">🧬 𝗥𝘂𝗻𝗻𝗶𝗻𝗴 𝘁𝗵𝗲 𝗖𝗼𝗱𝗲 🧬</h2>
 <p>The code was written in Python and R across two Jupyter notebooks. For an explaination of each notebook, see the section below. These were developed in Google Colab which is a free Jupyter notebook environment that allows you to run code through a browser.</p>
   
 <details>
-  <summary><b>Click to show instructions</b></summary>
-  <ol>
-  <li>Download the repository by clicking Code ➞ Download ZIP.</li>
-  <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/archive/refs/heads/main.zip">
-    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Download-Instruction.png" width="100%"></a>
-  <li>Extract the contents of the zip.</li>
-  <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/ZIP-Extract.png" width="700"></p>
-  <li>Visit <a href=https://colab.research.google.com>https://colab.research.google.com</a>.</li>
-  <li>Sign in to your Google account.</li>
-  <li>On Colab, go to File ➞ Upload notebook.</li>
-   <a href="https://colab.research.google.com/notebooks/intro.ipynb#recent=true">
+  <summary><b>Click to Show Instructions</b></summary>
+  
+  <table>
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+          <td align="center" valign="top">1.</td>
+          <td align="left" valign="top">
+            <p>Download the repository by clicking Code ➞ Download ZIP.</p>
+            <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/archive/refs/heads/main.zip"><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Download-Instruction.png" width="100%"></a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">2.</td>
+          <td align="left" valign="top">
+            <p>Extract the contents of the zip.</p>
+            <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/ZIP-Extract.png" width="600"></p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">3.</td>
+          <td align="left" valign="top">
+            <p>Visit <a href=https://colab.research.google.com>https://colab.research.google.com</a>.</p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">4.</td>
+          <td align="left" valign="top">
+            <p>Sign in to your Google account.</p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">5.</td>
+          <td align="left" valign="top">
+            <p>On Colab, go to File ➞ Upload notebook.</p>
+            <a href="https://colab.research.google.com/notebooks/intro.ipynb#recent=true">
     <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Colab-Upload.gif" width="100%"></a>
-  <li>Navigate to Clustering-and-TDA-of-scRNA-seq-Data-main > Jupyter_Notebooks.</li>
-  <li>Select the notebook to upload.</li>
-  <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-File-Location.png" width="100%"></p>
-  <li>Optionally switch from CPU to GPU by selecting Change runtime type ➞ Hardware accelerator ➞ GPU ➞ Save. This is recommended if you selected Clustering_and_TDA.ipynb and wish to train a new autoencoder as it can considerably reduce training time.</li>
-  <a><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-GPU.gif" width="100%"></a>
-  <li>Run the code through pressing Runtime ➞ Run all.
-  <a><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-Run.gif" width="100%"></a>
-  <li>If you would like to make any changes, for example running with your own dataset, follow the instructions in the notebook.
-</ol>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">6.</td>
+          <td align="left" valign="top">
+            <p>Navigate to Clustering-and-TDA-of-scRNA-seq-Data-main > Jupyter_Notebooks.</p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">7.</td>
+          <td align="left" valign="top">
+            <p>Select the notebook to upload.</p>
+            <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-File-Location.png" width="100%"></p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">8.</td>
+          <td align="left" valign="top">
+            <p>Optionally switch from CPU to GPU by selecting Change runtime type ➞ Hardware accelerator ➞ GPU ➞ Save. This is recommended if you selected Clustering_and_TDA.ipynb and wish to train a new autoencoder as it can considerably reduce training time.</p>
+            <a><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-GPU.gif" width="100%"></a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">9.</td>
+          <td align="left" valign="top">
+            <p>Run the code through pressing Runtime ➞ Run all.</p>
+            <a><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-Run.gif" width="100%"></a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">10.</td>
+          <td align="left" valign="top">
+            <p>If you would like to make any changes, for example running with your own dataset, follow the instructions in the notebook.</p>
+          </td>
+        </tr>
+    </tbody>
+</table>
 </details>
+
+<p><img src="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/gh-pages/Assets/Readme_Assets/Divider.png" width="100%"></p>
   
 <a id="repositorycontents"></a>
-<h2 align="center">🧬 Repository Contents 🧬</h2>
+<h2 align="center">🧬 𝗥𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝘆 𝗖𝗼𝗻𝘁𝗲𝗻𝘁𝘀 🧬</h2>
 <p>The repository consists of two branches: <a href="#mainbranch">main</a></li> and <a href="#pagesbranch">gh-pages</a>. The contents of each branch is explained here.</p>
 <a id="mainbranch"></a>
-<h3>Main Branch</h3>
+<h3>𝗠𝗮𝗶𝗻 𝗕𝗿𝗮𝗻𝗰𝗵</h3>
 
 <a id="jupyternotebooks"></a>
 <details open="open">
@@ -184,7 +247,7 @@ These folders contain zip files that are opened automatically in notebook <a hre
 </details>
 
 <a id="pagesbranch"></a>
-<h3>GitHub Pages Branch</h3>
+<h3>𝗚𝗶𝘁𝗛𝘂𝗯 𝗣𝗮𝗴𝗲𝘀 𝗕𝗿𝗮𝗻𝗰𝗵</h3>
 
 <a id="graphs"></a>
 <details open="open">
@@ -207,3 +270,5 @@ These folders contain zip files that are opened automatically in notebook <a hre
 <summary><b>Website</b></summary>
 Other folders provide the HTML, CSS, JavaScript and assets required to host the GitHub pages site.
 </details
+  
+<p><img align="right" src="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/gh-pages/Assets/Readme_Assets/Hexagons.png" width="120"></p>
