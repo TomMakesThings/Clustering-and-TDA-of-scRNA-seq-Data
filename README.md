@@ -99,26 +99,80 @@
   
 <details>
   <summary><b>Click to show instructions</b></summary>
-  <ol>
-  <li>Download the repository by clicking Code ➞ Download ZIP.</li>
-  <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/archive/refs/heads/main.zip">
-    <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Download-Instruction.png" width="100%"></a>
-  <li>Extract the contents of the zip.</li>
-  <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/ZIP-Extract.png" width="700"></p>
-  <li>Visit <a href=https://colab.research.google.com>https://colab.research.google.com</a>.</li>
-  <li>Sign in to your Google account.</li>
-  <li>On Colab, go to File ➞ Upload notebook.</li>
-   <a href="https://colab.research.google.com/notebooks/intro.ipynb#recent=true">
+  
+  <table>
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+          <td align="center" valign="top">1.</td>
+          <td align="left" valign="top">
+            <p>Download the repository by clicking Code ➞ Download ZIP.</p>
+            <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/archive/refs/heads/main.zip"><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Download-Instruction.png" width="100%"></a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">2.</td>
+          <td align="left" valign="top">
+            <p>Extract the contents of the zip.</p>
+            <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/ZIP-Extract.png" width="600"></p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">3.</td>
+          <td align="left" valign="top">
+            <p>Visit <a href=https://colab.research.google.com>https://colab.research.google.com</a>.</p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">4.</td>
+          <td align="left" valign="top">
+            <p>Sign in to your Google account.</p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">5.</td>
+          <td align="left" valign="top">
+            <p>On Colab, go to File ➞ Upload notebook.</p>
+            <a href="https://colab.research.google.com/notebooks/intro.ipynb#recent=true">
     <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Colab-Upload.gif" width="100%"></a>
-  <li>Navigate to Clustering-and-TDA-of-scRNA-seq-Data-main > Jupyter_Notebooks.</li>
-  <li>Select the notebook to upload.</li>
-  <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-File-Location.png" width="100%"></p>
-  <li>Optionally switch from CPU to GPU by selecting Change runtime type ➞ Hardware accelerator ➞ GPU ➞ Save. This is recommended if you selected Clustering_and_TDA.ipynb and wish to train a new autoencoder as it can considerably reduce training time.</li>
-  <a><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-GPU.gif" width="100%"></a>
-  <li>Run the code through pressing Runtime ➞ Run all.
-  <a><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-Run.gif" width="100%"></a>
-  <li>If you would like to make any changes, for example running with your own dataset, follow the instructions in the notebook.
-</ol>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">6.</td>
+          <td align="left" valign="top">
+            <p>Navigate to Clustering-and-TDA-of-scRNA-seq-Data-main > Jupyter_Notebooks.</p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">7.</td>
+          <td align="left" valign="top">
+            <p>Select the notebook to upload.</p>
+            <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-File-Location.png" width="100%"></p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">8.</td>
+          <td align="left" valign="top">
+            <p>Optionally switch from CPU to GPU by selecting Change runtime type ➞ Hardware accelerator ➞ GPU ➞ Save. This is recommended if you selected Clustering_and_TDA.ipynb and wish to train a new autoencoder as it can considerably reduce training time.</p>
+            <a><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-GPU.gif" width="100%"></a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">9.</td>
+          <td align="left" valign="top">
+            <p>Run the code through pressing Runtime ➞ Run all.</p>
+            <a><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Notebook-Run.gif" width="100%"></a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">10.</td>
+          <td align="left" valign="top">
+            <p>If you would like to make any changes, for example running with your own dataset, follow the instructions in the notebook.</p>
+          </td>
+        </tr>
+    </tbody>
+</table>
 </details>
   
 <a id="repositorycontents"></a>
