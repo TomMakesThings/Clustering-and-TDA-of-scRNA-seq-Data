@@ -1,8 +1,7 @@
 <div align="center">
   <h1>Clustering and Topological Data Analysis of Single-Cell RNA Sequencing Data</h1>
-  <p><img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Images/Profile.jpg" width="100"></p>
-  <p><b>Project by TomMakesThings</b></p>
-  <sub><b>2020 - 2021</b></sub>
+  <p><img src="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/gh-pages/Assets/Readme_Assets/Logo.png" width="170"></p>
+  <p><b>Project by <a href="https://github.com/TomMakesThings">TomMakesThings</a> - 2020/2021</b></p>
 </div>
 
 <details open="open">
@@ -31,9 +30,13 @@
   </ol>
 </details>
 
+<p><img src="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/gh-pages/Assets/Readme_Assets/Divider.png" width="100%"></p>
+
 <a id="about"></a>
 <h2 align="center">🧬 About 🧬</h2>
 <p>This respository hosts the datasets, code, interactive graphs and website for my <a href="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/raw/gh-pages/Paper/Clustering-and-TDA-of-scRNA-seq-Data.pdf">undergraduate final year project</a>. The aim is to experiment with clustering and topological data analysis to detect hidden gene expression in three different types of datasets. For an overview of the work, refer to this respository's <a href="https://tommakesthings.github.io/Clustering-and-TDA-of-scRNA-seq-Data/">GitHub Pages site</a>, or if you'd like to experiment with the code yourself, refer to the <a href="#code">Running the Code</a>.</p>
+
+<p><img src="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/gh-pages/Assets/Readme_Assets/Divider.png" width="100%"></p>
 
 <a id="results"></a>
 <h2 align="center">🧬 Results 🧬</h2>
@@ -92,6 +95,8 @@
     <img src="https://raw.githubusercontent.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/gh-pages/Assets/Readme_Assets/Mouse-Mapper.gif" width="100%">
   </a>
 </details>
+
+<p><img src="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/gh-pages/Assets/Readme_Assets/Divider.png" width="100%"></p>
 
 <a id="code"></a>
 <h2 align="center">🧬 Running the Code 🧬</h2>
@@ -174,6 +179,8 @@
     </tbody>
 </table>
 </details>
+
+<p><img src="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/gh-pages/Assets/Readme_Assets/Divider.png" width="100%"></p>
   
 <a id="repositorycontents"></a>
 <h2 align="center">🧬 Repository Contents 🧬</h2>
@@ -261,3 +268,5 @@ These folders contain zip files that are opened automatically in notebook <a hre
 <summary><b>Website</b></summary>
 Other folders provide the HTML, CSS, JavaScript and assets required to host the GitHub pages site.
 </details
+  
+<p><img align="right" src="https://github.com/TomMakesThings/Clustering-and-TDA-of-scRNA-seq-Data/blob/gh-pages/Assets/Readme_Assets/Hexagons.png" width="120"></p>
